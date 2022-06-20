@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="active-light-mode">
     <main class="page-wrapper">
         <div class="header-transparent-with-topbar">
             <div class="header-top-bar">
@@ -171,6 +171,21 @@
                                 </div>
                                 <!-- Start Mobile-Menu-Bar -->
 
+
+                                <div id="my_switcher" class="my_switcher">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript: void(0);" data-theme="light" class="setColor light">
+                                                <img class="sun-image" src="assets/images/icons/sun-01.svg" alt="Sun images">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0);" data-theme="dark" class="setColor dark">
+                                                <img class="Victor Image" src="assets/images/icons/vector.svg" alt="Vector Images">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -356,6 +371,12 @@
         </div>
         <!-- End Slider Area  -->
 
+
+
+
+
+
+
         <!-- Start Service Area  -->
         <div class="rn-service-area rn-section-gap">
             <div class="container">
@@ -367,98 +388,92 @@
                                 <span class="theme-gradient">What we can do for you</span>
                             </h4>
                             <h2 class="title w-600 mb--20">Services provide for you.</h2>
-                            <p class="description b1">There are many variations of passages of Lorem Ipsum
-                                available, <br>but the majority have suffered alteration.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="row row--15 service-wrapper">
-
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700">
-                        <div class="card-box card-style-1 text-left">
-                            <div class="inner">
-                                <div class="image">
-                                    <a href="#">
-                                        <img src="assets/images/services/serviice-01.jpg" alt="card Images">
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title mb--20"><a href="#">Awarded Design</a>
-                                    </h4>
-                                    <p class="description b1 color-gray mb--0">Variations There are many of pass
-                                        ages of Lorem Ipsum available the majority.</p>
-                                    <a class="btn-default btn-small btn-border" href="service.html">Read More</a>
-                                </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-duration="700">
+                        <div class="service service__style--1 icon-circle-style text-center">
+                            <div class="icon">
+                                <i class="feather-activity"></i>
+                            </div>
+                            <div class="content">
+                                <h4 class="title w-600"><a href="#">Individual Tax Services</a></h4>
+                                <p class="description b1 color-gray mb--0">We gauge our worth by the personal and business successes of our clients and industries.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700"
-                        data-sal-delay="100">
-                        <div class="card-box card-style-1 text-left">
-                            <div class="inner">
-                                <div class="image">
-                                    <a href="#">
-                                        <img src="assets/images/services/serviice-02.jpg" alt="card Images">
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title mb--20"><a href="#">Design &
-                                            Creative</a>
-                                    </h4>
-                                    <p class="description b1 color-gray mb--0">There are many variations
-                                        variats of passages of Lorem Ipsum available.</p>
-                                    <a class="btn-default btn-small btn-border" href="service.html">Read More</a>
-                                </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
+                        <div class="service service__style--1 icon-circle-style text-center">
+                            <div class="icon">
+                                <i class="feather-map"></i>
+                            </div>
+                            <div class="content">
+                                <h4 class="title w-600"><a href="#">Bookkeeping Services</a></h4>
+                                <p class="description b1 color-gray mb--0">We serve a range of industries and customers, in an organized, friendly, and reliable way.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700"
-                        data-sal-delay="200">
-                        <div class="card-box card-style-1 text-left">
-                            <div class="inner">
-                                <div class="image">
-                                    <a href="#">
-                                        <img src="assets/images/services/serviice-03.jpg" alt="card Images">
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title mb--20"><a href="#">App Development</a>
-                                    </h4>
-                                    <p class="description b1 color-gray mb--0">Passages there are many variatin Lorem
-                                        Ipsum available majority suffered.</p>
-                                    <a class="btn-default btn-small btn-border" href="service.html">Read More</a>
-                                </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
+                        <div class="service service__style--1 icon-circle-style text-center">
+                            <div class="icon">
+                                <i class="feather-cast"></i>
+                            </div>
+                            <div class="content">
+                                <h4 class="title w-600"><a href="#">Business Tax Services</a></h4>
+                                <p class="description b1 color-gray mb--0">We are in a position to identify tax planning shots that reduce both your now, future tax liabilities</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-duration="700">
+                        <div class="service service__style--1 icon-circle-style text-center">
+                            <div class="icon">
+                                <i class="feather-activity"></i>
+                            </div>
+                            <div class="content">
+                                <h4 class="title w-600"><a href="#">Payroll</a></h4>
+                                <p class="description b1 color-gray mb--0">Our principal aim is to provide customized services and highly favorable pricing for you.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700"
-                        data-sal-delay="300">
-                        <div class="card-box card-style-1 text-left">
-                            <div class="inner">
-                                <div class="image">
-                                    <a href="#">
-                                        <img src="assets/images/services/serviice-04.jpg" alt="card Images">
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title mb--20"><a href="#">Web Design</a>
-                                    </h4>
-                                    <p class="description b1 color-gray mb--0">Variations There are many of pass
-                                        ages of Lorem Ipsum available the majority.</p>
-                                    <a class="btn-default btn-small btn-border" href="service.html">Read More</a>
-                                </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
+                        <div class="service service__style--1 icon-circle-style text-center">
+                            <div class="icon">
+                                <i class="feather-map"></i>
+                            </div>
+                            <div class="content">
+                                <h4 class="title w-600"><a href="#">Part-Time CFO Services</a></h4>
+                                <p class="description b1 color-gray mb--0">Growing businesses often reach a point where fit financial advice is required from Part-Time CFO.</p>
                             </div>
                         </div>
+                    </div>
 
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
+                        <div class="service service__style--1 icon-circle-style text-center">
+                            <div class="icon">
+                                <i class="feather-cast"></i>
+                            </div>
+                            <div class="content">
+                                <h4 class="title w-600"><a href="#">IRS Resolution</a></h4>
+                                <p class="description b1 color-gray mb--0">We assist you set up your non-profit organization by handling all the authority reportage.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
             </div>
         </div>
         <!-- End Service Area  -->
+
+
+
+
+
+
 
         <!-- Start Seperator Area  -->
         <div class="rbt-separator-mid">

@@ -56,7 +56,9 @@
         }
 
         &:hover{
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            outline: 1px solid var(--color-lightest-blue);
+            border-radius: 5px;
         }
 
         &.rbt-border-none {
@@ -91,7 +93,7 @@
         &.icon-circle-style {
             background-color: transparent;
             box-shadow: none;
-            padding: 0px 35px;
+            padding: 20px 35px;
             margin-top: 25px;
             @media #{$laptop-device} {
                 padding: 0px 10px;
