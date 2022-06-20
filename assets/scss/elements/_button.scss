@@ -13,12 +13,10 @@ button ,
 div {
     &.btn-default {
         padding: 0 28px;
-        border-style: solid;
-        border-width: 2px;
-        border-color: transparent;
         border-radius: 8px;
         background-color: transparent;
-        background: linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 95% / 200% 100%;
+        background-image: linear-gradient(to right, var(--color-heavy-blue) , var(--color-light-blue));
+        border: none ;
         transition-duration: 300ms;
         color: var(--color-white);
         font-size: 16px;
@@ -89,13 +87,12 @@ div {
 
         &.btn-border {
             background-image: inherit;
-            border-color: var(--color-border);
+            border-color: var(--color-heavy-blue);
             border-width: 2px;
             border-style: solid;
 
             &:hover {
-                background-color: var(--color-secondary);
-                border-color: var(--color-secondary);
+                background-color: var(--color-heavy-blue);
             }
         }
 

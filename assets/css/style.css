@@ -80,7 +80,7 @@
     Default Styles
 ***************************************/
 /*-- Variables --*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
 :root {
   --color-primary: #059DFF;
   --color-primary-rgba: rgb(5, 157, 255);
@@ -92,6 +92,8 @@
   --color-tertiary-alt: #6549D5;
   --color-pink: #E33FA1;
   --color-light-green: #36C6F0;
+  --color-heavy-blue: #113A60;
+  --color-light-blue: #065F91;
   --color-primary-darker: #011827;
   --color-tertiary-darker: #150b40;
   --color-secondary-darker: #190301;
@@ -147,8 +149,8 @@
   --shadow-lighter: 4px 4px 20px 20px rgba(0,0,0,0.01);
   --transition: 0.3s;
   --transition-transform: transform .65s cubic-bezier(.23,1,.32,1);
-  --font-primary: "Inter", sans-serif;
-  --secondary-font: "Inter", sans-serif;
+  --font-primary: "Montserrat", sans-serif;
+  --secondary-font: "Montserrat", sans-serif;
   --font-awesome: "Font Awesome 5 Pro";
   --font-size-b1: 18px;
   --font-size-b2: 16px;
@@ -7581,7 +7583,7 @@ textarea:-ms-input-placeholder {
 ==========================*/
 /* Theme Gradient */
 .theme-gradient, .counter-style-1 .count-number {
-  background: linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 98%/200% 100%;
+  background: linear-gradient(to right, var(--color-heavy-blue), var(--color-light-blue));
   text-transform: capitalize;
   -webkit-background-clip: text;
   background-clip: text;
@@ -7590,7 +7592,7 @@ textarea:-ms-input-placeholder {
 
 .bg-theme-gradient {
   background-color: transparent;
-  background-image: linear-gradient(90deg, var(--color-primary-lightest) 10%, var(--color-primary-alt) 50%, var(--color-tertiary-alt) 90%);
+  background: linear-gradient(to right, var(--color-heavy-blue), var(--color-light-blue));
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -9670,12 +9672,10 @@ a.btn-default,
 button.btn-default,
 div.btn-default {
   padding: 0 28px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: transparent;
   border-radius: 8px;
   background-color: transparent;
-  background: linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 95%/200% 100%;
+  background-image: linear-gradient(to right, var(--color-heavy-blue), var(--color-light-blue));
+  border: none;
   transition-duration: 300ms;
   color: var(--color-white);
   font-size: 16px;
@@ -9762,15 +9762,14 @@ a.btn-default.btn-border,
 button.btn-default.btn-border,
 div.btn-default.btn-border {
   background-image: inherit;
-  border-color: var(--color-border);
+  border-color: var(--color-heavy-blue);
   border-width: 2px;
   border-style: solid;
 }
 a.btn-default.btn-border:hover,
 button.btn-default.btn-border:hover,
 div.btn-default.btn-border:hover {
-  background-color: var(--color-secondary);
-  border-color: var(--color-secondary);
+  background-color: var(--color-heavy-blue);
 }
 a.btn-default.text-underline,
 button.btn-default.text-underline,
@@ -15191,7 +15190,7 @@ body.active-light-mode button.btn-default.btn-border {
 
 body.active-light-mode a.btn-default.btn-border:hover,
 body.active-light-mode button.btn-default.btn-border:hover {
-  border-color: var(--color-secondary);
+  border-color: var(--color-heavy-blue);
   color: #fff;
 }
 
@@ -15304,4 +15303,5 @@ body.active-light-mode .slider-area.bg-transparent .inner a.btn-default.btn-bord
 body.active-light-mode .slider-area.bg-transparent .inner button.btn-default.btn-border:hover {
   color: var(--color-white);
 }
-/*# sourceMappingURL=../maps/style.css.map */
+
+/*# sourceMappingURL=style.css.map */
