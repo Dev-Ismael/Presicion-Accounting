@@ -129,7 +129,7 @@
             margin: 0 -10px;
             p {
                 margin-bottom: 0;
-                padding: 0 10px;
+                padding: 0 20px;
                 font-size: 14px;
                 position: relative;
                 display: flex;
@@ -173,8 +173,8 @@
     }
     .social-icon-wrapper {
         position: relative;
-        margin-left: 10px;
-        padding-left: 10px;
+        margin-left: 20px;
+        padding-left: 20px;
         @media #{$large-mobile} {
             margin-left: 0;
             padding-left: 0;

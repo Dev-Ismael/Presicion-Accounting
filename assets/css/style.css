@@ -94,6 +94,7 @@
   --color-light-green: #36C6F0;
   --color-heavy-blue: #113A60;
   --color-light-blue: #065F91;
+  --color-lightest-blue: #065e9159;
   --color-primary-darker: #011827;
   --color-tertiary-darker: #150b40;
   --color-secondary-darker: #190301;
@@ -7581,6 +7582,19 @@ textarea:-ms-input-placeholder {
 /*======================== 
     Common Style Css
 ==========================*/
+/* scrollbar */
+body::-webkit-scrollbar {
+  background-color: var(--color-lightest-blue);
+  width: 10px;
+  right: -10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-heavy-blue);
+  border-radius: 3px;
+  right: -10px;
+}
+
 /* Theme Gradient */
 .theme-gradient, .counter-style-1 .count-number {
   background: linear-gradient(to right, var(--color-heavy-blue), var(--color-light-blue));
@@ -9274,7 +9288,7 @@ xclip
 }
 .header-top-bar .header-right .address-content p {
   margin-bottom: 0;
-  padding: 0 10px;
+  padding: 0 20px;
   font-size: 14px;
   position: relative;
   display: flex;
@@ -9312,8 +9326,8 @@ xclip
 }
 .header-top-bar .social-icon-wrapper {
   position: relative;
-  margin-left: 10px;
-  padding-left: 10px;
+  margin-left: 20px;
+  padding-left: 20px;
 }
 @media only screen and (max-width: 575px) {
   .header-top-bar .social-icon-wrapper {
