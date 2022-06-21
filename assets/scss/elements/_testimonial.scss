@@ -90,18 +90,18 @@
         .description {
             line-height: 1.5;
             margin-bottom: 30px;
-            font-size: 32px;
+            font-size: 14px;
 
             @media #{$lg-layout} {
                 margin-bottom: 25px;
-                font-size: 24px;
+                font-size: 14px;
             }
             @media #{$md-layout} {
-                font-size: 24px;
+                font-size: 14px;
             }
 
             @media #{$sm-layout} {
-                font-size: 24px;
+                font-size: 14px;
             }
         }
         .client-info {
@@ -121,7 +121,7 @@
         }
     }
     .thumbnail {
-        background: linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 98% / 200% 100%;
+        background: linear-gradient(to right, var(--color-heavy-blue) , var(--color-light-blue));
         border-radius: 100%;
         padding: 10px;
         img {

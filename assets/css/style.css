@@ -11102,22 +11102,22 @@ div.btn-default.rounded-player.sm-size {
 .testimonial-style-two .content .description {
   line-height: 1.5;
   margin-bottom: 30px;
-  font-size: 32px;
+  font-size: 14px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .testimonial-style-two .content .description {
     margin-bottom: 25px;
-    font-size: 24px;
+    font-size: 14px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .testimonial-style-two .content .description {
-    font-size: 24px;
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 767px) {
   .testimonial-style-two .content .description {
-    font-size: 24px;
+    font-size: 14px;
   }
 }
 .testimonial-style-two .content .client-info .title {
@@ -11134,7 +11134,7 @@ div.btn-default.rounded-player.sm-size {
   font-style: italic;
 }
 .testimonial-style-two .thumbnail {
-  background: linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 98%/200% 100%;
+  background: linear-gradient(to right, var(--color-heavy-blue), var(--color-light-blue));
   border-radius: 100%;
   padding: 10px;
 }
@@ -11193,7 +11193,7 @@ div.btn-default.rounded-player.sm-size {
 .rn-slick-dot .slick-dots li.slick-active button::after {
   -webkit-transform: scale(2);
   transform: scale(2);
-  box-shadow: inset 0 0 0 1px var(--color-primary);
+  box-shadow: inset 0 0 0 1px var(--color-light-blue);
   background-color: transparent;
   background-color: transparent !important;
 }
@@ -11207,7 +11207,7 @@ div.btn-default.rounded-player.sm-size {
 .rn-slick-dot.dot-light .slick-dots li.slick-active button::after {
   -webkit-transform: scale(2);
   transform: scale(2);
-  box-shadow: inset 0 0 0 1px var(--color-primary);
+  box-shadow: inset 0 0 0 1px var(--color-light-blue);
   background-color: transparent;
   background-color: transparent !important;
 }
@@ -11248,8 +11248,8 @@ div.btn-default.rounded-player.sm-size {
   }
 }
 .rn-slick-arrow button.slick-arrow:hover {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
+  background: var(--color-light-blue);
+  border-color: var(--color-light-blue);
 }
 .rn-slick-arrow button.slick-arrow::before {
   line-height: 1;
