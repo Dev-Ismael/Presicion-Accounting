@@ -145,7 +145,7 @@
   --p-bold: 700;
   --p-extra-bold: 800;
   --p-black: 900;
-  --shadow-primary: 0 0 20px 5px rgba(251,83,67,0.2);
+  --shadow-primary: 0 0 20px 5px var(--color-lightest-blue);
   --shadow-light: 1px 1px 6px rgba(0,0,0,0.25);
   --shadow-lighter: 4px 4px 20px 20px rgba(0,0,0,0.01);
   --transition: 0.3s;
@@ -9359,16 +9359,6 @@ xclip
   width: auto;
   z-index: 99;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .header-transparent-with-topbar {
-    position: relative;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .header-transparent-with-topbar {
-    position: relative;
-  }
-}
 .header-transparent-with-topbar .header-top-bar {
   background-color: transparent;
 }
@@ -12847,7 +12837,7 @@ iframe {
   padding: 0;
   margin-left: 10px;
   width: 40px;
-  background: var(--color-secondary);
+  background: var(--color-light-blue);
   display: flex;
   justify-content: center;
   height: 40px;
@@ -12880,7 +12870,7 @@ iframe {
   display: block;
   position: relative;
   z-index: 2;
-  background: var(--color-secondary);
+  background: var(--color-light-blue);
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -13611,7 +13601,7 @@ iframe {
   padding: 120px 0;
 }
 .footer-style-1 .footer-top .rn-footer-widget .text-big {
-  font-size: 21px;
+  font-size: 18px;
   margin-top: 30px;
   padding-right: 13%;
   line-height: 37px;
@@ -13670,7 +13660,7 @@ iframe {
   padding-bottom: 70px;
 }
 .footer-style-default .footer-top .rn-footer-widget .text-big {
-  font-size: 21px;
+  font-size: 18px;
   margin-top: 30px;
   padding-right: 13%;
   line-height: 1.7;
@@ -15142,8 +15132,21 @@ body.active-light-mode .bg-overlay-solid::before {
   background: #f5f8fa;
 }
 
+body.active-light-mode .rn-header .logo a img.logo-light {
+  display: block;
+}
+body.active-light-mode .rn-header .logo a img.logo-dark {
+  display: none;
+}
+
 body.active-light-mode .rn-header.sticky {
   background: #f5f8fa !important;
+}
+body.active-light-mode .rn-header.sticky .logo a img.logo-light {
+  display: none;
+}
+body.active-light-mode .rn-header.sticky .logo a img.logo-dark {
+  display: block;
 }
 
 body.active-light-mode .bg-color-blackest {

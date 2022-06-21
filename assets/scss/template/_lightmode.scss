@@ -347,9 +347,25 @@ body.active-light-mode .rn-call-to-action.style-8,
 body.active-light-mode .bg-overlay-solid::before {
     background: #f5f8fa;
 }
-
+body.active-light-mode .rn-header{
+    .logo a img.logo-light {
+        display: block;
+    }
+    .logo a img.logo-dark {
+        display: none;
+    }
+}
 body.active-light-mode .rn-header.sticky {
     background: #f5f8fa !important;
+
+    .logo a img.logo-light {
+        display: none;
+    }
+
+    .logo a img.logo-dark {
+        display: block;
+    }
+
 }
 
 
