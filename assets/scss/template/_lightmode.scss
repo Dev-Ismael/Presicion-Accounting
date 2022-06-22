@@ -59,6 +59,8 @@ body {
             color: #65676b;
         }
 
+        .rn-slick-arrow.team-slider button.slick-arrow.prev-arrow::before ,
+        .rn-slick-arrow.team-slider button.slick-arrow.next-arrow::before,
         .rn-slick-arrow.testimonial-activation button.slick-arrow.prev-arrow::before ,
         .rn-slick-arrow.testimonial-activation button.slick-arrow.next-arrow::before{
             filter: brightness(0);
@@ -69,6 +71,8 @@ body {
         }
 
 
+        .rn-slick-arrow.team-slider button.slick-arrow.prev-arrow:hover::before, 
+        .rn-slick-arrow.team-slider button.slick-arrow.next-arrow:hover::before,
         .rn-slick-arrow.testimonial-activation button.slick-arrow.prev-arrow:hover::before, 
         .rn-slick-arrow.testimonial-activation button.slick-arrow.next-arrow:hover::before {
             filter: brightness(1);

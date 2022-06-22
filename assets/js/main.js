@@ -151,6 +151,18 @@
                 prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
                 nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>'
             });
+            // custom team slider
+            $('.team-slider').not('.slick-initialized').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: true,
+                adaptiveHeight: true,
+                cssEase: 'linear',
+                prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>'
+            });
             $('.slider-activation').not('.slick-initialized').slick({
                 infinite: true,
                 slidesToShow: 1,

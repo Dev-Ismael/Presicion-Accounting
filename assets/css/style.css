@@ -14882,6 +14882,8 @@ body.active-light-mode .rn-slick-arrow button.slick-arrow {
   border: 2px solid #d8d8d8;
   color: #65676b;
 }
+body.active-light-mode .rn-slick-arrow.team-slider button.slick-arrow.prev-arrow::before,
+body.active-light-mode .rn-slick-arrow.team-slider button.slick-arrow.next-arrow::before,
 body.active-light-mode .rn-slick-arrow.testimonial-activation button.slick-arrow.prev-arrow::before,
 body.active-light-mode .rn-slick-arrow.testimonial-activation button.slick-arrow.next-arrow::before {
   filter: brightness(0);
@@ -14889,6 +14891,8 @@ body.active-light-mode .rn-slick-arrow.testimonial-activation button.slick-arrow
 body.active-light-mode .rn-slick-arrow button.slick-arrow:hover {
   border-color: transparent !important;
 }
+body.active-light-mode .rn-slick-arrow.team-slider button.slick-arrow.prev-arrow:hover::before,
+body.active-light-mode .rn-slick-arrow.team-slider button.slick-arrow.next-arrow:hover::before,
 body.active-light-mode .rn-slick-arrow.testimonial-activation button.slick-arrow.prev-arrow:hover::before,
 body.active-light-mode .rn-slick-arrow.testimonial-activation button.slick-arrow.next-arrow:hover::before {
   filter: brightness(1);
