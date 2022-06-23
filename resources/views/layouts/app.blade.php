@@ -110,8 +110,8 @@
                             <div class="header-right">
                                 <nav class="mainmenu-nav d-none d-lg-block">
                                     <ul class="mainmenu">
-                                        <li><a href="/">Home</a></li>
-                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="{{ route("home") }}">Home</a></li>
+                                        <li><a href="{{ route("about") }}">About</a></li>
                                         <li class="with-megamenu has-menu-child-item"><a href="#">Services</a>
                                             <div class="rn-megamenu">
                                                 <div class="wrapper">
@@ -331,7 +331,7 @@
                                 <h4 class="title">Quick Links</h4>
                                 <div class="inner">
                                     <ul class="footer-link link-hover">
-                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="{{ route("about") }}">About</a></li>
                                         <li><a href="portfolio.html">Portfolio</a></li>
                                         <li><a href="{{ route("contact") }}">Contact</a></li>
                                         <li><a href="service.html">Service</a></li>
