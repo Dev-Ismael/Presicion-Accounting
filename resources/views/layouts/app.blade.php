@@ -315,7 +315,7 @@
                             <div class="rn-footer-widget">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <img class="logo-light" src="{{ asset('web/template_assets/images/logo/logo.png') }}" 
+                                        <img class="logo-light" src="{{ asset('web/template_assets/images/logo/logo.png') }}"
                                             alt="Corporate Logo">
                                         <img class="logo-dark" src="{{ asset('web/template_assets/images/logo/logo-dark.png') }}"
                                             alt="Corporate Logo">
