@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,114 +10,490 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('web/template_assets/images/favicon.png') }}">
 
     <!-- Template CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/animation') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/feature.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/magnify.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/slick-theme.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/lightbox.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('web/template_assets/css/vendor/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/animation.css') }}">
+    <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/feature.css') }}">
+    <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/magnify.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/slick-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/lightbox.css') }}">
+    <link rel="stylesheet" href="{{ asset('web/template_assets/css/style.css') }}">
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('web/css/app.css') }}" rel="stylesheet"> --}}
 
 </head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+<body class="active-light-mode">
+    <main id="app" class="page-wrapper">
 
-                    </ul>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+        <div class="header-transparent-with-topbar">
+            <div class="header-top-bar">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- <div class="col-lg-4 col-md-12 col-12">
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+                        </div> -->
+                        <div class="col-lg-12 col-md-12 col-12">
+                            <div class="header-right">
+                                <div class="address-content">
+                                    <p>
+                                        <i class="feather-map-pin"></i>
+                                        <span>1035 US Highway 46 East, Clifton, NJ 07013</span>
+                                    </p>
+                                    <p>
+                                        <i class="feather-phone"></i>
+                                        <span><a href="tel:(973) 956-1040">(973) 956-1040</a></span>
+                                    </p>
                                 </div>
-                            </li>
-                        @endguest
-                    </ul>
+                                <div class="social-icon-wrapper">
+                                    <ul class="social-icon social-default icon-naked">
+                                        <li>
+                                            <a href="https://web.facebook.com/Precision.Accounting.Intl?_rdc=1&_rdr"
+                                                target="_blank">
+                                                <i class="feather-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/IntlPrecision" target="_blank">
+                                                <i class="feather-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/channel/UCPB2_XDDen5BiL0ye_kvoeQ"
+                                                target="_blank">
+                                                <i class="feather-youtube"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/company/precision-accounting-llc-clifton-nj"
+                                                target="_blank">
+                                                <i class="feather-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="sms:(973) 304-5553" target="_blank">
+                                                <i class="feather-mail"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
 
 
+            <!-- Start Header Area  -->
+            <header class="rn-header header-default header-transparent header-sticky">
+                <div class="container position-relative">
+                    <div class="row align-items-center row--0">
+                        <div class="col-lg-3 col-md-6 col-4">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img class="logo-light"
+                                        src="{{ asset('web/template_assets/images/logo/logo.png') }}"
+                                        alt="Corporate Logo">
+                                    <img class="logo-dark"
+                                        src="{{ asset('web/template_assets/images/logo/logo-dark.png') }}"
+                                        alt="Corporate Logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-6 col-8 position-static">
+                            <div class="header-right">
+                                <nav class="mainmenu-nav d-none d-lg-block">
+                                    <ul class="mainmenu">
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li class="with-megamenu has-menu-child-item"><a href="#">Services</a>
+                                            <div class="rn-megamenu">
+                                                <div class="wrapper">
+                                                    <div class="row row--0">
+                                                        <div class="col-lg-4 single-mega-item">
+                                                            <ul class="mega-menu-item">
+                                                                <li><a href="#">Individuals Services</a></li>
+                                                                <li><a href="#">Tax Preparation Services</a></li>
+                                                                <li><a href="#">Tax Debt, and Tax Issues</a></li>
+                                                                <li><a href="#">Estate Planning</a></li>
+                                                                <li><a href="#">Retirement Planning</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-lg-4 single-mega-item">
+                                                            <ul class="mega-menu-item">
+                                                                <li><a href="#">Tax Services</a></li>
+                                                                <li><a href="#">Tax Preparation for Businesses</a>
+                                                                </li>
+                                                                <li><a href="#">Tax Planning</a></li>
+                                                                <li><a href="#">Estate and Trust Tax Services</a>
+                                                                </li>
+                                                                <li><a href="#">Tax Relief</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-lg-4 single-mega-item">
+                                                            <ul class="mega-menu-item">
+                                                                <li><a href="#">Bookkeeping Services</a></li>
+                                                                <li><a href="#">Payroll Services</a></li>
+                                                                <li><a href="#">Part-Time CFO Services</a></li>
+                                                                <li><a href="#">Non-Profit Organization
+                                                                        Services</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="has-droupdown has-menu-child-item"><a href="#">Tax Center</a>
+                                            <ul class="submenu">
+                                                <li><a href="track-your-refund.php">Track Your Refund</a></li>
+                                                <li><a href="tax-due-dates.php">Tax Due Dates</a></li>
+                                                <li><a href="tax-rates.php">Tax Rates</a></li>
+                                                <li><a href="tax-forms-and-publications.php">Tax Forms &amp;
+                                                        Publications</a></li>
+                                                <li><a href="record-retention-guide.php">Record Retention Guide</a>
+                                                </li>
+                                                <li><a href="state-tax-forms.php">State Tax Forms</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="/">Blog</a></li>
+                                        <li><a href="about.html">Contact</a></li>
+                                        <li><a href="contact.html">Resources</a></li>
+                                    </ul>
+                                </nav>
+                                <!-- Start Header Btn  -->
+                                <div class="header-btn"><a class="btn-default text-uppercase rounded-0"
+                                        target="_blank" href="#">Free Consulting</a></div>
+                                <!-- End Header Btn  -->
+
+                                <!-- Start Mobile-Menu-Bar -->
+                                <div class="mobile-menu-bar ml--5 d-block d-lg-none">
+                                    <div class="hamberger">
+                                        <button class="hamberger-button">
+                                            <i class="feather-menu"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Start Mobile-Menu-Bar -->
 
 
-    <--====================== Scripts ====================== -->
-    <script src="{{ asset("assets/js/vendor/modernizr.min.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/jquery.min.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/bootstrap.min.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/popper.min.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/waypoint.min.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/wow.min.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/counterup.min.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/feather.min.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/sal.min.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/masonry.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/imageloaded.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/magnify.min.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/lightbox.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/slick.min.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/easypie.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/text-type.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/jquery.style.swicher.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/js.cookie.js") }}"></script>
-    <script src="{{ asset("assets/js/vendor/jquery-one-page-nav.js") }}"></script>
+                                <div id="my_switcher" class="my_switcher">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript: void(0);" data-theme="light" class="setColor light">
+                                                <img class="sun-image"
+                                                    src="{{ asset('web/template_assets/images/icons/sun-01.svg') }}"
+                                                    alt="Sun images">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0);" data-theme="dark" class="setColor dark">
+                                                <img class="Victor Image"
+                                                    src="{{ asset('web/template_assets/images/icons/vector.svg') }}"
+                                                    alt="Vector Images">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- End Header Area  -->
+            <div class="popup-mobile-menu">
+                <div class="inner">
+                    <div class="header-top">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img class="logo-light"
+                                    src="{{ asset('web/template_assets/images/logo/logo.png') }}"
+                                    alt="Corporate Logo">
+                                <img class="logo-dark"
+                                    src="{{ asset('web/template_assets/images/logo/logo-dark.png') }}"
+                                    alt="Corporate Logo">
+                            </a>
+                        </div>
+                        <div class="close-menu">
+                            <button class="close-button">
+                                <i class="feather-x"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <ul class="mainmenu">
+
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="with-megamenu has-menu-child-item"><a href="#">Services</a>
+                            <div class="rn-megamenu">
+                                <div class="wrapper">
+                                    <div class="row row--0">
+                                        <div class="col-lg-4 single-mega-item">
+                                            <ul class="mega-menu-item">
+                                                <li><a href="#">Individuals Services</a></li>
+                                                <li><a href="#">Tax Preparation Services</a></li>
+                                                <li><a href="#">Tax Debt, and Tax Issues</a></li>
+                                                <li><a href="#">Estate Planning</a></li>
+                                                <li><a href="#">Retirement Planning</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-4 single-mega-item">
+                                            <ul class="mega-menu-item">
+                                                <li><a href="#">Tax Services</a></li>
+                                                <li><a href="#">Tax Preparation for Businesses</a></li>
+                                                <li><a href="#">Tax Planning</a></li>
+                                                <li><a href="#">Estate and Trust Tax Services</a></li>
+                                                <li><a href="#">Tax Relief</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-4 single-mega-item">
+                                            <ul class="mega-menu-item">
+                                                <li><a href="#">Bookkeeping Services</a></li>
+                                                <li><a href="#">Payroll Services</a></li>
+                                                <li><a href="#">Part-Time CFO Services</a></li>
+                                                <li><a href="#">Non-Profit Organization Services</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="has-droupdown has-menu-child-item"><a href="#">Tax Center</a>
+                            <ul class="submenu">
+                                <li><a href="track-your-refund.php">Track Your Refund</a></li>
+                                <li><a href="tax-due-dates.php">Tax Due Dates</a></li>
+                                <li><a href="tax-rates.php">Tax Rates</a></li>
+                                <li><a href="tax-forms-and-publications.php">Tax Forms &amp;
+                                        Publications</a></li>
+                                <li><a href="record-retention-guide.php">Record Retention Guide</a></li>
+                                <li><a href="state-tax-forms.php">State Tax Forms</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/">Blog</a></li>
+                        <li><a href="about.html">Contact</a></li>
+                        <li><a href="contact.html">Resources</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Start Theme Style  -->
+        <div>
+            <div class="rn-gradient-circle"></div>
+            <div class="rn-gradient-circle theme-pink"></div>
+        </div>
+        <!-- End Theme Style  -->
+
+
+
+
+        @yield('content')
+
+
+
+
+
+
+
+
+        <!-- Start Footer Area  -->
+        <footer class="rn-footer footer-style-default footer-style-1">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="rn-footer-widget">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img class="logo-light" src="{{ asset('web/template_assets/images/logo/logo.png') }}" 
+                                            alt="Corporate Logo">
+                                        <img class="logo-dark" src="{{ asset('web/template_assets/images/logo/logo-dark.png') }}"
+                                            alt="Corporate Logo">
+                                    </a>
+                                </div>
+                                <h5 class="text-big">For many years <span class="fw-bold">PRECISION ACCOUNTING</span>
+                                    INTL LLC has been helping individuals, families and small businesses in the
+                                    community prepare their taxes.</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                            <div class="rn-footer-widget">
+                                <h4 class="title">Quick Links</h4>
+                                <div class="inner">
+                                    <ul class="footer-link link-hover">
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="portfolio.html">Portfolio</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="service.html">Service</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                            <div class="rn-footer-widget">
+                                <h4 class="title">Contact Us</h4>
+                                <div class="inner">
+                                    <div class="footer-contact">
+                                        <div class="d-flex footer-contact-email">
+                                            <div class="pe-3 footer-contact-icon ">
+                                                <i class="feather-mail"></i>
+                                            </div>
+                                            <div class="footer-contact-text">
+                                                <span><a href="#">info@cpapai.com</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex footer-contact-address">
+                                            <div class="pe-3 footer-contact-icon">
+                                                <i class="feather-map"></i>
+                                            </div>
+                                            <div class="footer-contact-text">
+                                                <span><a href="https://g.page/PrecisionAccountingIntl?share"
+                                                        target="_blank">1035 US Highway 46 East, Clifton, NJ
+                                                        07013</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex footer-contact-phone">
+                                            <div class="pe-3 footer-contact-icon">
+                                                <i class="feather-phone"></i>
+                                            </div>
+                                            <div class="footer-contact-text">
+                                                <span><a href="tel:(973) 956-1040">(973) 956-1040</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex footer-contact-sms">
+                                            <div class="pe-3 footer-contact-icon">
+                                                <i class="feather-message-circle"></i>
+                                            </div>
+                                            <div class="footer-contact-text">
+                                                <span><a href="sms:(973) 304-5553">(973) 304-5553</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="rn-footer-widget">
+                                <h4 class="title pt-3 pt-md-0">Newsletter</h4>
+                                <div class="inner">
+                                    <h6 class="subtitle">Subscribe Our Newsletters To Get Updates & More</h6>
+                                    <form class="newsletter-form" action="#">
+                                        <div class="form-group">
+                                            <input type="email" placeholder="Enter Your Email Here">
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn-default" type="submit">Submit Now</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Start Copy Right Area  -->
+        <div class="copyright-area copyright-style-one">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-8 col-sm-12 col-12">
+                        <div class="copyright-left">
+                            <ul class="ft-menu link-hover">
+                                <li>
+                                    <a href="privacy-policy.html">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Terms And Condition</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-12 col-12">
+                        <div class="copyright-right text-center text-lg-end">
+                            <p class="copyright-text">
+                                © PRECISION ACCOUNTING
+                                <script>
+                                    const d = new Date();
+                                    let year = d.getFullYear();
+                                    document.write(year);
+                                </script>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Copy Right Area  -->
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+    <!-- ====================== Scripts ====================== -->
+    <script src="{{ asset('web/template_assets/js/vendor/modernizr.min.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/jquery.min.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/popper.min.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/waypoint.min.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/wow.min.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/counterup.min.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/feather.min.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/sal.min.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/masonry.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/imageloaded.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/magnify.min.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/lightbox.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/slick.min.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/easypie.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/text-type.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/jquery.style.swicher.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/js.cookie.js') }}"></script>
+    <script src="{{ asset('web/template_assets/js/vendor/jquery-one-page-nav.js') }}"></script>
     <!-- Main JS -->
-    <script src="{{ asset("assets/js/main.js") }}"></script>
+    <script src="{{ asset('web/template_assets/js/main.js') }}"></script>
 
     <!-- App Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    {{-- <script src="{{ asset('web/js/app.js') }}" defer></script> --}}
 
 
 </body>
+
 </html>
