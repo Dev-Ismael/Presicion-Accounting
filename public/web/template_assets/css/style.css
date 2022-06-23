@@ -12293,7 +12293,7 @@ Timeline Area
 }
 
 /*==========================
-    Contact Address 
+    Contact Address
 ============================*/
 .contact-form-1 .form-group input {
   height: 70px;
@@ -12311,7 +12311,7 @@ Timeline Area
 }
 
 /*-------------------
-    Address Area  
+    Address Area
 --------------------*/
 .rn-address {
   margin-top: 30px;
@@ -12322,6 +12322,7 @@ Timeline Area
   padding-bottom: 50px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   transition: 0.3s;
+  min-height: 100%;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .rn-address {

@@ -1,5 +1,5 @@
 /*==========================
-    Contact Address 
+    Contact Address
 ============================*/
 
 .contact-form-1 {
@@ -23,7 +23,7 @@
 }
 
 /*-------------------
-    Address Area  
+    Address Area
 --------------------*/
 .rn-address {
     margin-top: 30px;
@@ -34,7 +34,7 @@
     padding-bottom: 50px;
     box-shadow: 0 0 20px rgba(0,0,0,0.05);
     transition: 0.3s;
-
+    min-height: 100%;
     @media #{$lg-layout} {
         padding: 30px 20px;
     }
@@ -44,7 +44,7 @@
     @media #{$sm-layout} {
         padding: 30px 20px;
     }
-    
+
     .icon {
         color: var(--color-primary);
         border-radius: 100%;
@@ -73,7 +73,7 @@
                 font-size: 16px;
             }
             br {
-                
+
                 @media #{$lg-layout} {
                     display: none;
                 }

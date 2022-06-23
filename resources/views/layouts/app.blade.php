@@ -163,7 +163,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="/">Blog</a></li>
-                                        <li><a href="about.html">Contact</a></li>
+                                        <li><a href="{{ route("contact") }}">Contact</a></li>
                                         <li><a href="contact.html">Resources</a></li>
                                     </ul>
                                 </nav>
@@ -333,7 +333,7 @@
                                     <ul class="footer-link link-hover">
                                         <li><a href="about.html">About</a></li>
                                         <li><a href="portfolio.html">Portfolio</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="{{ route("contact") }}">Contact</a></li>
                                         <li><a href="service.html">Service</a></li>
                                     </ul>
                                 </div>
