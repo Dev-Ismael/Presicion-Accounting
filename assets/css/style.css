@@ -8882,7 +8882,7 @@ xclip
   align-items: center;
 }
 .header-default .logo a img {
-  max-height: 45px;
+  max-height: 70px;
 }
 .header-default .header-right {
   display: flex;
@@ -9985,7 +9985,7 @@ div.btn-default.rounded-player.sm-size {
   color: inherit;
 }
 .service.service__style--1 .content .title a:hover {
-  color: var(--color-primary);
+  color: var(--color-light-blue) !important;
 }
 .service.service__style--1:hover {
   transform: translateY(-10px);
@@ -10029,26 +10029,6 @@ div.btn-default.rounded-player.sm-size {
   box-shadow: none;
   padding: 20px 35px;
   margin-top: 25px;
-}
-@media only screen and (min-width: 1200px) and (max-width: 1599px) {
-  .service.service__style--1.icon-circle-style {
-    padding: 0px 10px;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .service.service__style--1.icon-circle-style {
-    padding: 0px 10px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .service.service__style--1.icon-circle-style {
-    padding: 0px 10px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .service.service__style--1.icon-circle-style {
-    padding: 0px 10px;
-  }
 }
 .service.service__style--1.icon-circle-style .icon {
   font-size: 39px;
@@ -11137,6 +11117,11 @@ div.btn-default.rounded-player.sm-size {
   background: linear-gradient(to right, var(--color-heavy-blue), var(--color-light-blue));
   border-radius: 100%;
   padding: 10px;
+}
+@media only screen and (max-width: 767px) {
+  .testimonial-style-two .thumbnail {
+    width: 120px !important;
+  }
 }
 .testimonial-style-two .thumbnail img {
   border-radius: 100%;

@@ -124,6 +124,9 @@
         background: linear-gradient(to right, var(--color-heavy-blue) , var(--color-light-blue));
         border-radius: 100%;
         padding: 10px;
+        @media #{$sm-layout} {
+            width: 120px !important;
+        }
         img {
             border-radius: 100%;
         }
