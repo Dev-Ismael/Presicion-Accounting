@@ -96,7 +96,7 @@
                     <div class="row align-items-center row--0">
                         <div class="col-lg-3 col-md-6 col-4">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="{{ route("home") }}">
                                     <img class="logo-light"
                                         src="{{ asset('web/template_assets/images/logo/logo.png') }}"
                                         alt="Corporate Logo">
@@ -118,30 +118,30 @@
                                                     <div class="row row--0">
                                                         <div class="col-lg-4 single-mega-item">
                                                             <ul class="mega-menu-item">
-                                                                <li><a href="#">Individuals Services</a></li>
-                                                                <li><a href="#">Tax Preparation Services</a></li>
-                                                                <li><a href="#">Tax Debt, and Tax Issues</a></li>
-                                                                <li><a href="#">Estate Planning</a></li>
-                                                                <li><a href="#">Retirement Planning</a></li>
+                                                                <li><a href="{{ route("service", "service-slug") }}">Individuals Services</a></li>
+                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Preparation Services</a></li>
+                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Debt, and Tax Issues</a></li>
+                                                                <li><a href="{{ route("service", "service-slug") }}">Estate Planning</a></li>
+                                                                <li><a href="{{ route("service", "service-slug") }}">Retirement Planning</a></li>
                                                             </ul>
                                                         </div>
                                                         <div class="col-lg-4 single-mega-item">
                                                             <ul class="mega-menu-item">
-                                                                <li><a href="#">Tax Services</a></li>
-                                                                <li><a href="#">Tax Preparation for Businesses</a>
+                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Services</a></li>
+                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Preparation for Businesses</a>
                                                                 </li>
-                                                                <li><a href="#">Tax Planning</a></li>
-                                                                <li><a href="#">Estate and Trust Tax Services</a>
+                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Planning</a></li>
+                                                                <li><a href="{{ route("service", "service-slug") }}">Estate and Trust Tax Services</a>
                                                                 </li>
-                                                                <li><a href="#">Tax Relief</a></li>
+                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Relief</a></li>
                                                             </ul>
                                                         </div>
                                                         <div class="col-lg-4 single-mega-item">
                                                             <ul class="mega-menu-item">
-                                                                <li><a href="#">Bookkeeping Services</a></li>
-                                                                <li><a href="#">Payroll Services</a></li>
-                                                                <li><a href="#">Part-Time CFO Services</a></li>
-                                                                <li><a href="#">Non-Profit Organization
+                                                                <li><a href="{{ route("service", "service-slug") }}">Bookkeeping Services</a></li>
+                                                                <li><a href="{{ route("service", "service-slug") }}">Payroll Services</a></li>
+                                                                <li><a href="{{ route("service", "service-slug") }}">Part-Time CFO Services</a></li>
+                                                                <li><a href="{{ route("service", "service-slug") }}">Non-Profit Organization
                                                                         Services</a>
                                                                 </li>
                                                             </ul>
@@ -164,7 +164,7 @@
                                         </li>
                                         <li><a href="{{ route("blog") }}">Blog</a></li>
                                         <li><a href="{{ route("contact") }}">Contact</a></li>
-                                        <li><a href="contact.html">Resources</a></li>
+                                        <li><a href="{{ route("resources") }}">Resources</a></li>
                                     </ul>
                                 </nav>
                                 <!-- Start Header Btn  -->
@@ -211,7 +211,7 @@
                 <div class="inner">
                     <div class="header-top">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="{{ route("home") }}">
                                 <img class="logo-light"
                                     src="{{ asset('web/template_assets/images/logo/logo.png') }}"
                                     alt="Corporate Logo">
@@ -236,28 +236,28 @@
                                     <div class="row row--0">
                                         <div class="col-lg-4 single-mega-item">
                                             <ul class="mega-menu-item">
-                                                <li><a href="#">Individuals Services</a></li>
-                                                <li><a href="#">Tax Preparation Services</a></li>
-                                                <li><a href="#">Tax Debt, and Tax Issues</a></li>
-                                                <li><a href="#">Estate Planning</a></li>
-                                                <li><a href="#">Retirement Planning</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Individuals Services</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Tax Preparation Services</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Tax Debt, and Tax Issues</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Estate Planning</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Retirement Planning</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-lg-4 single-mega-item">
                                             <ul class="mega-menu-item">
-                                                <li><a href="#">Tax Services</a></li>
-                                                <li><a href="#">Tax Preparation for Businesses</a></li>
-                                                <li><a href="#">Tax Planning</a></li>
-                                                <li><a href="#">Estate and Trust Tax Services</a></li>
-                                                <li><a href="#">Tax Relief</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Tax Services</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Tax Preparation for Businesses</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Tax Planning</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Estate and Trust Tax Services</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Tax Relief</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-lg-4 single-mega-item">
                                             <ul class="mega-menu-item">
-                                                <li><a href="#">Bookkeeping Services</a></li>
-                                                <li><a href="#">Payroll Services</a></li>
-                                                <li><a href="#">Part-Time CFO Services</a></li>
-                                                <li><a href="#">Non-Profit Organization Services</a>
+                                                <li><a href="{{ route("service", "service-slug") }}">Bookkeeping Services</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Payroll Services</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Part-Time CFO Services</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Non-Profit Organization Services</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -278,7 +278,7 @@
                         </li>
                         <li><a href="/">Blog</a></li>
                         <li><a href="about.html">Contact</a></li>
-                        <li><a href="contact.html">Resources</a></li>
+                        <li><a  href="{{ route("resources") }}">Resources</a></li>
                     </ul>
 
                 </div>
@@ -314,7 +314,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="rn-footer-widget">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="{{ route("home") }}">
                                         <img class="logo-light" src="{{ asset('web/template_assets/images/logo/logo.png') }}"
                                             alt="Corporate Logo">
                                         <img class="logo-dark" src="{{ asset('web/template_assets/images/logo/logo-dark.png') }}"

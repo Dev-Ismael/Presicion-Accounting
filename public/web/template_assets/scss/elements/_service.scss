@@ -1,5 +1,5 @@
 /*--------------------
-    Service Styles  
+    Service Styles
 ----------------------*/
 .service {
     &.service__style--1 {
@@ -84,7 +84,7 @@
             @media #{$sm-layout} {
                 padding: 30px 20px;
             }
-          
+
             .icon {
                 justify-content: left;
             }
@@ -198,6 +198,7 @@
         z-index: 2;
         border-radius: 10px;
         margin-top: 30px;
+        min-height: 100%;
 
         @media #{$laptop-device} {
             padding: 10px 28px;
@@ -238,7 +239,7 @@
         }
         &:hover{
             transform: translateY(-5px);
-            box-shadow: 0 0 39px rgba(255, 101, 80, 0.1);
+            box-shadow: 0 0 39px rgb(7 90 138 / 43%);
         }
     }
 }
@@ -298,7 +299,7 @@
             }
         }
 
-        
+
     }
 
     &>[class*=col] {
@@ -310,7 +311,7 @@
                             background-color: var(--color-secondary-darker);
                         }
                     }
-                    
+
                 }
             }
         }
@@ -323,7 +324,7 @@
                             background-color: var(--color-tertiary-darker);
                         }
                     }
-                    
+
                 }
             }
         }
@@ -336,7 +337,7 @@
                             background-color: var(--color-pink-darker);
                         }
                     }
-                    
+
                 }
             }
         }
@@ -349,7 +350,7 @@
                             background-color: var(--color-primary-darker);
                         }
                     }
-                    
+
                 }
             }
         }
@@ -362,7 +363,7 @@
                             background-color: var(--color-tertiary-darker);
                         }
                     }
-                    
+
                 }
             }
         }

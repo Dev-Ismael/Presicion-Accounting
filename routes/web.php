@@ -23,3 +23,5 @@ Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog');
 Route::get('/blog/{slug}', [App\Http\Controllers\BlogController::class, 'post'])->name('post');
+Route::get('/resources', [App\Http\Controllers\ResourceController::class, 'index'])->name('resources');
+Route::get('/service/{slug}', [App\Http\Controllers\ServiceController::class, 'index'])->name('service');
