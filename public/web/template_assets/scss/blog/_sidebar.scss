@@ -1,4 +1,4 @@
-// Blog Search 
+// Blog Search
 .blog-search {
     position: relative;
     input {
@@ -13,7 +13,7 @@
         top: 50%;
         transform: translateY(-50%);
         border: 0 none;
-        background: var(--color-primary-light);
+        background: var(--color-heavy-blue);
         height: 47px;
         padding: 0 20px;
         border-radius: 3px;
@@ -83,7 +83,7 @@
     }
 
 
-     // Blog List Style 
+     // Blog List Style
     ul {
         padding-left: 0;
         margin-bottom: -10px;
@@ -110,7 +110,7 @@
         }
     }
 
-    
+
     &.widget_categories {
         ul {
             li {
@@ -249,9 +249,9 @@
         padding: 0 20px;
         border-radius: 3px;
         &:hover {
-            background: var(--color-primary);
+            background: var(--color-heavy-blue);
             color: #ffffff;
-            border-color: var(--color-primary);
+            border-color: var(--color-heavy-blue);
         }
     }
 }

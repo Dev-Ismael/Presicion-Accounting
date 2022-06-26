@@ -16,4 +16,11 @@ class BlogController extends Controller
     {
         return view('blog');
     }
+
+    public function post()
+    {
+        return view('post');
+    }
+
+
 }

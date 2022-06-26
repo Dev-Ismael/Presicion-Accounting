@@ -211,7 +211,7 @@
                             data-sal-duration="700">
                             <div class="rn-card box-card-style-default">
                                 <div class="inner">
-                                    <div class="thumbnail"><a class="image" href="blog-details.html"><img
+                                    <div class="thumbnail"><a class="image" href="{{ route('post','post-slug') }}"><img
                                                 class="w-100"  src="{{ asset('web/template_assets/images/blog/blog-01.jfif') }}"
                                                 alt="Blog Image"></a>
                                     </div>
@@ -221,7 +221,7 @@
                                             <li class="separator">/</li>
                                             <li>10 Dec 2021</li>
                                         </ul>
-                                        <h4 class="title"><a href="blog-details.html">Best Corporate Tips You
+                                        <h4 class="title"><a href="{{ route('post','post-slug') }}">Best Corporate Tips You
                                                 Will
                                                 Read This Year.</a></h4>
                                     </div>
@@ -232,7 +232,7 @@
                             data-sal-duration="700" data-sal-delay="100">
                             <div class="rn-card box-card-style-default">
                                 <div class="inner">
-                                    <div class="thumbnail"><a class="image" href="blog-details.html"><img
+                                    <div class="thumbnail"><a class="image" href="{{ route('post','post-slug') }}"><img
                                                 class="w-100"  src="{{ asset('web/template_assets/images/blog/blog-02.jfif') }}"
                                                 alt="Blog Image"></a>
                                     </div>
@@ -242,7 +242,7 @@
                                             <li class="separator">/</li>
                                             <li>30 Nov 2021</li>
                                         </ul>
-                                        <h4 class="title"><a href="blog-details.html">Should Fixing Corporate
+                                        <h4 class="title"><a href="{{ route('post','post-slug') }}">Should Fixing Corporate
                                                 Take
                                                 100 Steps.</a></h4>
                                     </div>
@@ -254,7 +254,7 @@
                             <div class="rn-card box-card-style-default">
                                 <div class="inner">
                                     <div class="thumbnail">
-                                        <a class="image" href="blog-details.html">
+                                        <a class="image" href="{{ route('post','post-slug') }}">
                                             <img class="w-100"  src="{{ asset('web/template_assets/images/blog/blog-03.jfif') }}" alt="Blog Image">
                                         </a>
                                     </div>
@@ -264,7 +264,7 @@
                                             <li class="separator">/</li>
                                             <li>12 Oct 2021</li>
                                         </ul>
-                                        <h4 class="title"><a href="blog-details.html">The Next 100 Things To
+                                        <h4 class="title"><a href="{{ route('post','post-slug') }}">The Next 100 Things To
                                                 Immediately Do About.</a></h4>
                                     </div>
                                 </div>
@@ -274,7 +274,7 @@
                             data-sal-duration="700" data-sal-delay="300">
                             <div class="rn-card box-card-style-default">
                                 <div class="inner">
-                                    <div class="thumbnail"><a class="image" href="blog-details.html"><img
+                                    <div class="thumbnail"><a class="image" href="{{ route('post','post-slug') }}"><img
                                                 class="w-100"  src="{{ asset('web/template_assets/images/blog/blog-04.jfif') }}"
                                                 alt="Blog Image"></a>
                                     </div>
@@ -284,7 +284,7 @@
                                             <li class="separator">/</li>
                                             <li>25 Aug 2021</li>
                                         </ul>
-                                        <h4 class="title"><a href="blog-details.html">Top 5 Lessons About
+                                        <h4 class="title"><a href="{{ route('post','post-slug') }}">Top 5 Lessons About
                                                 Corporate To Learn Before.</a></h4>
                                     </div>
                                 </div>
@@ -294,7 +294,7 @@
                             data-sal-duration="700" data-sal-delay="100">
                             <div class="rn-card box-card-style-default">
                                 <div class="inner">
-                                    <div class="thumbnail"><a class="image" href="blog-details.html"><img
+                                    <div class="thumbnail"><a class="image" href="{{ route('post','post-slug') }}"><img
                                                 class="w-100"  src="{{ asset('web/template_assets/images/blog/blog-05.jfif') }}"
                                                 alt="Blog Image"></a>
                                     </div>
@@ -304,7 +304,7 @@
                                             <li class="separator">/</li>
                                             <li>23 Jul 2021</li>
                                         </ul>
-                                        <h4 class="title"><a href="blog-details.html">Master The Art Of
+                                        <h4 class="title"><a href="{{ route('post','post-slug') }}">Master The Art Of
                                                 Corporate
                                                 With These 5 Tips.</a></h4>
                                     </div>
@@ -315,7 +315,7 @@
                             data-sal-duration="700" data-sal-delay="200">
                             <div class="rn-card box-card-style-default">
                                 <div class="inner">
-                                    <div class="thumbnail"><a class="image" href="blog-details.html"><img
+                                    <div class="thumbnail"><a class="image" href="{{ route('post','post-slug') }}"><img
                                                 class="w-100"  src="{{ asset('web/template_assets/images/blog/blog-06.jfif') }}"
                                                 alt="Blog Image"></a>
                                     </div>
@@ -325,7 +325,7 @@
                                             <li class="separator">/</li>
                                             <li>30 Jun 2021</li>
                                         </ul>
-                                        <h4 class="title"><a href="blog-details.html">Corporate Is Your Worst
+                                        <h4 class="title"><a href="{{ route('post','post-slug') }}">Corporate Is Your Worst
                                                 Enemy. 5 Ways To Defeat It.</a></h4>
                                     </div>
                                 </div>
