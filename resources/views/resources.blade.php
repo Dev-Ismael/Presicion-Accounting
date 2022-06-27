@@ -18,8 +18,8 @@
 
 
 
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-duration="700">
-                        <div class="service service__style--2 text-center">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12  mt-3sal-animate" data-sal="slide-up" data-sal-duration="700">
+                        <div class="service service__style--2 text-center pt-5">
                             <div class="inner">
                                 <div class="image">
                                     <img src="{{ asset("web/template_assets/images/resources/resources-1.jpg") }}" alt="card Images">
@@ -40,8 +40,8 @@
 
 
 
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-duration="700">
-                        <div class="service service__style--2 text-center">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12  mt-3sal-animate" data-sal="slide-up" data-sal-duration="700">
+                        <div class="service service__style--2 text-center pt-5">
                             <div class="inner">
                                 <div class="image">
                                     <img src="{{ asset("web/template_assets/images/resources/resources-2.jpg") }}" alt="card Images">
@@ -63,8 +63,8 @@
 
 
 
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-duration="700">
-                        <div class="service service__style--2 text-center">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12  mt-3sal-animate" data-sal="slide-up" data-sal-duration="700">
+                        <div class="service service__style--2 text-center pt-5">
                             <div class="inner">
                                 <div class="image">
                                     <img src="{{ asset("web/template_assets/images/resources/resources-3.jpg") }}" alt="card Images">
@@ -89,8 +89,8 @@
 
 
 
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-duration="700">
-                        <div class="service service__style--2 text-center">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12  mt-3sal-animate" data-sal="slide-up" data-sal-duration="700">
+                        <div class="service service__style--2 text-center pt-5">
                             <div class="inner">
                                 <div class="image">
                                     <img src="{{ asset("web/template_assets/images/resources/resources-4.png") }}" alt="card Images">
@@ -113,8 +113,8 @@
 
 
 
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-duration="700">
-                        <div class="service service__style--2 text-center">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12  mt-3sal-animate" data-sal="slide-up" data-sal-duration="700">
+                        <div class="service service__style--2 text-center pt-5">
                             <div class="inner">
                                 <div class="image">
                                     <img src="{{ asset("web/template_assets/images/resources/resources-5.png") }}" alt="card Images">
@@ -139,8 +139,8 @@
 
 
 
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-duration="700">
-                        <div class="service service__style--2 text-center">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12  mt-3sal-animate" data-sal="slide-up" data-sal-duration="700">
+                        <div class="service service__style--2 text-center pt-5">
                             <div class="inner">
                                 <div class="image">
                                     <img src="{{ asset("web/template_assets/images/resources/resources-6.jpg") }}" alt="card Images">

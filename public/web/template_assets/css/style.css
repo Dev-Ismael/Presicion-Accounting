@@ -1098,6 +1098,13 @@ All Extend Here
   background-position: center center;
 }
 
+@media (max-width: 767.98px) {
+  .bg_image, .bgImagePosition {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 75%;
+  }
+}
 /*----------------------
     Animation Css  
 -----------------------*/
@@ -7579,7 +7586,7 @@ textarea:-ms-input-placeholder {
   padding-right: 100px !important;
 }
 
-/*======================== 
+/*========================
     Common Style Css
 ==========================*/
 /* scrollbar */
@@ -10650,11 +10657,16 @@ div.btn-default.rounded-player.sm-size {
 }
 
 /*----------------------
-    Team Style  
+    Team Style
 -------------------------*/
 .rn-box-card,
 .team-style-default {
   margin-top: 75px;
+}
+.rn-box-card.rn-team,
+.team-style-default.rn-team {
+  display: grid;
+  height: 80%;
 }
 .rn-box-card .inner,
 .team-style-default .inner {
@@ -10662,6 +10674,7 @@ div.btn-default.rounded-player.sm-size {
   -webkit-backdrop-filter: blur(4px) opacity(0.95);
   backdrop-filter: blur(4px) opacity(0.95);
   border-radius: var(--radius-big);
+  min-height: inherit;
 }
 .rn-box-card .inner .thumbnail,
 .team-style-default .inner .thumbnail {
@@ -10754,7 +10767,7 @@ div.btn-default.rounded-player.sm-size {
 }
 
 /*---------------------
-    Team Style Two  
+    Team Style Two
 -----------------------*/
 .team-style-two .inner .thumbnail img {
   width: 100%;
@@ -10797,7 +10810,7 @@ div.btn-default.rounded-player.sm-size {
 }
 
 /*---------------------
-    Team Style Three  
+    Team Style Three
 -----------------------*/
 .team-style-three .inner {
   position: relative;

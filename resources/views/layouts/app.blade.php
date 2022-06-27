@@ -91,7 +91,7 @@
 
 
             <!-- Start Header Area  -->
-            <header class="rn-header header-default header-transparent header-sticky">
+            <header class="rn-header header-default header-transparent header-sticky nav-white">
                 <div class="container position-relative">
                     <div class="row align-items-center row--0">
                         <div class="col-lg-3 col-md-6 col-4">
@@ -152,14 +152,14 @@
                                         </li>
                                         <li class="has-droupdown has-menu-child-item"><a href="#">Tax Center</a>
                                             <ul class="submenu">
-                                                <li><a href="track-your-refund.php">Track Your Refund</a></li>
-                                                <li><a href="tax-due-dates.php">Tax Due Dates</a></li>
-                                                <li><a href="tax-rates.php">Tax Rates</a></li>
-                                                <li><a href="tax-forms-and-publications.php">Tax Forms &amp;
+                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Track Your Refund</a></li>
+                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Tax Due Dates</a></li>
+                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Tax Rates</a></li>
+                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Tax Forms &amp;
                                                         Publications</a></li>
-                                                <li><a href="record-retention-guide.php">Record Retention Guide</a>
+                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Record Retention Guide</a>
                                                 </li>
-                                                <li><a href="state-tax-forms.php">State Tax Forms</a></li>
+                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">State Tax Forms</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="{{ route("blog") }}">Blog</a></li>
@@ -228,8 +228,8 @@
                     </div>
                     <ul class="mainmenu">
 
-                        <li><a href="/">Home</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="{{ route("home") }}">Home</a></li>
+                        <li><a href="{{ route("about") }}">About</a></li>
                         <li class="with-megamenu has-menu-child-item"><a href="#">Services</a>
                             <div class="rn-megamenu">
                                 <div class="wrapper">
@@ -267,17 +267,17 @@
                         </li>
                         <li class="has-droupdown has-menu-child-item"><a href="#">Tax Center</a>
                             <ul class="submenu">
-                                <li><a href="track-your-refund.php">Track Your Refund</a></li>
-                                <li><a href="tax-due-dates.php">Tax Due Dates</a></li>
-                                <li><a href="tax-rates.php">Tax Rates</a></li>
-                                <li><a href="tax-forms-and-publications.php">Tax Forms &amp;
+                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Track Your Refund</a></li>
+                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Tax Due Dates</a></li>
+                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Tax Rates</a></li>
+                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Tax Forms &amp;
                                         Publications</a></li>
-                                <li><a href="record-retention-guide.php">Record Retention Guide</a></li>
-                                <li><a href="state-tax-forms.php">State Tax Forms</a></li>
+                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Record Retention Guide</a></li>
+                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">State Tax Forms</a></li>
                             </ul>
                         </li>
-                        <li><a href="/">Blog</a></li>
-                        <li><a href="about.html">Contact</a></li>
+                        <li><a href="{{ route("blog") }}">Blog</a></li>
+                        <li><a href="{{ route("contact") }}">Contact</a></li>
                         <li><a  href="{{ route("resources") }}">Resources</a></li>
                     </ul>
 
@@ -311,7 +311,7 @@
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="rn-footer-widget">
                                 <div class="logo">
                                     <a href="{{ route("home") }}">
@@ -326,7 +326,7 @@
                                     community prepare their taxes.</h5>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                        <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
                             <div class="rn-footer-widget">
                                 <h4 class="title">Quick Links</h4>
                                 <div class="inner">
@@ -339,7 +339,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                        <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 col-12">
                             <div class="rn-footer-widget">
                                 <h4 class="title">Contact Us</h4>
                                 <div class="inner">
@@ -382,7 +382,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                        <div class="col-xl-4 col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="rn-footer-widget">
                                 <h4 class="title pt-3 pt-md-0">Newsletter</h4>
                                 <div class="inner">

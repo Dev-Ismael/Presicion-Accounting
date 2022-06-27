@@ -19,7 +19,7 @@
                 <div class="col-lg-12">
                     <div class="rn-contact-address mt_dec--30">
                         <div class="row">
-                            <div class="col-lg-4 col-md-6 col-12">
+                            <div class="col-lg-4 col-md-6 col-12 mt-3">
                                 <div class="rn-address">
                                     <div class="icon">
                                         <i class="feather-headphones"></i>
@@ -31,7 +31,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-12">
+                            <div class="col-lg-4 col-md-6 col-12  mt-3">
                                 <div class="rn-address">
                                     <div class="icon">
                                         <i class="feather-mail"></i>
@@ -42,7 +42,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-12">
+                            <div class="col-lg-4 col-md-6 col-12  mt-3">
                                 <div class="rn-address">
                                     <div class="icon">
                                         <i class="feather-map-pin"></i>

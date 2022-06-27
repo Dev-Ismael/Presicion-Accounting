@@ -37,10 +37,10 @@
 
         menuCurrentLink: function () {
             var currentPage = location.pathname.split("/"),
-            current = currentPage[currentPage.length-1];
-            $('.mainmenu li a').each(function(){
+                current = currentPage[currentPage.length - 1];
+            $('.mainmenu li a').each(function () {
                 var $this = $(this);
-                if($this.attr('href') === current){
+                if ($this.attr('href') === current) {
                     $this.addClass('active');
                     $this.parents('.has-menu-child-item').addClass('menu-item-open')
                 }
@@ -87,7 +87,7 @@
                 });
             });
         },
-        
+
 
 
         masonryActivation: function name(params) {
@@ -158,8 +158,26 @@
                 slidesToScroll: 1,
                 dots: true,
                 arrows: true,
+                infinite: true,
                 adaptiveHeight: true,
                 cssEase: 'linear',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ],
                 prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
                 nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>'
             });
@@ -185,7 +203,7 @@
                 cssEase: 'linear',
                 responsive: [
                     {
-                      breakpoint: 769,
+                        breakpoint: 769,
                         settings: {
                             slidesToShow: 2,
                             slidesToScroll: 2
@@ -198,7 +216,7 @@
                             slidesToScroll: 1
                         }
                     }
-                  ]
+                ]
             });
 
             $('.brand-carousel-activation').not('.slick-initialized').slick({
@@ -213,7 +231,7 @@
                 nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
                 responsive: [
                     {
-                      breakpoint: 769,
+                        breakpoint: 769,
                         settings: {
                             slidesToShow: 4,
                             slidesToScroll: 2
@@ -231,7 +249,7 @@
                             slidesToShow: 2,
                         }
                     },
-                  ]
+                ]
             });
 
             $('.brand-carousel-init').not('.slick-initialized').slick({
@@ -246,7 +264,7 @@
                 nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
                 responsive: [
                     {
-                      breakpoint: 769,
+                        breakpoint: 769,
                         settings: {
                             slidesToShow: 4,
                             slidesToScroll: 2
@@ -264,7 +282,7 @@
                             slidesToShow: 2,
                         }
                     },
-                  ]
+                ]
             });
         },
 
@@ -340,36 +358,36 @@
 
         contactForm: function () {
             $('.rwt-dynamic-form').on('submit', function (e) {
-				e.preventDefault();
-				var _self = $(this);
-				var __selector = _self.closest('input,textarea');
-				_self.closest('div').find('input,textarea').removeAttr('style');
-				_self.find('.error-msg').remove();
-				_self.closest('div').find('button[type="submit"]').attr('disabled', 'disabled');
-				var data = $(this).serialize();
-				$.ajax({
-					url: 'mail.php',
-					type: "post",
-					dataType: 'json',
-					data: data,
-					success: function (data) {
-						_self.closest('div').find('button[type="submit"]').removeAttr('disabled');
-						if (data.code == false) {
-							_self.closest('div').find('[name="' + data.field + '"]');
-							_self.find('.rn-btn').after('<div class="error-msg"><p>*' + data.err + '</p></div>');
-						} else {
-							$('.error-msg').hide();
-							$('.form-group').removeClass('focused');
-							_self.find('.rn-btn').after('<div class="success-msg"><p>' + data.success + '</p></div>');
-							_self.closest('div').find('input,textarea').val('');
+                e.preventDefault();
+                var _self = $(this);
+                var __selector = _self.closest('input,textarea');
+                _self.closest('div').find('input,textarea').removeAttr('style');
+                _self.find('.error-msg').remove();
+                _self.closest('div').find('button[type="submit"]').attr('disabled', 'disabled');
+                var data = $(this).serialize();
+                $.ajax({
+                    url: 'mail.php',
+                    type: "post",
+                    dataType: 'json',
+                    data: data,
+                    success: function (data) {
+                        _self.closest('div').find('button[type="submit"]').removeAttr('disabled');
+                        if (data.code == false) {
+                            _self.closest('div').find('[name="' + data.field + '"]');
+                            _self.find('.rn-btn').after('<div class="error-msg"><p>*' + data.err + '</p></div>');
+                        } else {
+                            $('.error-msg').hide();
+                            $('.form-group').removeClass('focused');
+                            _self.find('.rn-btn').after('<div class="success-msg"><p>' + data.success + '</p></div>');
+                            _self.closest('div').find('input,textarea').val('');
 
-							setTimeout(function () {
-								$('.success-msg').fadeOut('slow');
-							}, 5000);
-						}
-					}
-				});
-			});
+                            setTimeout(function () {
+                                $('.success-msg').fadeOut('slow');
+                            }, 5000);
+                        }
+                    }
+                });
+            });
         },
 
         onePageNav: function () {
@@ -383,7 +401,7 @@
             });
         },
 
-        
+
 
     }
     doobJs.i();

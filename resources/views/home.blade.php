@@ -483,7 +483,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="order-1 d-md-flex justify-content-center order-md-2 col-lg-2 col-md-4">
+                        <div class="order-1 d-flex justify-content-center order-md-2 col-lg-2 col-md-4">
                             <div class="thumbnail"><img class="w-100"  src="{{ asset('web/template_assets/images/testimonial/mthumb.png') }}"
                                     alt="Corporate Template"></div>
                         </div>
@@ -518,7 +518,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="order-1 d-md-flex justify-content-center order-md-2 col-lg-2 col-md-4">
+                        <div class="order-1 d-flex justify-content-center order-md-2 col-lg-2 col-md-4">
                             <div class="thumbnail"><img class="w-100"  src="{{ asset('web/template_assets/images/testimonial/mthumb.png') }}"
                                     alt="Corporate Template"></div>
                         </div>
@@ -547,7 +547,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="order-1 d-md-flex justify-content-center order-md-2 col-lg-2 col-md-4">
+                        <div class="order-1 d-flex justify-content-center order-md-2 col-lg-2 col-md-4">
                             <div class="thumbnail"><img class="w-100"  src="{{ asset('web/template_assets/images/testimonial/mthumb.png') }}"
                                     alt="Corporate Template"></div>
                         </div>
@@ -779,7 +779,9 @@
                                     <h6 class="subtitle theme-gradient">Accountant</h6>
                                     <span class="team-form">
                                         <i class="feather-map-pin"></i>
-                                        <span class="location">CO Miego, AD,USA</span>
+                                        <span class="location">
+                                            CO Miego, AD,USA
+                                        </span>
                                     </span>
                                 </div>
                             </div>

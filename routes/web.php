@@ -25,3 +25,4 @@ Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name
 Route::get('/blog/{slug}', [App\Http\Controllers\BlogController::class, 'post'])->name('post');
 Route::get('/resources', [App\Http\Controllers\ResourceController::class, 'index'])->name('resources');
 Route::get('/service/{slug}', [App\Http\Controllers\ServiceController::class, 'index'])->name('service');
+Route::get('/tax_center/{slug}', [App\Http\Controllers\TaxcenterController::class, 'index'])->name('tax_center');
