@@ -26,3 +26,20 @@ Route::get('/blog/{slug}', [App\Http\Controllers\BlogController::class, 'post'])
 Route::get('/resources', [App\Http\Controllers\ResourceController::class, 'index'])->name('resources');
 Route::get('/service/{slug}', [App\Http\Controllers\ServiceController::class, 'index'])->name('service');
 Route::get('/tax_center/{slug}', [App\Http\Controllers\TaxcenterController::class, 'index'])->name('tax_center');
+
+/*===========================================================================
+========== Admin Routes =====================================================
+===========================================================================*/
+
+Route::group([ "prefix" => "admin" , 'middleware'=> 'admin' , "as" => "admin." ] , function(){
+
+
+    // Posts
+    Route::get('posts/perPage/{num}' , [App\Http\Controllers\Admin\PostController::class, 'perPage'])->name("posts.perPage");
+    Route::post('posts/search' , [App\Http\Controllers\Admin\PostController::class, 'search'])->name("posts.search");
+    Route::post('posts/multiAction' , [App\Http\Controllers\Admin\PostController::class, 'multiAction'])->name("posts.multiAction");
+    Route::resource('posts', App\Http\Controllers\Admin\PostController::class);
+    Route::get('posts/destroy/{id}' , [App\Http\Controllers\Admin\PostController::class, 'destroy'] )->name("posts.destroy");
+
+
+});
