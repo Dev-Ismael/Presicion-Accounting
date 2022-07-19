@@ -31,7 +31,7 @@ Route::get('/tax_center/{slug}', [App\Http\Controllers\TaxcenterController::clas
 ========== Admin Routes =====================================================
 ===========================================================================*/
 
-Route::group([ "prefix" => "admin" ,  "as" => "admin." ] , function(){
+Route::group([ "prefix" => "admin" , 'middleware' => "admin" , "as" => "admin." ] , function(){
 
 
     // Dashboard
