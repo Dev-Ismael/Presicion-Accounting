@@ -13,7 +13,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('web/template_assets/images/favicon.png') }}">
 
-    <!-- Template CSS -->
+    <!-- Styles CSS -->
     <link rel="stylesheet" href="{{ asset('web/template_assets/css/vendor/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/animation.css') }}">
     <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/feature.css') }}">
@@ -22,8 +22,6 @@
     <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/slick-theme.css') }}">
     <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/lightbox.css') }}">
     <link rel="stylesheet" href="{{ asset('web/template_assets/css/style.css') }}">
-    <!-- Styles -->
-    {{-- <link href="{{ asset('web/css/app.css') }}" rel="stylesheet"> --}}
 
 </head>
 
