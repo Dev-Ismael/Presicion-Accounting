@@ -4,14 +4,14 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Post;
-use App\Http\Requests\Post\StorePostRequest;
-use App\Http\Requests\Post\UpdatePostRequest;
+use App\Models\Article;
+use App\Http\Requests\Article\StorePostRequest;
+use App\Http\Requests\Article\UpdatePostRequest;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
 
-class PostController extends Controller
+class ArticleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,8 +21,8 @@ class PostController extends Controller
     public function perPage( $num=10 )
     {
         // Dynamic pagination
-        $posts = Post::orderBy('id','desc')->paginate( $num );
-        return view("admin.posts.index",compact("posts"));
+        $articles = Article::orderBy('id','desc')->paginate( $num );
+        return view("admin.articles.index",compact("articles"));
     }
 
 
@@ -33,8 +33,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('id','desc')->paginate( 10 );
-        return view("admin.posts.index",compact("posts"));
+        $articles = Article::orderBy('id','desc')->paginate( 10 );
+        return view("admin.articles.index",compact("articles"));
     }
 
     /**
@@ -44,7 +44,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view("admin.posts.create");
+        return view("admin.articles.create");
     }
 
     /**
@@ -62,12 +62,12 @@ class PostController extends Controller
 
         // Store in DB
         try {
-            $post = Post::create( $requestData );
-                return redirect() -> route("admin.posts.index") -> with( [ "success" => " Post added successfully"] ) ;
-            if(!$post)
-                return redirect() -> route("admin.posts.index") -> with( [ "failed" => "Error at added opration"] ) ;
+            $article = Article::create( $requestData );
+                return redirect() -> route("admin.articles.index") -> with( [ "success" => " Article added successfully"] ) ;
+            if(!$article)
+                return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at added opration"] ) ;
         } catch (\Exception $e) {
-            return redirect() -> route("admin.posts.index") -> with( [ "failed" => "Error at added opration"] ) ;
+            return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at added opration"] ) ;
         }
 
     }
@@ -81,8 +81,8 @@ class PostController extends Controller
     public function show($id)
     {
         // find id in Db With Error 404
-        $post = Post::findOrFail($id);
-        return view("admin.posts.show" , compact("post") ) ;
+        $article = Article::findOrFail($id);
+        return view("admin.articles.show" , compact("article") ) ;
     }
 
     /**
@@ -94,8 +94,8 @@ class PostController extends Controller
     public function edit($id)
     {
         // find id in Db With Error 404
-        $post = Post::findOrFail($id);
-        return view("admin.posts.edit" , compact("post") ) ;
+        $article = Article::findOrFail($id);
+        return view("admin.articles.edit" , compact("article") ) ;
     }
 
     /**
@@ -108,24 +108,24 @@ class PostController extends Controller
     public function update(UpdatePostRequest $request, $id)
     {
         // find id in Db With Error 404
-        $post = Post::findOrFail($id);
+        $article = Article::findOrFail($id);
         $requestData = $request->all();
 
         // Hash Password
         if( $requestData['password'] == '' ){
-            $requestData['password'] = $post->password;
+            $requestData['password'] = $article->password;
         }else{
             $requestData['password'] = Hash::make($request->password);
         }
 
         // Update Record in DB
         try {
-            $update = $post-> update( $requestData );
-                return redirect() -> route("admin.posts.index") -> with( [ "success" => " Post updated successfully"] ) ;
+            $update = $article-> update( $requestData );
+                return redirect() -> route("admin.articles.index") -> with( [ "success" => " Article updated successfully"] ) ;
             if(!$update)
-                return redirect() -> route("admin.posts.index") -> with( [ "failed" => "Error at update opration"] ) ;
+                return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at update opration"] ) ;
         } catch (\Exception $e) {
-            return redirect() -> route("admin.posts.index") -> with( [ "failed" => "Error at update opration"] ) ;
+            return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at update opration"] ) ;
         }
     }
 
@@ -138,16 +138,16 @@ class PostController extends Controller
     public function destroy($id)
     {
         // find id in Db With Error 404
-        $post = Post::findOrFail($id);
+        $article = Article::findOrFail($id);
 
         // Delete Record from DB
         try {
-            $delete = $post->delete();
-                return redirect() -> route("admin.posts.index") -> with( [ "success" => " Post deleted successfully"] ) ;
+            $delete = $article->delete();
+                return redirect() -> route("admin.articles.index") -> with( [ "success" => " Article deleted successfully"] ) ;
             if(!$delete)
-                return redirect() -> route("admin.posts.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+                return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at delete opration"] ) ;
         } catch (\Exception $e) {
-            return redirect() -> route("admin.posts.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+            return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at delete opration"] ) ;
         }
     }
 
@@ -174,12 +174,12 @@ class PostController extends Controller
         // If Action is Delete
         if( $request->action == "delete" ){
             try {
-                $delete = Post::destroy( $request->id );
-                    return redirect() -> route("admin.posts.index") -> with( [ "success" => " Posts deleted successfully"] ) ;
+                $delete = Article::destroy( $request->id );
+                    return redirect() -> route("admin.articles.index") -> with( [ "success" => " Articles deleted successfully"] ) ;
                 if(!$delete)
-                    return redirect() -> route("admin.posts.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+                    return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at delete opration"] ) ;
             } catch (\Exception $e) {
-                return redirect() -> route("admin.posts.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+                return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at delete opration"] ) ;
             }
         }
 

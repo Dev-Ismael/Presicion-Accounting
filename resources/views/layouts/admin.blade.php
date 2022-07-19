@@ -120,6 +120,15 @@
                             <span class="sidebar-text">Dashboard</span>
                         </a>
                     </li>
+                    <li class="nav-item ">
+                        <a href="{{ route('admin.article.index') }}"
+                            class="nav-link {{ Request::is('*/articles*') ? 'active' : '' }}">
+                            <span class="sidebar-icon">
+                                <i class="fa-solid fa-file-lines"></i>
+                            </span>
+                            <span class="sidebar-text">Articles</span>
+                        </a>
+                    </li>
                     {{-- <li class="nav-item ">
                         <a href="#"
                             class="nav-link {{ Request::is('*/users*') ? 'active' : '' }}">
@@ -186,15 +195,7 @@
                             <span class="sidebar-text">Products</span>
                         </a>
                     </li>
-                    <li class="nav-item ">
-                        <a href="#"
-                            class="nav-link {{ Request::is('*/prescriptions*') ? 'active' : '' }}">
-                            <span class="sidebar-icon">
-                                <i class="fa-solid fa-file-prescription"></i>
-                            </span>
-                            <span class="sidebar-text">Prescriptions</span>
-                        </a>
-                    </li>
+
 
 
                     <li class="nav-item">

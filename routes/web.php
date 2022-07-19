@@ -38,12 +38,12 @@ Route::group([ "prefix" => "admin" , 'middleware' => "admin" , "as" => "admin." 
     Route::get('/dashboard' , [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
 
 
-    // Posts
-    Route::get('posts/perPage/{num}' , [App\Http\Controllers\Admin\PostController::class, 'perPage'])->name("posts.perPage");
-    Route::post('posts/search' , [App\Http\Controllers\Admin\PostController::class, 'search'])->name("posts.search");
-    Route::post('posts/multiAction' , [App\Http\Controllers\Admin\PostController::class, 'multiAction'])->name("posts.multiAction");
-    Route::resource('posts', App\Http\Controllers\Admin\PostController::class);
-    Route::get('posts/destroy/{id}' , [App\Http\Controllers\Admin\PostController::class, 'destroy'] )->name("posts.destroy");
+    // articles
+    Route::get('article/perPage/{num}' , [App\Http\Controllers\Admin\ArticleController::class, 'perPage'])->name("article.perPage");
+    Route::post('article/search' , [App\Http\Controllers\Admin\ArticleController::class, 'search'])->name("article.search");
+    Route::post('article/multiAction' , [App\Http\Controllers\Admin\ArticleController::class, 'multiAction'])->name("article.multiAction");
+    Route::resource('article', App\Http\Controllers\Admin\ArticleController::class);
+    Route::get('article/destroy/{id}' , [App\Http\Controllers\Admin\ArticleController::class, 'destroy'] )->name("article.destroy");
 
 
 });

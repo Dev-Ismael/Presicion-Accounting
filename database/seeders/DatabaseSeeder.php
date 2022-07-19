@@ -22,6 +22,16 @@ class DatabaseSeeder extends Seeder
             'password' => 'a.ismael@bluskyint.com',
             'is_admin' => '1',
         ]);
-        
+
+        \App\Models\Article::factory()->create([
+            'title' => 'title',
+            'content' => 'content',
+            'seo_description' => 'seo_description',
+            'seo_keywords' => 'seo_keywords',
+            'author' => 'author',
+            'category' => 'category',
+            'img' => 'img',
+        ]);
+
     }
 }
