@@ -104,11 +104,11 @@
                 <ul class="nav flex-column pt-3 pt-md-0">
                     <li class="nav-item">
                         <a href="{{ route('home') }}" class="nav-link text-center">
-                            <span class="sidebar-icon brand-img"><img src="{{ asset('images/favicon.png') }}"
+                            <span class="sidebar-icon brand-img"><img src="{{ asset('web/template_assets/images/favicon.png') }}"
                                     alt="Bloomfield Logo">
                             </span>
-                            <span class="mt-1 sidebar-text">Bloomfield <small
-                                    style="font-size: 0.7rem">PH</small></span>
+                            <span class="mt-1 sidebar-text">PRESICION  <small
+                                    style="font-size: 0.7rem">INTL</small></span>
                         </a>
                     </li>
                     <li class="nav-item ">
@@ -120,8 +120,8 @@
                             <span class="sidebar-text">Dashboard</span>
                         </a>
                     </li>
-                    <li class="nav-item ">
-                        <a href="{{ route('admin.users.index') }}"
+                    {{-- <li class="nav-item ">
+                        <a href="#"
                             class="nav-link {{ Request::is('*/users*') ? 'active' : '' }}">
                             <span class="sidebar-icon">
                                 <i class="fa-solid fa-users"></i>
@@ -151,7 +151,7 @@
                             <ul class="flex-column nav">
                                 <li class="nav-item">
                                     <a class="nav-link {{ Request::is('*/categories*') ? 'active' : '' }}"
-                                        href="{{ route('admin.categories.index') }}">
+                                        href="#">
                                         <span class="sidebar-text-contracted">
                                             <i class="fa-solid fa-list-check"></i>
                                         </span>
@@ -163,7 +163,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link {{ Request::is('*/subcategories*') ? 'active' : '' }}"
-                                        href="{{ route('admin.subcategories.index') }}">
+                                        href="#">
                                         <span class="sidebar-text-contracted">
                                             <i class="fa-solid fa-folder-tree"></i>
                                         </span>
@@ -178,7 +178,7 @@
                         </div>
                     </li>
                     <li class="nav-item ">
-                        <a href="{{ route('admin.products.index') }}"
+                        <a href="#"
                             class="nav-link {{ Request::is('*/products*') ? 'active' : '' }}">
                             <span class="sidebar-icon">
                                 <i class="fa-solid fa-box-open"></i>
@@ -187,7 +187,7 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a href="{{ route('admin.prescriptions.index') }}"
+                        <a href="#"
                             class="nav-link {{ Request::is('*/prescriptions*') ? 'active' : '' }}">
                             <span class="sidebar-icon">
                                 <i class="fa-solid fa-file-prescription"></i>
@@ -218,7 +218,7 @@
                             <ul class="flex-column nav">
                                 <li class="nav-item">
                                     <a class="nav-link {{ Request::is('*/orders*') ? 'active' : '' }}"
-                                        href="{{ route('admin.orders.index') }}">
+                                        href="#">
                                         <span class="sidebar-text-contracted">
                                             <i class="fa-solid fa-cart-shopping"></i>
                                         </span>
@@ -230,7 +230,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link {{ Request::is('*/prescription_orders*') ? 'active' : '' }}"
-                                        href="{{ route('admin.prescription_orders.index') }}">
+                                        href="#">
                                         <span class="sidebar-text-contracted">
                                             <i class="fa-solid fa-file-prescription"></i>
                                         </span>
@@ -245,14 +245,14 @@
                         </div>
                     </li>
                     <li class="nav-item ">
-                        <a href="{{ route('admin.messeges.index') }}"
+                        <a href="#"
                             class="nav-link {{ Request::is('*/messeges*') ? 'active' : '' }}">
                             <span class="sidebar-icon">
                                 <i class="fa-solid fa-envelope"></i>
                             </span>
                             <span class="sidebar-text">Messeges</span>
                         </a>
-                    </li>
+                    </li> --}}
 
                 </ul>
             </div>
@@ -285,7 +285,7 @@
                                         </path>
                                     </svg>
                                 </a>
-                                <!------ Notification ------>
+                                {{-- <!------ Notification ------>
                                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-center mt-2 py-0">
                                     <div class="list-group list-group-flush">
                                         <a href="#"
@@ -402,7 +402,7 @@
                                             View all
                                         </a>
                                     </div>
-                                </div>
+                                </div> --}}
                             </li>
                             <li class="nav-item dropdown ms-lg-3">
                                 <a class="nav-link dropdown-toggle pt-2 px-0" href="#" role="button"
@@ -417,7 +417,7 @@
                                 </a>
                                 <div class="dropdown-menu dashboard-dropdown dropdown-menu-end mt-2 py-1">
                                     <a class="dropdown-item d-flex align-items-center"
-                                        href="{{ route('profile') }}">
+                                        href="#">
                                         <svg class="dropdown-icon text-gray-400 me-2" fill="currentColor"
                                             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd"
@@ -436,7 +436,7 @@
                                         Settings
                                     </a> --}}
                                     <a class="dropdown-item d-flex align-items-center"
-                                        href="{{ route('admin.messeges.index') }}">
+                                        href="#">
                                         <svg class="dropdown-icon text-gray-400 me-2" fill="currentColor"
                                             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd"
