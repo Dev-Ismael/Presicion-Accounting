@@ -5,11 +5,12 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Article;
-use App\Http\Requests\Article\StorePostRequest;
-use App\Http\Requests\Article\UpdatePostRequest;
+use App\Http\Requests\Articles\StoreArticleRequest;
+use App\Http\Requests\Articles\UpdatePostRequest;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Str;
 
 class ArticleController extends Controller
 {
@@ -22,7 +23,7 @@ class ArticleController extends Controller
     {
         // Dynamic pagination
         $articles = Article::orderBy('id','desc')->paginate( $num );
-        return view("admin.articles.index",compact("articles"));
+        return view("admin.article.index",compact("articles"));
     }
 
 
@@ -34,7 +35,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::orderBy('id','desc')->paginate( 10 );
-        return view("admin.articles.index",compact("articles"));
+        return view("admin.article.index",compact("articles"));
     }
 
     /**
@@ -44,7 +45,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view("admin.articles.create");
+        return view("admin.article.create");
     }
 
     /**
@@ -53,21 +54,35 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePostRequest $request)
+    public function store(StoreArticleRequest $request)
     {
 
+        // save all request in one variable
         $requestData = $request->all();
-        // Hash Password
-        $requestData['password'] = Hash::make($request->password);
 
+
+        //  Upload image & Create name img
+        $file_extention = $request->img -> getClientOriginalExtension();
+        $file_name = time() . "." . $file_extention;   // name => 3628.png
+        $path = "images/articles" ;
+        $request -> img -> move( $path , $file_name );
+        // edit var img at $requestData Array
+        $requestData['img'] = $file_name;
+
+
+        // add slug in $requestData Array
+        $requestData += [ 'slug' => Str::slug( $request->title , '-') ];
+
+
+        // return $requestData;
         // Store in DB
         try {
             $article = Article::create( $requestData );
-                return redirect() -> route("admin.articles.index") -> with( [ "success" => " Article added successfully"] ) ;
+                return Redirect::back()-> with( [ "success" => " Article store successfully"] ) ;
             if(!$article)
-                return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at added opration"] ) ;
+                return Redirect::back()-> with( [ "failed" => "Error at store opration"] ) ;
         } catch (\Exception $e) {
-            return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at added opration"] ) ;
+            return Redirect::back()-> with( [ "failed" => "Error at store opration"] ) ;
         }
 
     }
@@ -82,7 +97,7 @@ class ArticleController extends Controller
     {
         // find id in Db With Error 404
         $article = Article::findOrFail($id);
-        return view("admin.articles.show" , compact("article") ) ;
+        return view("admin.article.show" , compact("article") ) ;
     }
 
     /**
@@ -95,7 +110,7 @@ class ArticleController extends Controller
     {
         // find id in Db With Error 404
         $article = Article::findOrFail($id);
-        return view("admin.articles.edit" , compact("article") ) ;
+        return view("admin.article.edit" , compact("article") ) ;
     }
 
     /**
@@ -121,11 +136,11 @@ class ArticleController extends Controller
         // Update Record in DB
         try {
             $update = $article-> update( $requestData );
-                return redirect() -> route("admin.articles.index") -> with( [ "success" => " Article updated successfully"] ) ;
+                return redirect() -> route("admin.article.index") -> with( [ "success" => " Article updated successfully"] ) ;
             if(!$update)
-                return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at update opration"] ) ;
+                return redirect() -> route("admin.article.index") -> with( [ "failed" => "Error at update opration"] ) ;
         } catch (\Exception $e) {
-            return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at update opration"] ) ;
+            return redirect() -> route("admin.article.index") -> with( [ "failed" => "Error at update opration"] ) ;
         }
     }
 
@@ -143,11 +158,11 @@ class ArticleController extends Controller
         // Delete Record from DB
         try {
             $delete = $article->delete();
-                return redirect() -> route("admin.articles.index") -> with( [ "success" => " Article deleted successfully"] ) ;
+                return redirect() -> route("admin.article.index") -> with( [ "success" => " Article deleted successfully"] ) ;
             if(!$delete)
-                return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+                return redirect() -> route("admin.article.index") -> with( [ "failed" => "Error at delete opration"] ) ;
         } catch (\Exception $e) {
-            return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+            return redirect() -> route("admin.article.index") -> with( [ "failed" => "Error at delete opration"] ) ;
         }
     }
 
@@ -175,11 +190,11 @@ class ArticleController extends Controller
         if( $request->action == "delete" ){
             try {
                 $delete = Article::destroy( $request->id );
-                    return redirect() -> route("admin.articles.index") -> with( [ "success" => " Articles deleted successfully"] ) ;
+                    return redirect() -> route("admin.article.index") -> with( [ "success" => " Articles deleted successfully"] ) ;
                 if(!$delete)
-                    return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+                    return redirect() -> route("admin.article.index") -> with( [ "failed" => "Error at delete opration"] ) ;
             } catch (\Exception $e) {
-                return redirect() -> route("admin.articles.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+                return redirect() -> route("admin.article.index") -> with( [ "failed" => "Error at delete opration"] ) ;
             }
         }
 

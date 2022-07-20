@@ -28,17 +28,21 @@
 
 
 
+    <!----- VOLT Template Assets ----->
+    <link type="text/css" href="{{ asset('volt_template_assets/css/sweetalert2.min.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('volt_template_assets/css/notyf.min.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('volt_template_assets/css/main.min.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('volt_template_assets/css/apexcharts.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('volt_template_assets/css/dropzone.min.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('volt_template_assets/css/choices.min.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('volt_template_assets/css/leaflet.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('volt_template_assets/css/volt.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('volt_template_assets/css/select2.min.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('volt_template_assets/css/custom.css') }}" rel="stylesheet">
 
-    <link type="text/css" href="{{ asset('admin/css/sweetalert2.min.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ asset('admin/css/notyf.min.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ asset('admin/css/main.min.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ asset('admin/css/apexcharts.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ asset('admin/css/dropzone.min.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ asset('admin/css/choices.min.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ asset('admin/css/leaflet.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ asset('admin/css/volt.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ asset('admin/css/select2.min.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ asset('admin/css/custom.css') }}" rel="stylesheet">
+
+    <!--------- CkEditor 5 -------->
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
 
 
 </head>
@@ -487,31 +491,31 @@
 
 
 
-    <script src="{{ asset('admin/js/popper.min.js') }}"></script>
-    <script src="{{ asset('admin/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('admin/js/on-screen.umd.min.js') }}"></script>
-    <script src="{{ asset('admin/js/nouislider.min.js') }}"></script>
-    <script src="{{ asset('admin/js/smooth-scroll.polyfills.min.js') }}"></script>
-    <script src="{{ asset('admin/js/countUp.umd.js') }}"></script>
-    <script src="{{ asset('admin/js/apexcharts.min.js') }}"></script>
-    <script src="{{ asset('admin/js/datepicker.min.js') }}"></script>
-    <script src="{{ asset('admin/js/simple-datatables.js') }}"></script>
-    <script src="{{ asset('admin/js/sweetalert2.min.js') }}"></script>
-    <script src="{{ asset('admin/js/moment.min.js') }}"></script>
-    <script src="{{ asset('admin/js/datepicker.min.js') }}"></script>
-    <script src="{{ asset('admin/js/main.min.js') }}"></script>
-    <script src="{{ asset('admin/js/dropzone.min.js') }}"></script>
-    <script src="{{ asset('admin/js/notyf.min.js') }}"></script>
-    <script src="{{ asset('admin/js/leaflet.js') }}"></script>
-    <script src="{{ asset('admin/js/svgMap.min.js') }}"></script>
-    <script src="{{ asset('admin/js/simplebar.min.js') }}"></script>
-    <script src="{{ asset('admin/js/Sortable.min.js') }}"></script>
-    <script async defer="defer" src="{{ asset('admin/js/buttons.js') }}"></script>
-    <script src="{{ asset('admin/js/volt.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/on-screen.umd.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/nouislider.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/smooth-scroll.polyfills.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/countUp.umd.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/datepicker.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/simple-datatables.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/sweetalert2.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/moment.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/datepicker.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/main.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/dropzone.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/notyf.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/leaflet.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/svgMap.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/simplebar.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/Sortable.min.js') }}"></script>
+    <script async defer="defer" src="{{ asset('volt_template_assets/js/buttons.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/volt.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
-    <script src="{{ asset('admin/js/custom.js') }}"></script>
-    <script src="{{ asset('admin/js/select2.min.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/custom.js') }}"></script>
+    <script src="{{ asset('volt_template_assets/js/select2.min.js') }}"></script>
 
 </body>
 

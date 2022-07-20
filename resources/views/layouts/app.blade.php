@@ -11,17 +11,17 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('web/template_assets/images/favicon.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('doob_template_assets/images/favicon.png') }}">
 
     <!-- Styles CSS -->
-    <link rel="stylesheet" href="{{ asset('web/template_assets/css/vendor/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/animation.css') }}">
-    <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/feature.css') }}">
-    <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/magnify.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/slick-theme.css') }}">
-    <link rel="stylesheet" href="{{ asset('web/template_assets/css/plugins/lightbox.css') }}">
-    <link rel="stylesheet" href="{{ asset('web/template_assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('doob_template_assets/css/vendor/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('doob_template_assets/css/plugins/animation.css') }}">
+    <link rel="stylesheet" href="{{ asset('doob_template_assets/css/plugins/feature.css') }}">
+    <link rel="stylesheet" href="{{ asset('doob_template_assets/css/plugins/magnify.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('doob_template_assets/css/plugins/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('doob_template_assets/css/plugins/slick-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('doob_template_assets/css/plugins/lightbox.css') }}">
+    <link rel="stylesheet" href="{{ asset('doob_template_assets/css/style.css') }}">
 
 </head>
 
@@ -96,10 +96,10 @@
                             <div class="logo">
                                 <a href="{{ route("home") }}">
                                     <img class="logo-light"
-                                        src="{{ asset('web/template_assets/images/logo/logo.png') }}"
+                                        src="{{ asset('doob_template_assets/images/logo/logo.png') }}"
                                         alt="Corporate Logo">
                                     <img class="logo-dark"
-                                        src="{{ asset('web/template_assets/images/logo/logo-dark.png') }}"
+                                        src="{{ asset('doob_template_assets/images/logo/logo-dark.png') }}"
                                         alt="Corporate Logo">
                                 </a>
                             </div>
@@ -186,14 +186,14 @@
                                         <li>
                                             <a href="javascript: void(0);" data-theme="light" class="setColor light">
                                                 <img class="sun-image"
-                                                    src="{{ asset('web/template_assets/images/icons/sun-01.svg') }}"
+                                                    src="{{ asset('doob_template_assets/images/icons/sun-01.svg') }}"
                                                     alt="Sun images">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript: void(0);" data-theme="dark" class="setColor dark">
                                                 <img class="Victor Image"
-                                                    src="{{ asset('web/template_assets/images/icons/vector.svg') }}"
+                                                    src="{{ asset('doob_template_assets/images/icons/vector.svg') }}"
                                                     alt="Vector Images">
                                             </a>
                                         </li>
@@ -211,10 +211,10 @@
                         <div class="logo">
                             <a href="{{ route("home") }}">
                                 <img class="logo-light"
-                                    src="{{ asset('web/template_assets/images/logo/logo.png') }}"
+                                    src="{{ asset('doob_template_assets/images/logo/logo.png') }}"
                                     alt="Corporate Logo">
                                 <img class="logo-dark"
-                                    src="{{ asset('web/template_assets/images/logo/logo-dark.png') }}"
+                                    src="{{ asset('doob_template_assets/images/logo/logo-dark.png') }}"
                                     alt="Corporate Logo">
                             </a>
                         </div>
@@ -313,9 +313,9 @@
                             <div class="rn-footer-widget">
                                 <div class="logo">
                                     <a href="{{ route("home") }}">
-                                        <img class="logo-light" src="{{ asset('web/template_assets/images/logo/logo.png') }}"
+                                        <img class="logo-light" src="{{ asset('doob_template_assets/images/logo/logo.png') }}"
                                             alt="Corporate Logo">
-                                        <img class="logo-dark" src="{{ asset('web/template_assets/images/logo/logo-dark.png') }}"
+                                        <img class="logo-dark" src="{{ asset('doob_template_assets/images/logo/logo-dark.png') }}"
                                             alt="Corporate Logo">
                                     </a>
                                 </div>
@@ -466,27 +466,27 @@
 
 
     <!-- ====================== Scripts ====================== -->
-    <script src="{{ asset('web/template_assets/js/vendor/modernizr.min.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/jquery.min.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/popper.min.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/waypoint.min.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/wow.min.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/counterup.min.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/feather.min.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/sal.min.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/masonry.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/imageloaded.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/magnify.min.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/lightbox.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/slick.min.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/easypie.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/text-type.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/jquery.style.swicher.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/js.cookie.js') }}"></script>
-    <script src="{{ asset('web/template_assets/js/vendor/jquery-one-page-nav.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/modernizr.min.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/jquery.min.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/popper.min.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/waypoint.min.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/wow.min.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/counterup.min.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/feather.min.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/sal.min.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/masonry.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/imageloaded.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/magnify.min.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/lightbox.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/slick.min.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/easypie.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/text-type.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/jquery.style.swicher.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/js.cookie.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/vendor/jquery-one-page-nav.js') }}"></script>
     <!-- Main JS -->
-    <script src="{{ asset('web/template_assets/js/main.js') }}"></script>
+    <script src="{{ asset('doob_template_assets/js/main.js') }}"></script>
 
     <!-- App Scripts -->
     {{-- <script src="{{ asset('web/js/app.js') }}" defer></script> --}}
