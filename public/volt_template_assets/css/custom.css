@@ -499,7 +499,9 @@ table.show-data .show-img-container {
     border-radius: 5px;
     padding: 3px;
 }
-
+table.show-data .show-img-container img{
+    width: 240px;
+}
 table.show-data td.product-image img {
     height: 120px;
 }

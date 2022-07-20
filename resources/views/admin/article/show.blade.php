@@ -15,7 +15,7 @@
                     </a>
                 </li>
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Admin</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('admin.users.index') }}">Users</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.article.index') }}">Article</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Show</li>
             </ol>
         </nav>
@@ -28,13 +28,13 @@
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <h2 class="fs-5 fw-bold mb-0"> <i class="fa-solid fa-eye text-primary"></i> User Details</h2>
+                                        <h2 class="fs-5 fw-bold mb-0"> <i class="fa-solid fa-eye text-primary"></i> Article Details</h2>
                                     </div>
                                     <div class="col text-end">
-                                        <a href="{{ route("admin.users.edit" , $user->id) }}" class="btn btn-sm btn-primary">
+                                        <a href="{{ route("admin.article.edit" , $article->id) }}" class="btn btn-sm btn-primary">
                                             <i class="fa-solid fa-pen-to-square"></i> Edit
                                         </a>
-                                        <a href="{{ route('admin.users.destroy', $user->id) }}" class="btn btn-sm btn-danger delete-record">
+                                        <a href="{{ route('admin.article.destroy', $article->id) }}" class="btn btn-sm btn-danger delete-record">
                                             <i class="fa-solid fa-trash-can"></i> Delete
                                         </a>
                                     </div>
@@ -45,85 +45,22 @@
                                     <tbody>
                                         <tr>
                                             <td class="text-capitalize"> # ID </td>
-                                            <td> {{ $user->id != "" ? $user->id : '-'}} </td>
+                                            <td> {{ $article->id != "" ? $article->id : '-'}} </td>
                                         </tr>
                                         <tr>
-                                            <td class="text-capitalize"> <i class="fa-solid fa-file-signature"></i> Username </td>
-                                            <td> {{ $user->name != "" ? $user->name : '-'  }} </td>
+                                            <td class="text-capitalize"> <i class="fa-solid fa-file-signature"></i> Title </td>
+                                            <td> {{ $article->title != "" ? $article->title : '-'  }} </td>
                                         </tr>
                                         <tr>
-                                            <td class="text-capitalize"> <i class="fa-solid fa-file-signature"></i> First Name </td>
-                                            <td> {{ $user->first_name != "" ? $user->first_name : '-'  }} </td>
+                                            <td class="text-capitalize"> <i class="fa-solid fa-cart-flatbed"></i> Content </td>
+                                            <td> {!! $article->content !!} </td>
                                         </tr>
                                         <tr>
-                                            <td class="text-capitalize"> <i class="fa-solid fa-file-signature"></i> Last Name </td>
-                                            <td> {{ $user->last_name != "" ? $user->last_name : '-'}} </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-capitalize"> <i class="fa-solid fa-envelope"></i> Email </td>
-                                            <td> {{ $user->email != "" ? $user->email : '-'  }} </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-capitalize"> <i class="fa-solid fa-envelope"></i> Second Email </td>
-                                            <td> {{ $user->email_2 != "" ? $user->email_2 : '-'  }} </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="text-capitalize"> <i class="fa-solid fa-phone-volume"></i> Phone </td>
-                                            <td>
-                                                <!--- Filter Null valuesin address array --->
-                                                @php $userPhone = array_filter( $user->phone )  @endphp
-                                                <!-- if every value not empty -->
-                                                @if ( $userPhone != Null  )
-                                                    <ul style="padding-left: 1rem; margin-bottom:0px">
-                                                        @foreach ( $userPhone as $phone )
-                                                            <li> {{ $phone }} </li>
-                                                        @endforeach
-                                                    </ul>
-                                                @else
-                                                    -
-                                                @endif
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-capitalize"> <i class="fa-solid fa-flag-usa"></i> State </td>
-                                            <td> {{ $user->state != "" ? $user->state : '-' }} </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-capitalize"> <i class="fa-solid fa-location-dot"></i> Address </td>
-                                            <td>
-                                                <!--- Filter Null valuesin address array --->
-                                                @php $userAddress = array_filter( $user->address )  @endphp
-                                                <!-- if every value not empty -->
-                                                @if ( $userAddress != Null  )
-                                                    <ul style="padding-left: 1rem; margin-bottom:0px">
-                                                        @foreach ( $userAddress as $address )
-                                                            <li> {{ $address }} </li>
-                                                        @endforeach
-                                                    </ul>
-                                                @else
-                                                    -
-                                                @endif
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-capitalize"> <i class="fa-solid fa-clock"></i> Created At </td>
-                                            <td> {{ $user->created_at != "" ? $user->created_at : '-' }} </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-capitalize"> <i class="fa-solid fa-clock"></i> Updated At </td>
-                                            <td> {{ $user->updated_at != "" ? $user->updated_at : '-' }} </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-capitalize"> <i class="fa-solid fa-shield-halved"></i> Role </td>
-                                            <td>
-                                                @if ( $user->role == '1' )
-                                                    Admin
-                                                @elseif( $user->role == '2')
-                                                    Editor
-                                                @elseif( $user->role == '3')
-                                                    User
-                                                @endif
+                                            <td class="text-capitalize"> <i class="fa-solid fa-image"></i> Image </td>
+                                            <td class="article-image">
+                                                <a class="show-img-container" href="{{ asset('images/articles/'.$article->img) }}" target="_blank">
+                                                    <img src="{{ asset('images/articles/'.$article->img) }}" alt="product-image">
+                                                </div>
                                             </td>
                                         </tr>
                                     </tbody>
