@@ -39,6 +39,7 @@ Route::group([ "prefix" => "admin" , 'middleware' => "admin" , "as" => "admin." 
     Route::get('/dashboard' , [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
 
 
+    
     // articles
     Route::get('article/perPage/{num}' , [App\Http\Controllers\Admin\ArticleController::class, 'perPage'])->name("article.perPage");
     Route::post('article/search' , [App\Http\Controllers\Admin\ArticleController::class, 'search'])->name("article.search");
@@ -56,6 +57,13 @@ Route::group([ "prefix" => "admin" , 'middleware' => "admin" , "as" => "admin." 
     Route::get('resource/destroy/{id}' , [App\Http\Controllers\Admin\ResourceController::class, 'destroy'] )->name("resource.destroy");
 
 
+
+    // members
+    Route::get('member/perPage/{num}' , [App\Http\Controllers\Admin\MemberController::class, 'perPage'])->name("member.perPage");
+    Route::post('member/search' , [App\Http\Controllers\Admin\MemberController::class, 'search'])->name("member.search");
+    Route::post('member/multiAction' , [App\Http\Controllers\Admin\MemberController::class, 'multiAction'])->name("member.multiAction");
+    Route::resource('member', App\Http\Controllers\Admin\MemberController::class);
+    Route::get('member/destroy/{id}' , [App\Http\Controllers\Admin\MemberController::class, 'destroy'] )->name("member.destroy");
 
 
 

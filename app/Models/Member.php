@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 
-class Resource extends Model
+class Member extends Model
 {
     use HasFactory;
 
@@ -17,7 +17,7 @@ class Resource extends Model
      */
 
      protected $fillable = [
-        'title', 'content', 'img'
+        'name', 'job_title', 'address', 'img'
     ];
 
 

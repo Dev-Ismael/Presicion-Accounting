@@ -142,6 +142,15 @@
                             <span class="sidebar-text">Resources</span>
                         </a>
                     </li>
+                    <li class="nav-item ">
+                        <a href="{{ route('admin.member.index') }}"
+                            class="nav-link {{ Request::is('*/member*') ? 'active' : '' }}">
+                            <span class="sidebar-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </span>
+                            <span class="sidebar-text">Members</span>
+                        </a>
+                    </li>
                     {{-- <li class="nav-item ">
                         <a href="#"
                             class="nav-link {{ Request::is('*/users*') ? 'active' : '' }}">

@@ -4,57 +4,57 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Resource;
-use App\Http\Requests\Resources\StoreResourceRequest;
-use App\Http\Requests\Resources\UpdateResourceRequest;
+use App\Models\Member;
+use App\Http\Requests\Members\StoreMemberRequest;
+use App\Http\Requests\Members\UpdateMemberRequest;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
-class ResourceController extends Controller
+class MemberController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the member.
      *
      * @return \Illuminate\Http\Response
      */
     public function perPage( $num=10 )
     {
         // Dynamic pagination
-        $resources = Resource::orderBy('id','desc')->paginate( $num );
-        return view("admin.resource.index",compact("resources"));
+        $members = Member::orderBy('id','desc')->paginate( $num );
+        return view("admin.member.index",compact("members"));
     }
 
 
     /**
-     * Display a listing of the resource.
+     * Display a listing of the member.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $resources = Resource::orderBy('id','desc')->paginate( 10 );
-        return view("admin.resource.index",compact("resources"));
+        $members = Member::orderBy('id','desc')->paginate( 10 );
+        return view("admin.member.index",compact("members"));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new member.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        return view("admin.resource.create");
+        return view("admin.member.create");
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created member in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreResourceRequest $request)
+    public function store(StoreMemberRequest $request)
     {
 
         // save all request in one variable
@@ -64,7 +64,7 @@ class ResourceController extends Controller
         //  Upload image & Create name img
         $file_extention = $request->img -> getClientOriginalExtension();
         $file_name = time() . "." . $file_extention;   // name => 3628.png
-        $path = "images/resources" ;
+        $path = "images/members" ;
         $request -> img -> move( $path , $file_name );
         // edit var img at $requestData Array
         $requestData['img'] = $file_name;
@@ -73,9 +73,9 @@ class ResourceController extends Controller
 
         // Store in DB
         try {
-            $resource = Resource::create( $requestData );
-                return Redirect::back()-> with( [ "success" => " Resource store successfully"] ) ;
-            if(!$resource)
+            $member = Member::create( $requestData );
+                return Redirect::back()-> with( [ "success" => " Member store successfully"] ) ;
+            if(!$member)
                 return Redirect::back()-> with( [ "failed" => "Error at store opration"] ) ;
         } catch (\Exception $e) {
             return Redirect::back()-> with( [ "failed" => "Error at store opration"] ) ;
@@ -84,7 +84,7 @@ class ResourceController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified member.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -92,12 +92,12 @@ class ResourceController extends Controller
     public function show($id)
     {
         // find id in Db With Error 404
-        $resource = Resource::findOrFail($id);
-        return view("admin.resource.show" , compact("resource") ) ;
+        $member = Member::findOrFail($id);
+        return view("admin.member.show" , compact("member") ) ;
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified member.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -105,21 +105,21 @@ class ResourceController extends Controller
     public function edit($id)
     {
         // find id in Db With Error 404
-        $resource = Resource::findOrFail($id);
-        return view("admin.resource.edit" , compact("resource") ) ;
+        $member = Member::findOrFail($id);
+        return view("admin.member.edit" , compact("member") ) ;
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified member in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateResourceRequest $request, $id)
+    public function update(UpdateMemberRequest $request, $id)
     {
         // find id in Db With Error 404
-        $resource = Resource::findOrFail($id);
+        $member = Member::findOrFail($id);
 
         // save all request in one variable
         $requestData = $request->all();
@@ -129,10 +129,10 @@ class ResourceController extends Controller
             //  Upload image & Create name img
             $file_extention = $request->img -> getClientOriginalExtension();
             $file_name = time() . "." . $file_extention;   // name => 3628.png
-            $path = "images/resources" ;
+            $path = "images/members" ;
             $request->img -> move( $path , $file_name );
         }else{
-            $file_name = $resource->img;
+            $file_name = $member->img;
         }
 
         // Add img name to $requestData
@@ -142,18 +142,18 @@ class ResourceController extends Controller
 
         // Update Record in DB
         try {
-            $update = $resource-> update( $requestData );
-                return redirect() -> route("admin.resource.index") -> with( [ "success" => " Resource updated successfully"] ) ;
+            $update = $member-> update( $requestData );
+                return redirect() -> route("admin.member.index") -> with( [ "success" => " Member updated successfully"] ) ;
             if(!$update)
-                return redirect() -> route("admin.resource.index") -> with( [ "failed" => "Error at update opration"] ) ;
+                return redirect() -> route("admin.member.index") -> with( [ "failed" => "Error at update opration"] ) ;
         } catch (\Exception $e) {
-            return redirect() -> route("admin.resource.index") -> with( [ "failed" => "Error at update opration"] ) ;
+            return redirect() -> route("admin.member.index") -> with( [ "failed" => "Error at update opration"] ) ;
         }
 
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified member from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -161,16 +161,16 @@ class ResourceController extends Controller
     public function destroy($id)
     {
         // find id in Db With Error 404
-        $resource = Resource::findOrFail($id);
+        $member = Member::findOrFail($id);
 
         // Delete Record from DB
         try {
-            $delete = $resource->delete();
-                return redirect() -> route("admin.resource.index") -> with( [ "success" => " Resource deleted successfully"] ) ;
+            $delete = $member->delete();
+                return redirect() -> route("admin.member.index") -> with( [ "success" => " Member deleted successfully"] ) ;
             if(!$delete)
-                return redirect() -> route("admin.resource.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+                return redirect() -> route("admin.member.index") -> with( [ "failed" => "Error at delete opration"] ) ;
         } catch (\Exception $e) {
-            return redirect() -> route("admin.resource.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+            return redirect() -> route("admin.member.index") -> with( [ "failed" => "Error at delete opration"] ) ;
         }
     }
 
@@ -189,8 +189,8 @@ class ResourceController extends Controller
             'search'     =>  ['required', 'string', 'max:55'],
         ]);
 
-        $resources = Resource::where('title', 'like', "%{$request->search}%")->paginate( 10 );
-        return view("admin.resource.index",compact("resources"));
+        $members = Member::where('name', 'like', "%{$request->search}%")->paginate( 10 );
+        return view("admin.member.index",compact("members"));
 
     }
 
@@ -217,12 +217,12 @@ class ResourceController extends Controller
         // If Action is Delete
         if( $request->action == "delete" ){
             try {
-                $delete = Resource::destroy( $request->id );
-                    return redirect() -> route("admin.resource.index") -> with( [ "success" => " Resources deleted successfully"] ) ;
+                $delete = Member::destroy( $request->id );
+                    return redirect() -> route("admin.member.index") -> with( [ "success" => " Members deleted successfully"] ) ;
                 if(!$delete)
-                    return redirect() -> route("admin.resource.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+                    return redirect() -> route("admin.member.index") -> with( [ "failed" => "Error at delete opration"] ) ;
             } catch (\Exception $e) {
-                return redirect() -> route("admin.resource.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+                return redirect() -> route("admin.member.index") -> with( [ "failed" => "Error at delete opration"] ) ;
             }
         }
 
