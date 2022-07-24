@@ -153,3 +153,11 @@ ClassicEditor.create( document.querySelector( '#article-content' ) )
 .catch( error => {
         console.error( error );
 } );
+
+ClassicEditor.create( document.querySelector( '#resource-content' ) )
+.then( editor => {
+        console.log( editor );
+} )
+.catch( error => {
+        console.error( error );
+} );

@@ -15,7 +15,7 @@
                     </a>
                 </li>
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Admin</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('admin.article.index') }}">Article</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.resource.index') }}">Resource</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Show</li>
             </ol>
         </nav>
@@ -28,13 +28,13 @@
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <h2 class="fs-5 fw-bold mb-0"> <i class="fa-solid fa-eye text-primary"></i> Article Details</h2>
+                                        <h2 class="fs-5 fw-bold mb-0"> <i class="fa-solid fa-eye text-primary"></i> Resource Details</h2>
                                     </div>
                                     <div class="col text-end">
-                                        <a href="{{ route("admin.article.edit" , $article->id) }}" class="btn btn-sm btn-primary">
+                                        <a href="{{ route("admin.resource.edit" , $resource->id) }}" class="btn btn-sm btn-primary">
                                             <i class="fa-solid fa-pen-to-square"></i> Edit
                                         </a>
-                                        <a href="{{ route('admin.article.destroy', $article->id) }}" class="btn btn-sm btn-danger delete-record">
+                                        <a href="{{ route('admin.resource.destroy', $resource->id) }}" class="btn btn-sm btn-danger delete-record">
                                             <i class="fa-solid fa-trash-can"></i> Delete
                                         </a>
                                     </div>
@@ -43,25 +43,25 @@
                             <div class="table-responsive">
                                 <table class="table align-items-center table-flush show-data">
                                     <tbody>
-                                        <tr>
+                                        {{-- <tr>
                                             <td class="text-capitalize"> # ID </td>
-                                            <td> {{ $article->id != "" ? $article->id : '-'}} </td>
-                                        </tr>
+                                            <td> {{ $resource->id != "" ? $resource->id : '-'}} </td>
+                                        </tr> --}}
                                         <tr>
                                             <td class="text-capitalize"> <i class="fa-solid fa-file-signature"></i> Title </td>
-                                            <td> {{ $article->title != "" ? $article->title : '-'  }} </td>
+                                            <td> {{ $resource->title != "" ? $resource->title : '-'  }} </td>
                                         </tr>
                                         <tr>
                                             <td class="text-capitalize"> <i class="fa-solid fa-image"></i> Image </td>
-                                            <td class="article-image">
-                                                <a class="show-img-container" href="{{ asset('images/articles/'.$article->img) }}" target="_blank">
-                                                    <img src="{{ asset('images/articles/'.$article->img) }}" alt="product-image">
+                                            <td class="resource-image">
+                                                <a class="show-img-container" href="{{ asset('images/resources/'.$resource->img) }}" target="_blank">
+                                                    <img src="{{ asset('images/resources/'.$resource->img) }}" alt="resource-image">
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="text-capitalize content"> <i class="fa-solid fa-cart-flatbed"></i> Content </td>
-                                            <td> {!! $article->content !!} </td>
+                                            <td> {!! $resource->content !!} </td>
                                         </tr>
                                     </tbody>
                                 </table>

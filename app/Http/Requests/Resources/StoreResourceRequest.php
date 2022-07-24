@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests\Articles;
+namespace App\Http\Requests\Resources;
 
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
-    class StoreArticleRequest extends FormRequest
+    class StoreResourceRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,12 +25,8 @@ use Illuminate\Foundation\Http\FormRequest;
     public function rules()
     {
         return [
-            'title'           => ['required' , 'string' , 'max:100' , Rule::unique('articles', 'title')->ignore($this->article)],
+            'title'           => ['required' , 'string' , 'max:100' , Rule::unique('resources', 'title')->ignore($this->article)],
             'content'         => ['required' , 'string' , 'max:5000'],
-            'seo_description' => ['required' , 'string' , 'max:500'],
-            'seo_keywords'    => ['required' , 'string' , 'max:500'],
-            'author'          => ['required' , 'string' , 'max:55'],
-            'category'        => ['required' , 'string' , 'max:55'],
             'img'             => ['required' , 'mimes:jpeg,png,jpg' , 'max:2048'],
         ];
     }

@@ -15,7 +15,7 @@
                     </a>
                 </li>
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Admin</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('admin.article.index') }}">Users</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.resource.index') }}">Resources</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Create</li>
             </ol>
         </nav>
@@ -29,13 +29,13 @@
                                 <div class="row align-items-center">
                                     <div class="col">
                                         <h2 class="fs-5 fw-bold mb-0"> <i class="fa-solid fa-plus text-primary"></i> Create
-                                            Article</h2>
+                                            Resource</h2>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <div class="row align-items-center">
-                                    <form action="{{ route('admin.article.store') }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('admin.resource.store') }}" method="POST" enctype="multipart/form-data">
 
 
                                         @csrf
@@ -43,7 +43,7 @@
                                         <!----------------- title -------------------->
                                         <div class="mb-4 input-content">
                                             <label for="title" class="capitalize"> <i class="fa-solid fa-file-signature"></i> Title </label>
-                                            <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}" aria-describedby="emailHelp" placeholder="Type Article Title..." autocomplete="nope" />
+                                            <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}" aria-describedby="emailHelp" placeholder="Type Resource Title..." autocomplete="nope" />
                                             @error('title')
                                                 <small class="form-text text-danger">{{$message }}</small>
                                             @enderror
@@ -52,49 +52,9 @@
 
                                         <!----------------- Content -------------------->
                                         <div class="mb-4 input-content">
-                                            <label for="content" class="capitalize"> <i class="fa-solid fa-align-left"></i> Article Content </label>
-                                            <textarea type="text" name="content" id="article-content" rows="5" class="form-control @error('content') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Article Content..." autocomplete="nope" >{{ old('description') }}</textarea>
+                                            <label for="content" class="capitalize"> <i class="fa-solid fa-align-left"></i> Content </label>
+                                            <textarea type="text" name="content" id="resource-content" rows="5" class="form-control @error('content') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Resource Content..." autocomplete="nope" >{{ old('description') }}</textarea>
                                             @error('content')
-                                                <small class="form-text text-danger">{{$message }}</small>
-                                            @enderror
-                                        </div>
-
-
-                                        <!----------------- Seo Description -------------------->
-                                        <div class="mb-4 input-content">
-                                            <label for="seo_description" class="capitalize"> <i class="fa-solid fa-chart-line"></i> SEO Description </label>
-                                            <input type="text" name="seo_description" id="seo_description" class="form-control @error('seo_description') is-invalid @enderror" value="{{ old('seo_description') }}" aria-describedby="emailHelp" placeholder="Type SEO Description..." autocomplete="nope" />
-                                            @error('seo_description')
-                                                <small class="form-text text-danger">{{$message }}</small>
-                                            @enderror
-                                        </div>
-
-
-                                        <!----------------- Seo Keywords -------------------->
-                                        <div class="mb-4 input-content">
-                                            <label for="seo_keywords" class="capitalize"> <i class="fa-solid fa-chart-line"></i> SEO Keywords </label>
-                                            <input type="text" name="seo_keywords" id="seo_keywords" class="form-control @error('seo_keywords') is-invalid @enderror" value="{{ old('seo_keywords') }}" aria-describedby="emailHelp" placeholder="Type SEO Keywords..." autocomplete="nope" />
-                                            @error('seo_keywords')
-                                                <small class="form-text text-danger">{{$message }}</small>
-                                            @enderror
-                                        </div>
-
-
-                                        <!----------------- Author -------------------->
-                                        <div class="mb-4 input-content">
-                                            <label for="author" class="capitalize"> <i class="fa-solid fa-user-pen"></i> Author </label>
-                                            <input type="text" name="author" id="author" class="form-control @error('author') is-invalid @enderror" value="{{ old('author') }}" aria-describedby="emailHelp" placeholder="Type SEO Keywords..." autocomplete="nope" />
-                                            @error('author')
-                                                <small class="form-text text-danger">{{$message }}</small>
-                                            @enderror
-                                        </div>
-
-
-                                        <!----------------- Category -------------------->
-                                        <div class="mb-4 input-content">
-                                            <label for="category" class="capitalize"> <i class="fa-solid fa-code-branch"></i> Category </label>
-                                            <input type="text" name="category" id="category" class="form-control @error('category') is-invalid @enderror" value="{{ old('category') }}" aria-describedby="emailHelp" placeholder="Type SEO Keywords..." autocomplete="nope" />
-                                            @error('category')
                                                 <small class="form-text text-danger">{{$message }}</small>
                                             @enderror
                                         </div>

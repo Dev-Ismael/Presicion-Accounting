@@ -15,7 +15,7 @@
                     </a>
                 </li>
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Admin</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('admin.article.index') }}">Users</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.article.index') }}">Resources</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Create</li>
             </ol>
         </nav>
@@ -40,7 +40,7 @@
 
                                         @csrf
 
-                                        <!----------------- title -------------------->
+                                        <!----------------- Title -------------------->
                                         <div class="mb-4 input-content">
                                             <label for="title" class="capitalize"> <i class="fa-solid fa-file-signature"></i> Title </label>
                                             <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}" aria-describedby="emailHelp" placeholder="Type Article Title..." autocomplete="nope" />

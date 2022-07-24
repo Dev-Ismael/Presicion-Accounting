@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 100 )->index();
             $table->string('slug');
-            $table->text('content', 10000);
+            $table->text('content', 5000);
             $table->string('seo_description', 500);
             $table->string('seo_keywords', 500);
             $table->string('author');

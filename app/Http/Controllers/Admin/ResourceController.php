@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Resource;
-use App\Http\Requests\Resources\StoreArticleRequest;
-use App\Http\Requests\Resources\UpdateArticleRequest;
+use App\Http\Requests\Resources\StoreResourceRequest;
+use App\Http\Requests\Resources\UpdateResourceRequest;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
@@ -54,7 +54,7 @@ class ResourceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreArticleRequest $request)
+    public function store(StoreResourceRequest $request)
     {
 
         // save all request in one variable
@@ -69,12 +69,11 @@ class ResourceController extends Controller
         // edit var img at $requestData Array
         $requestData['img'] = $file_name;
 
-
         // add slug in $requestData Array
         $requestData += [ 'slug' => Str::slug( $request->title , '-') ];
 
-
         // return $requestData;
+
         // Store in DB
         try {
             $resource = Resource::create( $requestData );
@@ -120,7 +119,7 @@ class ResourceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateArticleRequest $request, $id)
+    public function update(UpdateResourceRequest $request, $id)
     {
         // find id in Db With Error 404
         $resource = Resource::findOrFail($id);
