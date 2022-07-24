@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 /*==================================================================
 =================== Global properties ==============================
 ==================================================================*/
@@ -12,6 +13,12 @@
 }
 
 /*=========== Global Css ===========*/
+body{
+    font-family: 'Montserrat', sans-serif !important;
+}
+p,a,li,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif !important;
+}
 .float-right {
     float: right;
 }

@@ -183,6 +183,26 @@ class ArticleController extends Controller
 
 
 
+    /**
+     * search in record.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request)
+    {
+        // validate search and redirect back
+        $this->validate($request, [
+            'search'     =>  ['required', 'string', 'max:55'],
+        ]);
+
+        $articles = Article::where('title', 'like', "%{$request->search}%")->paginate( 10 );
+        return view("admin.article.index",compact("articles"));
+
+    }
+
+
+
     public function multiAction(Request $request)
     {
 
