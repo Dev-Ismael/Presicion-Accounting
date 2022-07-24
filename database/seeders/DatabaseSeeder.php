@@ -35,5 +35,12 @@ class DatabaseSeeder extends Seeder
             'img' => 'img',
         ]);
 
+        \App\Models\Resource::factory()->create([
+            'title' => 'title',
+            'slug' => 'slug',
+            'content' => 'content',
+            'img' => 'img',
+        ]);
+
     }
 }

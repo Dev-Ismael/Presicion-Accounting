@@ -47,4 +47,16 @@ Route::group([ "prefix" => "admin" , 'middleware' => "admin" , "as" => "admin." 
     Route::get('article/destroy/{id}' , [App\Http\Controllers\Admin\ArticleController::class, 'destroy'] )->name("article.destroy");
 
 
+
+    // resources
+    Route::get('resource/perPage/{num}' , [App\Http\Controllers\Admin\ResourceController::class, 'perPage'])->name("resource.perPage");
+    Route::post('resource/search' , [App\Http\Controllers\Admin\ResourceController::class, 'search'])->name("resource.search");
+    Route::post('resource/multiAction' , [App\Http\Controllers\Admin\ResourceController::class, 'multiAction'])->name("resource.multiAction");
+    Route::resource('resource', App\Http\Controllers\Admin\ResourceController::class);
+    Route::get('resource/destroy/{id}' , [App\Http\Controllers\Admin\ResourceController::class, 'destroy'] )->name("resource.destroy");
+
+
+
+
+
 });

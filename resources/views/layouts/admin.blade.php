@@ -126,11 +126,20 @@
                     </li>
                     <li class="nav-item ">
                         <a href="{{ route('admin.article.index') }}"
-                            class="nav-link {{ Request::is('*/articles*') ? 'active' : '' }}">
+                            class="nav-link {{ Request::is('*/article*') ? 'active' : '' }}">
                             <span class="sidebar-icon">
-                                <i class="fa-solid fa-file-lines"></i>
+                                <i class="fa-brands fa-blogger-b"></i>
                             </span>
                             <span class="sidebar-text">Articles</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="{{ route('admin.resource.index') }}"
+                            class="nav-link {{ Request::is('*/resource*') ? 'active' : '' }}">
+                            <span class="sidebar-icon">
+                                <i class="fa-solid fa-book"></i>
+                            </span>
+                            <span class="sidebar-text">Resources</span>
                         </a>
                     </li>
                     {{-- <li class="nav-item ">
