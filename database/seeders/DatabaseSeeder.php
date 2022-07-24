@@ -48,5 +48,15 @@ class DatabaseSeeder extends Seeder
             'img' => 'img',
         ]);
 
+
+
+        \App\Models\TaxCenter::factory()->create([
+            'title' => 'title',
+            'content' => 'content',
+            'img' => 'img',
+        ]);
+
+        
+
     }
 }

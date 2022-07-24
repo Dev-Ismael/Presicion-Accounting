@@ -15,8 +15,8 @@
                     </a>
                 </li>
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Admin</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('admin.resource.index') }}">Resources</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Edit</li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.tax_center.index') }}">Tax Center</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Create</li>
             </ol>
         </nav>
 
@@ -28,23 +28,22 @@
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <h2 class="fs-5 fw-bold mb-0"> <i class="fa-solid fa-pen-to-square text-primary"></i> Edit
-                                            Resource</h2>
+                                        <h2 class="fs-5 fw-bold mb-0"> <i class="fa-solid fa-plus text-primary"></i> Create
+                                            Tax Center</h2>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <div class="row align-items-center">
-                                    <form action="{{ route('admin.resource.update' , $resource->id) }}" class="edit-form" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('admin.tax_center.store') }}" method="POST" enctype="multipart/form-data">
+
 
                                         @csrf
-
-                                        @method('PUT')
 
                                         <!----------------- title -------------------->
                                         <div class="mb-4 input-content">
                                             <label for="title" class="capitalize"> <i class="fa-solid fa-file-signature"></i> Title </label>
-                                            <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" value="{{ $resource->title }}" aria-describedby="emailHelp" placeholder="Type Resource Title..." autocomplete="nope" />
+                                            <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}" aria-describedby="emailHelp" placeholder="Type Tax Center Title..." autocomplete="nope" />
                                             @error('title')
                                                 <small class="form-text text-danger">{{$message }}</small>
                                             @enderror
@@ -52,9 +51,9 @@
 
 
                                         <!----------------- Content -------------------->
-                                        <div class="mb-4 input-content">
-                                            <label for="content" class="capitalize"> <i class="fa-solid fa-align-left"></i> Resource Content </label>
-                                            <textarea type="text" name="content" id="CKEditor_Content" rows="5" class="form-control @error('content') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Resource Content..." autocomplete="nope" >{{ $resource->content }}</textarea>
+                                            <div class="mb-4 input-content">
+                                            <label for="content" class="capitalize"> <i class="fa-solid fa-align-left"></i> Content </label>
+                                            <textarea type="text" name="content" id="CKEditor_Content" rows="5" class="form-control @error('content') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Tax Center Content..." autocomplete="nope" >{{ old('description') }}</textarea>
                                             @error('content')
                                                 <small class="form-text text-danger">{{$message }}</small>
                                             @enderror
@@ -63,14 +62,7 @@
 
                                         <!----------------- Img -------------------->
                                         <div class="mb-3 input-content">
-                                            <label for="img" class="form-label d-flex align-items-center">
-                                                <i class="fa-solid fa-image"></i> &nbsp;  Image
-                                                <div class="show-img-container">
-                                                    <a href="{{ asset("images/resources/".$resource->img) }}"  target="_blank">
-                                                        <img src="{{ asset("images/resources/".$resource->img) }}" alt="resource-img">
-                                                    </a>
-                                                </div>
-                                            </label>
+                                            <label for="img" class="form-label"> <i class="fa-solid fa-image"></i> Image </label>
                                             <input name="img" type="file" class="form-control @error('img') is-invalid @enderror" id="img"  />
                                             @error('img')
                                                 <small class="form-text text-danger">{{ $message }}</small>
@@ -78,7 +70,9 @@
                                         </div>
 
 
-                                        <button type="submit" class="btn btn-primary float-right" > <i class="fa-solid fa-floppy-disk"></i> Save </button>
+                                        <!----------------- Submit Btn -------------------->
+                                        <button type="submit" class="btn btn-primary float-right" > <i class="fa-solid fa-floppy-disk"></i> Submit </button>
+
 
                                     </form>
                                 </div>

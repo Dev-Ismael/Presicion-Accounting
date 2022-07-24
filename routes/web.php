@@ -39,7 +39,7 @@ Route::group([ "prefix" => "admin" , 'middleware' => "admin" , "as" => "admin." 
     Route::get('/dashboard' , [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
 
 
-    
+
     // articles
     Route::get('article/perPage/{num}' , [App\Http\Controllers\Admin\ArticleController::class, 'perPage'])->name("article.perPage");
     Route::post('article/search' , [App\Http\Controllers\Admin\ArticleController::class, 'search'])->name("article.search");
@@ -65,6 +65,14 @@ Route::group([ "prefix" => "admin" , 'middleware' => "admin" , "as" => "admin." 
     Route::resource('member', App\Http\Controllers\Admin\MemberController::class);
     Route::get('member/destroy/{id}' , [App\Http\Controllers\Admin\MemberController::class, 'destroy'] )->name("member.destroy");
 
+
+
+    // tax_center
+    Route::get('tax_center/perPage/{num}' , [App\Http\Controllers\Admin\TaxCenterController::class, 'perPage'])->name("tax_center.perPage");
+    Route::post('tax_center/search' , [App\Http\Controllers\Admin\TaxCenterController::class, 'search'])->name("tax_center.search");
+    Route::post('tax_center/multiAction' , [App\Http\Controllers\Admin\TaxCenterController::class, 'multiAction'])->name("tax_center.multiAction");
+    Route::resource('tax_center', App\Http\Controllers\Admin\TaxCenterController::class);
+    Route::get('tax_center/destroy/{id}' , [App\Http\Controllers\Admin\TaxCenterController::class, 'destroy'] )->name("tax_center.destroy");
 
 
 });

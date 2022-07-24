@@ -146,15 +146,7 @@ if (selectAction) {
 ===================  CKEditor 5   ========================================
 =========================================================================*/
 
-ClassicEditor.create( document.querySelector( '#article-content' ) )
-.then( editor => {
-        console.log( editor );
-} )
-.catch( error => {
-        console.error( error );
-} );
-
-ClassicEditor.create( document.querySelector( '#resource-content' ) )
+ClassicEditor.create( document.querySelector( '#CKEditor_Content' ) )
 .then( editor => {
         console.log( editor );
 } )

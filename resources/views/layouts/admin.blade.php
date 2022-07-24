@@ -151,6 +151,15 @@
                             <span class="sidebar-text">Members</span>
                         </a>
                     </li>
+                    <li class="nav-item ">
+                        <a href="{{ route('admin.tax_center.index') }}"
+                            class="nav-link {{ Request::is('*/tax_center*') ? 'active' : '' }}">
+                            <span class="sidebar-icon">
+                                <i class="fa-solid fa-money-bill-wave"></i>
+                            </span>
+                            <span class="sidebar-text">Tax Center</span>
+                        </a>
+                    </li>
                     {{-- <li class="nav-item ">
                         <a href="#"
                             class="nav-link {{ Request::is('*/users*') ? 'active' : '' }}">
