@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Article;
 use App\Http\Requests\Articles\StoreArticleRequest;
-use App\Http\Requests\Articles\UpdatePostRequest;
+use App\Http\Requests\Articles\UpdateArticleRequest;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
@@ -120,18 +120,32 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePostRequest $request, $id)
+    public function update(UpdateArticleRequest $request, $id)
     {
         // find id in Db With Error 404
         $article = Article::findOrFail($id);
+
+        // save all request in one variable
         $requestData = $request->all();
 
-        // Hash Password
-        if( $requestData['password'] == '' ){
-            $requestData['password'] = $article->password;
+        // Check If There img Uploaded
+        if( $request-> hasFile("img") ){
+            //  Upload image & Create name img
+            $file_extention = $request->img -> getClientOriginalExtension();
+            $file_name = time() . "." . $file_extention;   // name => 3628.png
+            $path = "images/articles" ;
+            $request->img -> move( $path , $file_name );
         }else{
-            $requestData['password'] = Hash::make($request->password);
+            $file_name = $article->img;
         }
+
+        // Add img name to $requestData
+        $requestData['img'] = $file_name;
+
+        // add slug in $requestData Array
+        $requestData += [ 'slug' => Str::slug( $request->title , '-') ];
+
+        // return $requestData;
 
         // Update Record in DB
         try {
@@ -142,6 +156,7 @@ class ArticleController extends Controller
         } catch (\Exception $e) {
             return redirect() -> route("admin.article.index") -> with( [ "failed" => "Error at update opration"] ) ;
         }
+
     }
 
     /**
