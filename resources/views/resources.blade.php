@@ -22,7 +22,7 @@
                         <div class="service service__style--2 text-center pt-5">
                             <div class="inner">
                                 <div class="image">
-                                    <img src="{{ asset("web/template_assets/images/resources/resources-1.jpg") }}" alt="card Images">
+                                    <img src="{{ asset("doob_template_assets/images/resources/resources-1.jpg") }}" alt="card Images">
                                 </div>
                                 <div class="content">
                                     <h4 class="title">
@@ -44,7 +44,7 @@
                         <div class="service service__style--2 text-center pt-5">
                             <div class="inner">
                                 <div class="image">
-                                    <img src="{{ asset("web/template_assets/images/resources/resources-2.jpg") }}" alt="card Images">
+                                    <img src="{{ asset("doob_template_assets/images/resources/resources-2.jpg") }}" alt="card Images">
                                 </div>
                                 <div class="content">
                                     <h4 class="title">
@@ -67,7 +67,7 @@
                         <div class="service service__style--2 text-center pt-5">
                             <div class="inner">
                                 <div class="image">
-                                    <img src="{{ asset("web/template_assets/images/resources/resources-3.jpg") }}" alt="card Images">
+                                    <img src="{{ asset("doob_template_assets/images/resources/resources-3.jpg") }}" alt="card Images">
                                 </div>
                                 <div class="content">
                                     <h4 class="title">
@@ -93,7 +93,7 @@
                         <div class="service service__style--2 text-center pt-5">
                             <div class="inner">
                                 <div class="image">
-                                    <img src="{{ asset("web/template_assets/images/resources/resources-4.png") }}" alt="card Images">
+                                    <img src="{{ asset("doob_template_assets/images/resources/resources-4.png") }}" alt="card Images">
                                 </div>
                                 <div class="content">
                                     <h4 class="title">
@@ -117,7 +117,7 @@
                         <div class="service service__style--2 text-center pt-5">
                             <div class="inner">
                                 <div class="image">
-                                    <img src="{{ asset("web/template_assets/images/resources/resources-5.png") }}" alt="card Images">
+                                    <img src="{{ asset("doob_template_assets/images/resources/resources-5.png") }}" alt="card Images">
                                 </div>
                                 <div class="content">
                                     <h4 class="title">
@@ -143,7 +143,7 @@
                         <div class="service service__style--2 text-center pt-5">
                             <div class="inner">
                                 <div class="image">
-                                    <img src="{{ asset("web/template_assets/images/resources/resources-6.jpg") }}" alt="card Images">
+                                    <img src="{{ asset("doob_template_assets/images/resources/resources-6.jpg") }}" alt="card Images">
                                 </div>
                                 <div class="content">
                                     <h4 class="title">

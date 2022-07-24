@@ -19,7 +19,7 @@
                         <div class="row g-0 radius-10">
                             <div class="col-lg-12 col-xl-6 col-12">
                                 <div class="thumbnail">
-                                    <img src="{{ asset("web/template_assets/images/services/service.jpg") }}" alt="split Images">
+                                    <img src="{{ asset("doob_template_assets/images/services/service.jpg") }}" alt="split Images">
                                 </div>
                             </div>
                             <div class="col-lg-12 col-xl-6 col-12">

@@ -45,7 +45,7 @@
                                             <div class="inner">
                                                 <div class="thumbnail">
                                                     <a class="image" href="/blog-details/1"><img
-                                                        src="{{ asset('web/template_assets/images/blog/blog-01.jfif') }}" alt="Blog Image">
+                                                        src="{{ asset('doob_template_assets/images/blog/blog-01.jfif') }}" alt="Blog Image">
                                                     </a>
                                                 </div>
                                                 <div class="content">
@@ -65,7 +65,7 @@
                                         <div class="rn-card undefined">
                                             <div class="inner">
                                                 <div class="thumbnail"><a class="image" href="{{ route('post','post-slug') }}"><img
-                                                    src="{{ asset('web/template_assets/images/blog/blog-02.jfif') }}" alt="Blog Image"></a>
+                                                    src="{{ asset('doob_template_assets/images/blog/blog-02.jfif') }}" alt="Blog Image"></a>
                                                 </div>
                                                 <div class="content">
                                                     <ul class="rn-meta-list">
@@ -83,7 +83,7 @@
                                         <div class="rn-card undefined">
                                             <div class="inner">
                                                 <div class="thumbnail"><a class="image" href="{{ route('post','post-slug') }}"><img
-                                                    src="{{ asset('web/template_assets/images/blog/blog-03.jfif') }}" alt="Blog Image"></a>
+                                                    src="{{ asset('doob_template_assets/images/blog/blog-03.jfif') }}" alt="Blog Image"></a>
                                                 </div>
                                                 <div class="content">
                                                     <ul class="rn-meta-list">
@@ -102,7 +102,7 @@
                                         <div class="rn-card undefined">
                                             <div class="inner">
                                                 <div class="thumbnail"><a class="image" href="/blog-details/4"><img
-                                                    src="{{ asset('web/template_assets/images/blog/blog-04.jfif') }}" alt="Blog Image"></a>
+                                                    src="{{ asset('doob_template_assets/images/blog/blog-04.jfif') }}" alt="Blog Image"></a>
                                                 </div>
                                                 <div class="content">
                                                     <ul class="rn-meta-list">
@@ -121,7 +121,7 @@
                                         <div class="rn-card undefined">
                                             <div class="inner">
                                                 <div class="thumbnail"><a class="image" href="/blog-details/5"><img
-                                                    src="{{ asset('web/template_assets/images/blog/blog-05.jfif') }}" alt="Blog Image"></a>
+                                                    src="{{ asset('doob_template_assets/images/blog/blog-05.jfif') }}" alt="Blog Image"></a>
                                                 </div>
                                                 <div class="content">
                                                     <ul class="rn-meta-list">
@@ -139,7 +139,7 @@
                                         <div class="rn-card undefined">
                                             <div class="inner">
                                                 <div class="thumbnail"><a class="image" href="{{ route('post','post-slug') }}"><img
-                                                    src="{{ asset('web/template_assets/images/blog/blog-06.jfif') }}" alt="Blog Image"></a>
+                                                    src="{{ asset('doob_template_assets/images/blog/blog-06.jfif') }}" alt="Blog Image"></a>
                                                 </div>
                                                 <div class="content">
                                                     <ul class="rn-meta-list">

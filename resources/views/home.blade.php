@@ -72,7 +72,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-duration="700">
                     <div class="service service__style--1 icon-circle-style text-center">
                         <div class="service-icon pb-3">
-                            <img src="{{ asset('web/template_assets/images/services/service-01.png') }}" width="100" alt="service-icon">
+                            <img src="{{ asset('doob_template_assets/images/services/service-01.png') }}" width="100" alt="service-icon">
                         </div>
                         <div class="content">
                             <h4 class="title w-600"><a href="#">Individual Tax Services</a></h4>
@@ -86,7 +86,7 @@
                     data-sal-delay="100">
                     <div class="service service__style--1 icon-circle-style text-center">
                         <div class="service-icon pb-3">
-                            <img  src="{{ asset('web/template_assets/images/services/service-02.png') }}" width="100" alt="service-icon">
+                            <img  src="{{ asset('doob_template_assets/images/services/service-02.png') }}" width="100" alt="service-icon">
                         </div>
                         <div class="content">
                             <h4 class="title w-600"><a href="#">Bookkeeping Services</a></h4>
@@ -100,7 +100,7 @@
                     data-sal-delay="200">
                     <div class="service service__style--1 icon-circle-style text-center">
                         <div class="service-icon pb-3">
-                            <img  src="{{ asset('web/template_assets/images/services/service-03.png') }}" width="100" alt="service-icon">
+                            <img  src="{{ asset('doob_template_assets/images/services/service-03.png') }}" width="100" alt="service-icon">
                         </div>
                         <div class="content">
                             <h4 class="title w-600"><a href="#">Business Tax Services</a></h4>
@@ -112,7 +112,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-duration="700">
                     <div class="service service__style--1 icon-circle-style text-center">
                         <div class="service-icon pb-3">
-                            <img  src="{{ asset('web/template_assets/images/services/service-03.png') }}" width="100" alt="service-icon">
+                            <img  src="{{ asset('doob_template_assets/images/services/service-03.png') }}" width="100" alt="service-icon">
                         </div>
                         <div class="content">
                             <h4 class="title w-600"><a href="#">Payroll</a></h4>
@@ -126,7 +126,7 @@
                     data-sal-delay="100">
                     <div class="service service__style--1 icon-circle-style text-center">
                         <div class="service-icon pb-3">
-                            <img  src="{{ asset('web/template_assets/images/services/service-02.png') }}" width="100" alt="service-icon">
+                            <img  src="{{ asset('doob_template_assets/images/services/service-02.png') }}" width="100" alt="service-icon">
                         </div>
                         <div class="content">
                             <h4 class="title w-600"><a href="#">Part-Time CFO Services</a></h4>
@@ -140,7 +140,7 @@
                     data-sal-delay="200">
                     <div class="service service__style--1 icon-circle-style text-center">
                         <div class="service-icon pb-3">
-                            <img  src="{{ asset('web/template_assets/images/services/service-01.png') }}" width="100" alt="service-icon">
+                            <img  src="{{ asset('doob_template_assets/images/services/service-01.png') }}" width="100" alt="service-icon">
                         </div>
                         <div class="content">
                             <h4 class="title w-600"><a href="#">IRS Resolution</a></h4>
@@ -212,7 +212,7 @@
                             <div class="rn-card box-card-style-default">
                                 <div class="inner">
                                     <div class="thumbnail"><a class="image" href="{{ route('post','post-slug') }}"><img
-                                                class="w-100"  src="{{ asset('web/template_assets/images/blog/blog-01.jfif') }}"
+                                                class="w-100"  src="{{ asset('doob_template_assets/images/blog/blog-01.jfif') }}"
                                                 alt="Blog Image"></a>
                                     </div>
                                     <div class="content">
@@ -233,7 +233,7 @@
                             <div class="rn-card box-card-style-default">
                                 <div class="inner">
                                     <div class="thumbnail"><a class="image" href="{{ route('post','post-slug') }}"><img
-                                                class="w-100"  src="{{ asset('web/template_assets/images/blog/blog-02.jfif') }}"
+                                                class="w-100"  src="{{ asset('doob_template_assets/images/blog/blog-02.jfif') }}"
                                                 alt="Blog Image"></a>
                                     </div>
                                     <div class="content">
@@ -255,7 +255,7 @@
                                 <div class="inner">
                                     <div class="thumbnail">
                                         <a class="image" href="{{ route('post','post-slug') }}">
-                                            <img class="w-100"  src="{{ asset('web/template_assets/images/blog/blog-03.jfif') }}" alt="Blog Image">
+                                            <img class="w-100"  src="{{ asset('doob_template_assets/images/blog/blog-03.jfif') }}" alt="Blog Image">
                                         </a>
                                     </div>
                                     <div class="content">
@@ -275,7 +275,7 @@
                             <div class="rn-card box-card-style-default">
                                 <div class="inner">
                                     <div class="thumbnail"><a class="image" href="{{ route('post','post-slug') }}"><img
-                                                class="w-100"  src="{{ asset('web/template_assets/images/blog/blog-04.jfif') }}"
+                                                class="w-100"  src="{{ asset('doob_template_assets/images/blog/blog-04.jfif') }}"
                                                 alt="Blog Image"></a>
                                     </div>
                                     <div class="content">
@@ -295,7 +295,7 @@
                             <div class="rn-card box-card-style-default">
                                 <div class="inner">
                                     <div class="thumbnail"><a class="image" href="{{ route('post','post-slug') }}"><img
-                                                class="w-100"  src="{{ asset('web/template_assets/images/blog/blog-05.jfif') }}"
+                                                class="w-100"  src="{{ asset('doob_template_assets/images/blog/blog-05.jfif') }}"
                                                 alt="Blog Image"></a>
                                     </div>
                                     <div class="content">
@@ -316,7 +316,7 @@
                             <div class="rn-card box-card-style-default">
                                 <div class="inner">
                                     <div class="thumbnail"><a class="image" href="{{ route('post','post-slug') }}"><img
-                                                class="w-100"  src="{{ asset('web/template_assets/images/blog/blog-06.jfif') }}"
+                                                class="w-100"  src="{{ asset('doob_template_assets/images/blog/blog-06.jfif') }}"
                                                 alt="Blog Image"></a>
                                     </div>
                                     <div class="content">
@@ -382,7 +382,7 @@
                         <div class="video-popup icon-center">
                             <div class="overlay-content">
                                 <div class="thumbnail"><img class="radius-small"
-                                         src="{{ asset('web/template_assets/images/about/contact-image.jpg') }}" alt="Corporate Image"></div>
+                                         src="{{ asset('doob_template_assets/images/about/contact-image.jpg') }}" alt="Corporate Image"></div>
                                 <div class="video-icon">
                                     <a class="btn-default rounded-player popup-video"
                                         href="https://www.youtube.com/watch?v=8tgU-kdAw_k">
@@ -484,7 +484,7 @@
                             </div>
                         </div>
                         <div class="order-1 d-flex justify-content-center order-md-2 col-lg-2 col-md-4">
-                            <div class="thumbnail"><img class="w-100"  src="{{ asset('web/template_assets/images/testimonial/mthumb.png') }}"
+                            <div class="thumbnail"><img class="w-100"  src="{{ asset('doob_template_assets/images/testimonial/mthumb.png') }}"
                                     alt="Corporate Template"></div>
                         </div>
                     </div>
@@ -519,7 +519,7 @@
                             </div>
                         </div>
                         <div class="order-1 d-flex justify-content-center order-md-2 col-lg-2 col-md-4">
-                            <div class="thumbnail"><img class="w-100"  src="{{ asset('web/template_assets/images/testimonial/mthumb.png') }}"
+                            <div class="thumbnail"><img class="w-100"  src="{{ asset('doob_template_assets/images/testimonial/mthumb.png') }}"
                                     alt="Corporate Template"></div>
                         </div>
                     </div>
@@ -548,7 +548,7 @@
                             </div>
                         </div>
                         <div class="order-1 d-flex justify-content-center order-md-2 col-lg-2 col-md-4">
-                            <div class="thumbnail"><img class="w-100"  src="{{ asset('web/template_assets/images/testimonial/mthumb.png') }}"
+                            <div class="thumbnail"><img class="w-100"  src="{{ asset('doob_template_assets/images/testimonial/mthumb.png') }}"
                                     alt="Corporate Template"></div>
                         </div>
                     </div>
@@ -700,7 +700,7 @@
                         <div class="rn-team team-style-default">
                             <div class="inner">
                                 <div class="thumbnail">
-                                    <img  src="{{ asset('web/template_assets/images/team/team-1.png') }}" alt="Corporate Template">
+                                    <img  src="{{ asset('doob_template_assets/images/team/team-1.png') }}" alt="Corporate Template">
                                 </div>
                                 <div class="content">
                                     <h2 class="title">Amr Ibrahim</h2>
@@ -718,7 +718,7 @@
                         <div class="rn-team team-style-default">
                             <div class="inner">
                                 <div class="thumbnail">
-                                    <img  src="{{ asset('web/template_assets/images/team/team-2.png') }}" alt="Corporate Template">
+                                    <img  src="{{ asset('doob_template_assets/images/team/team-2.png') }}" alt="Corporate Template">
                                 </div>
                                 <div class="content">
                                     <h2 class="title">Wesam Albajes</h2>
@@ -736,7 +736,7 @@
                         <div class="rn-team team-style-default">
                             <div class="inner">
                                 <div class="thumbnail">
-                                    <img  src="{{ asset('web/template_assets/images/team/team-3.png') }}" alt="Corporate Template">
+                                    <img  src="{{ asset('doob_template_assets/images/team/team-3.png') }}" alt="Corporate Template">
                                 </div>
                                 <div class="content">
                                     <h2 class="title">Hisham Sadek</h2>
@@ -754,7 +754,7 @@
                         <div class="rn-team team-style-default">
                             <div class="inner">
                                 <div class="thumbnail">
-                                    <img  src="{{ asset('web/template_assets/images/team/team-4.png') }}" alt="Corporate Template">
+                                    <img  src="{{ asset('doob_template_assets/images/team/team-4.png') }}" alt="Corporate Template">
                                 </div>
                                 <div class="content">
                                     <h2 class="title">Hisham Elkhazendar </h2>
@@ -772,7 +772,7 @@
                         <div class="rn-team team-style-default">
                             <div class="inner">
                                 <div class="thumbnail">
-                                    <img  src="{{ asset('web/template_assets/images/team/team-5.png') }}" alt="Corporate Template">
+                                    <img  src="{{ asset('doob_template_assets/images/team/team-5.png') }}" alt="Corporate Template">
                                 </div>
                                 <div class="content">
                                     <h2 class="title">Ali Mafarja </h2>

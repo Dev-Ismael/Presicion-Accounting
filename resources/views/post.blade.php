@@ -24,7 +24,7 @@
                                     </li>
                                 </ul>
                                 <div class="thumbnail alignwide mt--60"><img class="w-100 radius"
-                                        src="{{ asset("web/template_assets/images/blog/mthumb.jfif") }}" alt="Blog Images"></div>
+                                        src="{{ asset("doob_template_assets/images/blog/mthumb.jfif") }}" alt="Blog Images"></div>
                             </div>
                         </div>
                     </div>

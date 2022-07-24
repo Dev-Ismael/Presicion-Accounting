@@ -17,7 +17,7 @@
     <meta name="theme-color" content="#2a8e82">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('doob_template_assets/images/favicon-white.png') }}">
 
     <!------- FontAwesome  ------->
     <script src="https://kit.fontawesome.com/bc98e6aa51.js" crossorigin="anonymous"></script>
@@ -108,7 +108,7 @@
                 <ul class="nav flex-column pt-3 pt-md-0">
                     <li class="nav-item">
                         <a href="{{ route('home') }}" class="nav-link text-center">
-                            <span class="sidebar-icon brand-img"><img src="{{ asset('web/template_assets/images/favicon.png') }}"
+                            <span class="sidebar-icon brand-img"><img src="{{ asset('doob_template_assets/images/favicon-white.png') }}"
                                     alt="Bloomfield Logo">
                             </span>
                             <span class="mt-1 sidebar-text">PRESICION  <small

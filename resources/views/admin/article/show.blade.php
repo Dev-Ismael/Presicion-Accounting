@@ -52,16 +52,16 @@
                                             <td> {{ $article->title != "" ? $article->title : '-'  }} </td>
                                         </tr>
                                         <tr>
-                                            <td class="text-capitalize"> <i class="fa-solid fa-cart-flatbed"></i> Content </td>
-                                            <td> {!! $article->content !!} </td>
-                                        </tr>
-                                        <tr>
                                             <td class="text-capitalize"> <i class="fa-solid fa-image"></i> Image </td>
                                             <td class="article-image">
                                                 <a class="show-img-container" href="{{ asset('images/articles/'.$article->img) }}" target="_blank">
                                                     <img src="{{ asset('images/articles/'.$article->img) }}" alt="product-image">
                                                 </div>
                                             </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-capitalize content"> <i class="fa-solid fa-cart-flatbed"></i> Content </td>
+                                            <td> {!! $article->content !!} </td>
                                         </tr>
                                     </tbody>
                                 </table>

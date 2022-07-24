@@ -77,7 +77,7 @@
                             <div class="tab-pane fade advance-tab-content-1" id="home" role="tabpanel"
                                 aria-labelledby="home-tab">
                                 <div class="thumbnail">
-                                    <img src="{{ asset('web/template_assets/images/advance-tab/payroll.jpg') }}"
+                                    <img src="{{ asset('doob_template_assets/images/advance-tab/payroll.jpg') }}"
                                         alt="advance-tab-image">
                                 </div>
 
@@ -85,14 +85,14 @@
                             <div class="tab-pane fade advance-tab-content-1" id="profile" role="tabpanel"
                                 aria-labelledby="profile-tab">
                                 <div class="thumbnail">
-                                    <img src="{{ asset('web/template_assets/images/advance-tab/irs.jpg') }}"
+                                    <img src="{{ asset('doob_template_assets/images/advance-tab/irs.jpg') }}"
                                         alt="advance-tab-image">
                                 </div>
                             </div>
                             <div class="tab-pane fade advance-tab-content-1 active show" id="contact" role="tabpanel"
                                 aria-labelledby="contact-tab">
                                 <div class="thumbnail">
-                                    <img src="{{ asset('web/template_assets/images/advance-tab/quick.jpg') }}"
+                                    <img src="{{ asset('doob_template_assets/images/advance-tab/quick.jpg') }}"
                                         alt="advance-tab-image">
                                 </div>
                             </div>
@@ -127,7 +127,7 @@
                     <div class="row g-0 radius-10 align-items-center">
                         <div class="col-lg-12 col-xl-6 col-12">
                             <div class="thumbnail">
-                                <img src="{{ asset('web/template_assets/images/split/about.jpg') }}"  alt="split Images">
+                                <img src="{{ asset('doob_template_assets/images/split/about.jpg') }}"  alt="split Images">
                             </div>
                         </div>
                         <div class="col-lg-12 col-xl-6 col-12">

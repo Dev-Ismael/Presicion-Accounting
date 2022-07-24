@@ -487,7 +487,12 @@ form.edit-form .show-img-container img {
 table.show-data tr td>i {
     color: var(--blue) !important;
 }
-
+.table td, .table th{
+    white-space: normal;
+}
+.table td:first-child{
+    white-space: nowrap;
+}
 table.show-data .product-price {
     color: #2e8345;
     font-weight: bolder;
