@@ -18,7 +18,7 @@
                             </a>
                         </li>
                         <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Admin</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Tax Centers</li>
+                        <li class="breadcrumb-item active" aria-current="page">Tax Center</li>
                     </ol>
                 </nav>
                 <h2 class="h4"> <i class="fa-solid fa-file-lines text-primary"></i> Tax Center List</h2>

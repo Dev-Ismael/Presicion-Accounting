@@ -348,6 +348,7 @@ body.active-light-mode .frame-image ,
 body.active-light-mode .rn-back-top,
 body.active-light-mode .popup-mobile-menu .inner,
 body.active-light-mode .rn-call-to-action.style-8,
+body.active-light-mode .mainmenu-nav .mainmenu .sub-menu,
 body.active-light-mode .bg-overlay-solid::before {
     background: #f5f8fa;
 }
@@ -551,7 +552,3 @@ body.active-light-mode .slider-area.bg-transparent .inner a.btn-default.btn-bord
 body.active-light-mode .slider-area.bg-transparent .inner button.btn-default.btn-border:hover {
     color: var(--color-white);
 }
-
-// body.light .copyright-style-one, body.light .footer-style-default {
-//     background: #f5f8fa;
-// }

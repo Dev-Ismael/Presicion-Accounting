@@ -219,7 +219,7 @@ class TaxCenterController extends Controller
         if( $request->action == "delete" ){
             try {
                 $delete = TaxCenter::destroy( $request->id );
-                    return redirect() -> route("admin.tax_center.index") -> with( [ "success" => " Tax Centers deleted successfully"] ) ;
+                    return redirect() -> route("admin.tax_center.index") -> with( [ "success" => " Tax Center deleted successfully"] ) ;
                 if(!$delete)
                     return redirect() -> route("admin.tax_center.index") -> with( [ "failed" => "Error at delete opration"] ) ;
             } catch (\Exception $e) {

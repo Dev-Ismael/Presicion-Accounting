@@ -1,5 +1,5 @@
 /*--------------------------
-    Navigation Styles 
+    Navigation Styles
 ----------------------------*/
 .mainmenu-nav {
     .mainmenu {
@@ -32,7 +32,7 @@
                     color: var(--color-primary) !important;
                 }
             }
-        } 
+        }
         li {
             margin-top: 0;
             margin-bottom: 0;
@@ -74,7 +74,7 @@
                         }
                     }
                 }
-    
+
                 &:hover {
                     .submenu {
                         opacity: 1;
@@ -84,7 +84,7 @@
                 }
             }
 
-            &.with-megamenu { 
+            &.with-megamenu {
                 position: static;
                 .rn-megamenu {
                     position: absolute;
@@ -152,6 +152,45 @@
             }
 
         }
+
+        /* ============================================
+            Navbar Custom Style { sub-menu }
+        =============================================*/
+        .sub-menu{
+            padding-left: 0px;
+            padding: 10px;
+            position: absolute;
+            left: 261px;
+            top: 0px;
+            background-color: var(--color-blackest);
+            box-shadow: var(--shadow-lighter);
+            width: 240px;
+            border-radius: 5px;
+            display: none;
+        }
+        .sub-menu:hover{
+            display: block;
+        }
+        ul.submenu li:hover  .sub-menu{
+            display: block;
+        }
+        .fa-arrow-right{
+            position: absolute;
+            right: 25px;
+            top: 10px;
+        }
+        .sub-menu i.fa-solid.fa-arrow-right{
+            line-height: inherit !important;
+        }
+
+
+
+
+
+
+
+
+
+
     }
 }
-

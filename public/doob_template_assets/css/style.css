@@ -9025,12 +9025,15 @@ xclip
   }
 }
 /*--------------------------
-    Navigation Styles 
+    Navigation Styles
 ----------------------------*/
 .mainmenu-nav .mainmenu {
   display: flex;
   margin: 0;
   padding: 0;
+  /* ============================================
+      Navbar Custom Style { sub-menu }
+  =============================================*/
 }
 .mainmenu-nav .mainmenu > li > a {
   color: var(--color-body);
@@ -9151,6 +9154,32 @@ xclip
   opacity: 1;
   visibility: visible;
   top: 100%;
+}
+.mainmenu-nav .mainmenu .sub-menu {
+  padding-left: 0px;
+  padding: 10px;
+  position: absolute;
+  left: 261px;
+  top: 0px;
+  background-color: var(--color-blackest);
+  box-shadow: var(--shadow-lighter);
+  width: 240px;
+  border-radius: 5px;
+  display: none;
+}
+.mainmenu-nav .mainmenu .sub-menu:hover {
+  display: block;
+}
+.mainmenu-nav .mainmenu ul.submenu li:hover .sub-menu {
+  display: block;
+}
+.mainmenu-nav .mainmenu .fa-arrow-right {
+  position: absolute;
+  right: 25px;
+  top: 10px;
+}
+.mainmenu-nav .mainmenu .sub-menu i.fa-solid.fa-arrow-right {
+  line-height: inherit !important;
 }
 
 /*--------------------------
@@ -15143,6 +15172,7 @@ body.active-light-mode .frame-image,
 body.active-light-mode .rn-back-top,
 body.active-light-mode .popup-mobile-menu .inner,
 body.active-light-mode .rn-call-to-action.style-8,
+body.active-light-mode .mainmenu-nav .mainmenu .sub-menu,
 body.active-light-mode .bg-overlay-solid::before {
   background: #f5f8fa;
 }
