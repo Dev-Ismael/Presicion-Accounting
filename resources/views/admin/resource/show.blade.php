@@ -48,16 +48,16 @@
                                             <td> {{ $resource->id != "" ? $resource->id : '-'}} </td>
                                         </tr> --}}
                                         <tr>
-                                            <td class="text-capitalize"> <i class="fa-solid fa-file-signature"></i> Title </td>
-                                            <td> {{ $resource->title != "" ? $resource->title : '-'  }} </td>
-                                        </tr>
-                                        <tr>
                                             <td class="text-capitalize"> <i class="fa-solid fa-image"></i> Image </td>
                                             <td class="resource-image">
                                                 <a class="show-img-container" href="{{ asset('images/resources/'.$resource->img) }}" target="_blank">
                                                     <img src="{{ asset('images/resources/'.$resource->img) }}" alt="resource-image">
                                                 </div>
                                             </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-capitalize"> <i class="fa-solid fa-file-signature"></i> Title </td>
+                                            <td> {{ $resource->title != "" ? $resource->title : '-'  }} </td>
                                         </tr>
                                         <tr>
                                             <td class="text-capitalize content"> <i class="fa-solid fa-cart-flatbed"></i> Content </td>

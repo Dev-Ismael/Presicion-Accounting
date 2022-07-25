@@ -56,7 +56,14 @@ class DatabaseSeeder extends Seeder
             'img' => 'img',
         ]);
 
-        
+
+        \App\Models\Service::factory()->create([
+            'title' => 'title',
+            'slug' => 'slug',
+            'parent_id' => 1,
+            'content' => 'content',
+            'img' => 'img',
+        ]);
 
     }
 }

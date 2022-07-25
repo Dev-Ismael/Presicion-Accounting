@@ -48,16 +48,16 @@
                                             <td> {{ $tax_center->id != "" ? $tax_center->id : '-'}} </td>
                                         </tr> --}}
                                         <tr>
-                                            <td class="text-capitalize"> <i class="fa-solid fa-file-signature"></i> Title </td>
-                                            <td> {{ $tax_center->title != "" ? $tax_center->title : '-'  }} </td>
-                                        </tr>
-                                        <tr>
                                             <td class="text-capitalize"> <i class="fa-solid fa-image"></i> Image </td>
                                             <td class="tax_center-image">
                                                 <a class="show-img-container" href="{{ asset('images/tax_center/'.$tax_center->img) }}" target="_blank">
                                                     <img src="{{ asset('images/tax_center/'.$tax_center->img) }}" alt="tax_center-image">
                                                 </div>
                                             </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-capitalize"> <i class="fa-solid fa-file-signature"></i> Title </td>
+                                            <td> {{ $tax_center->title != "" ? $tax_center->title : '-'  }} </td>
                                         </tr>
                                         <tr>
                                             <td class="text-capitalize content"> <i class="fa-solid fa-cart-flatbed"></i> Content </td>

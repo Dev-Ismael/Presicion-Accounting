@@ -25,7 +25,7 @@ class StoreTaxCenterRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'           => ['required' , 'string' , 'max:100' , Rule::unique('tax_centers', 'title')->ignore($this->tax_centers)],
+            'title'           => ['required' , 'string' , 'max:100' , Rule::unique('tax_centers', 'title')->ignore($this->tax_center)],
             'content'         => ['required' , 'string' , 'max:5000'],
             'img'             => ['required' , 'mimes:jpeg,png,jpg' , 'max:2048'],
         ];

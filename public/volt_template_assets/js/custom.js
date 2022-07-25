@@ -44,6 +44,17 @@ scrollBtn.addEventListener('click', event => {
 
 
 /*==================================================
+================ Select 2 Libaray
+=====================================================*/
+$(document).ready(function () {
+    // Main Category
+    $("select#service").select2( {
+        placeholder: "Choose Parent Service...",
+    });
+
+
+});
+/*==================================================
 ================ input Check
 =====================================================*/
 const mainChecker = document.getElementById("main-checker");

@@ -160,6 +160,15 @@
                             <span class="sidebar-text">Tax Center</span>
                         </a>
                     </li>
+                    <li class="nav-item ">
+                        <a href="{{ route('admin.service.index') }}"
+                            class="nav-link {{ Request::is('*/service*') ? 'active' : '' }}">
+                            <span class="sidebar-icon">
+                                <i class="fa-solid fa-handshake-simple"></i>
+                            </span>
+                            <span class="sidebar-text">Services</span>
+                        </a>
+                    </li>
                     {{-- <li class="nav-item ">
                         <a href="#"
                             class="nav-link {{ Request::is('*/users*') ? 'active' : '' }}">
