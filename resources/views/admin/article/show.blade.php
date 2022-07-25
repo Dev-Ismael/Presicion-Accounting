@@ -52,7 +52,7 @@
                                             <td class="article-image">
                                                 <a class="show-img-container" href="{{ asset('images/articles/'.$article->img) }}" target="_blank">
                                                     <img src="{{ asset('images/articles/'.$article->img) }}" alt="article-image">
-                                                </div>
+                                                </a>
                                             </td>
                                         </tr>
                                         <tr>

@@ -52,7 +52,7 @@
                                             <td class="service-image">
                                                 <a class="show-img-container" href="{{ asset('images/services/'.$service->img) }}" target="_blank">
                                                     <img src="{{ asset('images/services/'.$service->img) }}" alt="service-image">
-                                                </div>
+                                                </a>
                                             </td>
                                         </tr>
                                         <tr>

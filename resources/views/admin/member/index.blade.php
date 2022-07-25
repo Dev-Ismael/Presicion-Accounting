@@ -21,7 +21,7 @@
                         <li class="breadcrumb-item active" aria-current="page">Members</li>
                     </ol>
                 </nav>
-                <h2 class="h4"> <i class="fa-solid fa-file-lines text-primary"></i> Members List</h2>
+                <h2 class="h4"> <i class="fa-solid fa-users text-primary"></i> Members List</h2>
                 <p class="mb-0">Your web analytics dashboard template.</p>
             </div>
             <div class="btn-toolbar mb-2 mb-md-0"><a href="{{ route('admin.member.create') }}"
@@ -36,7 +36,7 @@
                 <!--------------- Search Form --------------->
                 <div class="col-9 col-lg-8 d-md-flex">
                     <form action="{{ route('admin.member.search') }}" method="POST"
-                        class="input-group me-2 me-lg-3 fmxw-300">
+                        class="input-group me-2 me-lg-3 fmxw-400">
                         <button type="submit" class="input-group-text">
                             <svg class="icon icon-xs" x-description="Heroicon name: solid/search"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -48,7 +48,7 @@
                         </button>
                         @csrf
                         <input type="text" name="search" class="form-control @error('search') is-invalid @enderror"
-                            placeholder="Search members by title" value='{{ Request::input('search') }}'
+                            placeholder="Search members by name" value='{{ Request::input('search') }}'
                             autocomplete="off" maxlength="55" required />
                         @error('search')
                             <div class="invalid-feedback" style="margin-left: 40px">{{ $message }}.</div>
@@ -135,7 +135,7 @@
                         <select id="select-action" class="form-select fmxw-200" name="action"
                             aria-label="Message select example" style="display:inline">
                             <option value="" selected="selected" style="display: none"> Choose Action </option>
-                            <option value="delete"> Delete </option>
+                            <option value="delete"> Delete Member</option>
                         </select>
                         <button type="submit" id="multi-alert-btn" class="btn btn-sm px-3 btn-primary ms-3 multi-alert"
                             disabled> <i class="fa-solid fa-list-check"></i> Apply</button>
@@ -172,7 +172,7 @@
                                     </td>
                                     <td><a href="{{ route('admin.member.show', $member->id) }}" class="d-flex align-items-center"><img
                                                 src="{{ asset('images/members/' . $member->img) }}"
-                                                class="avatar rounded-circle me-3" alt="Avatar">
+                                                class="avatar rounded-circle me-3" alt="testimonail-image">
                                             <div class="d-block"><span class="fw-bold">{{ $member->name }}</span>
                                                 <div class="small text-gray">{{ $member->job_title }}</div>
                                             </div>

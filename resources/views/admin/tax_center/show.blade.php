@@ -52,7 +52,7 @@
                                             <td class="tax_center-image">
                                                 <a class="show-img-container" href="{{ asset('images/tax_center/'.$tax_center->img) }}" target="_blank">
                                                     <img src="{{ asset('images/tax_center/'.$tax_center->img) }}" alt="tax_center-image">
-                                                </div>
+                                                </a>
                                             </td>
                                         </tr>
                                         <tr>

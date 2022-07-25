@@ -47,9 +47,13 @@ scrollBtn.addEventListener('click', event => {
 ================ Select 2 Libaray
 =====================================================*/
 $(document).ready(function () {
-    // Main Category
+    // Select Option Service
     $("select#service").select2( {
         placeholder: "Choose Parent Service...",
+    });
+    // visibility
+    $("select#visibility").select2( {
+
     });
 
 

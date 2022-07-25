@@ -15,7 +15,7 @@
                     </a>
                 </li>
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Admin</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('admin.member.index') }}">Members</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.testimonial.index') }}">Testimonial</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Show</li>
             </ol>
         </nav>
@@ -28,13 +28,13 @@
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <h2 class="fs-5 fw-bold mb-0"> <i class="fa-solid fa-eye text-primary"></i> Members Details</h2>
+                                        <h2 class="fs-5 fw-bold mb-0"> <i class="fa-solid fa-eye text-primary"></i> Testimonial Details</h2>
                                     </div>
                                     <div class="col text-end">
-                                        <a href="{{ route("admin.member.edit" , $member->id) }}" class="btn btn-sm btn-primary">
+                                        <a href="{{ route("admin.testimonial.edit" , $testimonial->id) }}" class="btn btn-sm btn-primary">
                                             <i class="fa-solid fa-pen-to-square"></i> Edit
                                         </a>
-                                        <a href="{{ route('admin.member.destroy', $member->id) }}" class="btn btn-sm btn-danger delete-record">
+                                        <a href="{{ route('admin.testimonial.destroy', $testimonial->id) }}" class="btn btn-sm btn-danger delete-record">
                                             <i class="fa-solid fa-trash-can"></i> Delete
                                         </a>
                                     </div>
@@ -45,28 +45,38 @@
                                     <tbody>
                                         {{-- <tr>
                                             <td class="text-capitalize"> # ID </td>
-                                            <td> {{ $member->id != "" ? $member->id : '-'}} </td>
+                                            <td> {{ $testimonial->id != "" ? $testimonial->id : '-'}} </td>
                                         </tr> --}}
-
                                         <tr>
                                             <td class="text-capitalize"> <i class="fa-solid fa-image"></i> Image </td>
-                                            <td class="member-image">
-                                                <a class="show-img-container" href="{{ asset('images/members/'.$member->img) }}" target="_blank">
-                                                    <img src="{{ asset('images/members/'.$member->img) }}" alt="member-image">
+                                            <td class="testimonial-image">
+                                                <a class="show-img-container" href="{{ asset('images/testimonials/'.$testimonial->img) }}" target="_blank">
+                                                    <img src="{{ asset('images/testimonials/'.$testimonial->img) }}" alt="testimonial-image">
                                                 </a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="text-capitalize"> <i class="fa-solid fa-file-signature"></i> Title </td>
-                                            <td> {{ $member->name != "" ? $member->name : '-'  }} </td>
+                                            <td class="text-capitalize"> <i class="fa-solid fa-file-signature"></i> name </td>
+                                            <td> {{ $testimonial->name != "" ? $testimonial->name : '-'  }} </td>
                                         </tr>
                                         <tr>
                                             <td class="text-capitalize"> <i class="fa-solid fa-user-tie"></i> Job Title </td>
-                                            <td> {{ $member->job_title != "" ? $member->job_title : '-'  }} </td>
+                                            <td> {{ $testimonial->job_title != "" ? $testimonial->job_title : '-'  }} </td>
                                         </tr>
                                         <tr>
-                                            <td class="text-capitalize content"> <i class="fa-solid fa-address-card"></i> Address </td>
-                                            <td> {!! $member->address !!} </td>
+                                            <td class="text-capitalize"> <i class="fa-solid fa-eye"></i> Visibility </td>
+                                            <td>
+                                                @if ( $testimonial->visibility === "0" )
+                                                    <span class="text-danger"> <i class="fa-regular fa-circle-xmark fa-2x"></i> </span>
+
+                                                @else
+                                                    <span class="text-success"> <i class="fa-regular fa-circle-check fa-2x"></i> </span>
+                                                @endif
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-capitalize content"> <i class="fa-solid fa-cart-flatbed"></i> Content </td>
+                                            <td> {!! $testimonial->content !!} </td>
                                         </tr>
                                     </tbody>
                                 </table>

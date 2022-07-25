@@ -49,7 +49,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-
         \App\Models\TaxCenter::factory()->create([
             'title' => 'title',
             'content' => 'content',
@@ -62,6 +61,14 @@ class DatabaseSeeder extends Seeder
             'slug' => 'slug',
             'parent_id' => 1,
             'content' => 'content',
+            'img' => 'img',
+        ]);
+
+
+        \App\Models\Testimonial::factory()->create([
+            'name' => 'Ahmed',
+            'job_title' => 'web developer',
+            'content' => 'precision fantastic company',
             'img' => 'img',
         ]);
 

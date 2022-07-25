@@ -15,7 +15,7 @@
                     </a>
                 </li>
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Admin</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('admin.service.index') }}">Services</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.testimonial.index') }}">Testimonials</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Create</li>
             </ol>
         </nav>
@@ -28,38 +28,46 @@
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <h2 class="fs-5 fw-bold mb-0"> <i class="fa-solid fa-plus text-primary"></i> Create
-                                            Service</h2>
+                                        <h2 class="fs-5 fw-bold mb-0"> <i class="fa-solid fa-plus text-primary"></i> Create Testimonial </h2>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <div class="row align-items-center">
-                                    <form action="{{ route('admin.service.store') }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('admin.testimonial.store') }}" method="POST" enctype="multipart/form-data">
 
 
                                         @csrf
 
-                                        <!----------------- title -------------------->
+
+                                        <!----------------- Name -------------------->
                                         <div class="mb-4 input-content">
-                                            <label for="title" class="capitalize"> <i class="fa-solid fa-file-signature"></i> Title </label>
-                                            <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}" aria-describedby="emailHelp" placeholder="Type Service Title..." autocomplete="nope" />
-                                            @error('title')
+                                            <label for="name" class="capitalize"> <i class="fa-solid fa-file-signature"></i> Username </label>
+                                            <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" aria-describedby="emailHelp" placeholder="Type Usermame..." autocomplete="nope" />
+                                            @error('name')
                                                 <small class="form-text text-danger">{{$message }}</small>
                                             @enderror
                                         </div>
 
 
-                                        <!----------------- Parent Service -------------------->
+                                        <!----------------- Job Title -------------------->
                                         <div class="mb-4 input-content">
-                                            <label for="parent_id" class="capitalize"> <i class="fa-solid fa-code-branch"></i> Parent Service (Optional) </label>
-                                            <select class="form-select form-control @error('parent_id') is-invalid @enderror" name="parent_id" id="service"  aria-label="Default select example" >
-                                                <option></option>
-                                                @foreach ( $services as $service )
-                                                    <option value="{{ $service->id }}"  {{ old('parent_id') == $service->id ? "selected" : "" }} >{{ $service->title }}</option>
-                                                @endforeach
+                                            <label for="job_title" class="capitalize"> <i class="fa-solid fa-user-tie"></i> Job Title </label>
+                                            <input type="text" name="job_title" id="job_title" class="form-control @error('job_title') is-invalid @enderror" value="{{ old('job_title') }}" aria-describedby="emailHelp" placeholder="Type Job Title..." autocomplete="nope" />
+                                            @error('job_title')
+                                                <small class="form-text text-danger">{{$message }}</small>
+                                            @enderror
+                                        </div>
+
+
+                                        <!----------------- Visibility -------------------->
+                                        <div class="mb-4 input-content">
+                                            <label for="visibility" class="capitalize"> <i class="fa-solid fa-eye"></i> Testimonial Visibility </label>
+                                            <select class="form-select form-control @error('visibility') is-invalid @enderror" name="visibility" id="visibility"  aria-label="Default select example" >
+                                                <option value="1" {{ old('visibility') == '1' ? "selected" : "" }} > Visible </option>
+                                                <option value="0" {{ old('visibility') == '0' ? "selected" : "" }} > Invisible </option>
                                             </select>
-                                            @error('parent_id')
+                                            @error('visibility')
                                                 <small class="form-text text-danger">{{$message }}</small>
                                             @enderror
                                         </div>
@@ -68,7 +76,7 @@
                                         <!----------------- Content -------------------->
                                         <div class="mb-4 input-content">
                                             <label for="content" class="capitalize"> <i class="fa-solid fa-align-left"></i> Content </label>
-                                            <textarea type="text" name="content" id="CKEditor_Content" rows="5" class="form-control @error('content') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Service Content..." autocomplete="nope" >{{ old('content') }}</textarea>
+                                            <textarea type="text" name="content"  rows="5" class="form-control @error('content') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Testimonial Content..." autocomplete="nope" >{{ old('content') }}</textarea>
                                             @error('content')
                                                 <small class="form-text text-danger">{{$message }}</small>
                                             @enderror

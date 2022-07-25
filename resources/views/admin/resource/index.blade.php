@@ -21,7 +21,7 @@
                         <li class="breadcrumb-item active" aria-current="page">Resources</li>
                     </ol>
                 </nav>
-                <h2 class="h4"> <i class="fa-solid fa-file-lines text-primary"></i> Resources List</h2>
+                <h2 class="h4"> <i class="fa-solid fa-book text-primary"></i> Resources List</h2>
                 <p class="mb-0">Your web analytics dashboard template.</p>
             </div>
             <div class="btn-toolbar mb-2 mb-md-0"><a href="{{ route('admin.resource.create') }}"
@@ -34,7 +34,7 @@
 
                 <!--------------- Search Form --------------->
                 <div class="col-9 col-lg-8 d-md-flex">
-                    <form action="{{ route('admin.resource.search') }}" method="POST" class="input-group me-2 me-lg-3 fmxw-300">
+                    <form action="{{ route('admin.resource.search') }}" method="POST" class="input-group me-2 me-lg-3 fmxw-400">
                         <button type="submit" class="input-group-text">
                             <svg class="icon icon-xs" x-description="Heroicon name: solid/search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
@@ -126,7 +126,7 @@
                         @csrf
                         <select id="select-action" class="form-select fmxw-200" name="action" aria-label="Message select example" style="display:inline">
                             <option value="" selected="selected" style="display: none"> Choose Action </option>
-                            <option value="delete"> Delete </option>
+                            <option value="delete"> Delete Resource</option>
                         </select>
                         <button type="submit" id="multi-alert-btn" class="btn btn-sm px-3 btn-primary ms-3 multi-alert" disabled> <i class="fa-solid fa-list-check"></i> Apply</button>
 

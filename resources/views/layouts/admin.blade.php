@@ -169,6 +169,15 @@
                             <span class="sidebar-text">Services</span>
                         </a>
                     </li>
+                    <li class="nav-item ">
+                        <a href="{{ route('admin.testimonial.index') }}"
+                            class="nav-link {{ Request::is('*/testimonial*') ? 'active' : '' }}">
+                            <span class="sidebar-icon">
+                                <i class="fa-solid fa-comment"></i>
+                            </span>
+                            <span class="sidebar-text">Testimonials</span>
+                        </a>
+                    </li>
                     {{-- <li class="nav-item ">
                         <a href="#"
                             class="nav-link {{ Request::is('*/users*') ? 'active' : '' }}">
