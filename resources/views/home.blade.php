@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
+
+
     <!-- Start Slider Area  -->
     <div class="slider-area slider-style-1 variation-default height-950 bg_image bg_image--5" data-black-overlay="2">
         <div class="container">
@@ -449,6 +452,12 @@
 
 
 
+
+
+
+
+
+
     <!-- Start testimonial Four -->
     <div class="rwt-testimonial-area rn-section-gap">
         <div class="container">
@@ -465,94 +474,33 @@
             </div>
 
             <div class="rn-slick-dot rn-slick-arrow testimonial-activation mb--60">
-                <div class="testimonial-style-two">
-                    <div class="row align-items-center row--20">
-                        <div class="order-2 order-md-1 col-lg-8 col-md-8 offset-lg-1">
-                            <div class="content mt_sm--40"><span class="form">&nbsp;</span>
-                                <p class="description">What I am primarily looking for with
-                                    Great Firm to do business with, very professional and trust worthy.
-                                    Been doing my personal tax returns for years and never had an issue.
-                                    Always on time and always willing to help anyway they can.
-                                    The workers are very friendly and willing to go the extra mile to make you feel
-                                    like your family.
-                                    Highly recommended Firm and its location is very accessible from
-                                    anywhere......Yassine </p>
-                                <div class="client-info">
-                                    <h4 class="title">Heather Atshan</h4>
-                                    <h6 class="subtitle">Client</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="order-1 d-flex justify-content-center order-md-2 col-lg-2 col-md-4">
-                            <div class="thumbnail"><img class="w-100"  src="{{ asset('doob_template_assets/images/testimonial/mthumb.png') }}"
-                                    alt="Corporate Template"></div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="testimonial-style-two">
-                    <div class="row align-items-center row--20">
-                        <div class="order-2 order-md-1 col-lg-8 col-md-8 offset-lg-1">
-                            <div class="content mt_sm--40"><span class="form">&nbsp;</span>
-                                <p class="description">
-                                    Precision Accounting was extremely professional they came highly recommend by a
-                                    family member.
-                                    The expereince was seamless the owner was patient with answering all my
-                                    questions and requesting all the docments
-                                    he needed to take create a seamless expereince for my 2019 tax filing for both
-                                    my busines and myself.
-                                    I am New Yorker and been operating my company since 2014 I have had some many
-                                    poor expereince in the past.
-                                    I am exteremly excited to have found an accounting company that is not just
-                                    looking to do basics but to
-                                    actually help you continue to grow and educate their clients on best practices
-                                    for their business.
-                                    My experience was so exellent that we are keeping them on moving forward and I
-                                    have been telling other
-                                    CEO and founders in NYC about Precision Accounting. If your looking for someone
-                                    to grow with these guys are it.
-                                </p>
-                                <div class="client-info">
-                                    <h4 class="title">Ahmed Aboelsaad</h4>
-                                    <h6 class="subtitle">Client</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="order-1 d-flex justify-content-center order-md-2 col-lg-2 col-md-4">
-                            <div class="thumbnail"><img class="w-100"  src="{{ asset('doob_template_assets/images/testimonial/mthumb.png') }}"
-                                    alt="Corporate Template"></div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="testimonial-style-two">
-                    <div class="row align-items-center row--20">
-                        <div class="order-2 order-md-1 col-lg-8 col-md-8 offset-lg-1">
-                            <div class="content mt_sm--40"><span class="form">&nbsp;</span>
-                                <p class="description">
-                                    Two words: Hire them! More detail: Highly recommend this firm! Year after year,
-                                    Mr. Amr Ibrahim has provided reliable, competent expertise for my tax returns.
-                                    He has excellent communication and listening skills, and patiently answers all
-                                    of my (many) questions, which is greatly appreciated. Maintains confidentiality
-                                    of all his clients. Goes above and beyond for customer service and making me
-                                    feel valued as a client. Very friendly, responsive staff over the phone and in
-                                    person, and they make booking an appointment seamless. Diaa who helped me book
-                                    my appointment is the kindest soul, as is Mustafa. Lesline has helped me through
-                                    the years with both ahead of time and stat requests and always comes through.
-                                    Cannot say enough. Highly recommend!
-                                </p>
-                                <div class="client-info">
-                                    <h4 class="title">MHANA HARFOUCHE</h4>
-                                    <h6 class="subtitle">Client</h6>
+
+                @foreach ( $testimonials as $testimonial )
+                    <div class="testimonial-style-two">
+                        <div class="row align-items-center row--20">
+                            <div class="order-2 order-md-1 col-lg-8 col-md-8 offset-lg-1">
+                                <div class="content mt_sm--40"><span class="form">&nbsp;</span>
+                                    <p class="description">
+                                        {{ $testimonial->content }}
+                                     </p>
+                                    <div class="client-info">
+                                        <h4 class="title">{{ $testimonial->name }}</h4>
+                                        <h6 class="subtitle">{{ $testimonial->job_title }}</h6>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="order-1 d-flex justify-content-center order-md-2 col-lg-2 col-md-4">
-                            <div class="thumbnail"><img class="w-100"  src="{{ asset('doob_template_assets/images/testimonial/mthumb.png') }}"
-                                    alt="Corporate Template"></div>
+                            <div class="order-1 d-flex justify-content-center order-md-2 col-lg-2 col-md-4">
+                                <div class="thumbnail"><img class="w-100"  src="{{ asset("images/testimonials/".$testimonial->img) }}"
+                                        alt="client-image"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
+
+
+
             </div>
         </div>
     </div>
@@ -695,6 +643,34 @@
                 </div>
 
                 <div class="rn-slick-dot rn-slick-arrow team-slider mb--60">
+
+                    @foreach ( $members as $member )
+
+                        <div class="mt--30 sal-animate me-3 ms-3" data-sal="slide-up" data-sal-duration="700"
+                            data-sal-delay="200">
+                            <div class="rn-team team-style-default">
+                                <div class="inner">
+                                    <div class="thumbnail">
+                                        <img  src="{{ asset("images/members/".$member->img) }}" alt="member-image">
+                                    </div>
+                                    <div class="content">
+                                        <h2 class="title">{{ $member->name }}</h2>
+                                        <h6 class="subtitle theme-gradient">{{ $member->job_title }}</h6>
+                                        <span class="team-form">
+                                            <i class="feather-map-pin"></i>
+                                            <span class="location">{{ $member->address }}</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    @endforeach
+
+
+
+                    {{--
+
                     <div class="mt--30 sal-animate me-3 ms-3" data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="200">
                         <div class="rn-team team-style-default">
@@ -786,7 +762,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
