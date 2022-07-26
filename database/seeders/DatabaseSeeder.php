@@ -51,6 +51,10 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\TaxCenter::factory()->create([
             'title' => 'title',
+            'slug' => 'slug',
+            'seo_title' => 'seo_title',
+            'seo_description' => 'seo_description',
+            'seo_keywords' => 'seo_keywords',
             'content' => 'content',
             'img' => 'img',
         ]);

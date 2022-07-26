@@ -61,6 +61,38 @@
                                         </div>
 
 
+
+                                        <!----------------- Seo Title -------------------->
+                                        <div class="mb-4 input-content">
+                                            <label for="seo_title" class="capitalize"> <i class="fa-solid fa-chart-line"></i> SEO Title </label>
+                                            <input type="text" name="seo_title" id="seo_title" class="form-control @error('seo_title') is-invalid @enderror" value="{{ $tax_center->seo_title }}" aria-describedby="emailHelp" placeholder="Type SEO Title..." autocomplete="nope" />
+                                            @error('seo_title')
+                                                <small class="form-text text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+
+
+                                        <!----------------- Seo Description -------------------->
+                                        <div class="mb-4 input-content">
+                                            <label for="seo_description" class="capitalize"> <i class="fa-solid fa-chart-line"></i> SEO Description </label>
+                                            <input type="text" name="seo_description" id="seo_description" class="form-control @error('seo_description') is-invalid @enderror" value="{{ $tax_center->seo_description }}" aria-describedby="emailHelp" placeholder="Type SEO Description..." autocomplete="nope" />
+                                            @error('seo_description')
+                                                <small class="form-text text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+
+
+                                        <!----------------- Seo Keywords -------------------->
+                                        <div class="mb-4 input-content">
+                                            <label for="seo_keywords" class="capitalize"> <i class="fa-solid fa-chart-line"></i> SEO Keywords </label>
+                                            <input type="text" name="seo_keywords" id="seo_keywords" class="form-control @error('seo_keywords') is-invalid @enderror" value="{{ $tax_center->seo_keywords }}" aria-describedby="emailHelp" placeholder="Type SEO Keywords..." autocomplete="nope" />
+                                            @error('seo_keywords')
+                                                <small class="form-text text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+
+
+
                                         <!----------------- Img -------------------->
                                         <div class="mb-3 input-content">
                                             <label for="img" class="form-label d-flex align-items-center">

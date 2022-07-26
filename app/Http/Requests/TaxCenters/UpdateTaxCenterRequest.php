@@ -27,6 +27,9 @@ class UpdateTaxCenterRequest extends FormRequest
         return [
             'title'           => ['required' , 'string' , 'max:100' , Rule::unique('tax_centers', 'title')->ignore($this->tax_center)],
             'content'         => ['required' , 'string' , 'max:5000'],
+            'seo_title'       => ['required' , 'string' , 'max:500'],
+            'seo_description' => ['required' , 'string' , 'max:500'],
+            'seo_keywords'    => ['required' , 'string' , 'max:500'],
             'img'             => ['nullable' , 'mimes:jpeg,png,jpg' , 'max:2048'],
         ];
     }

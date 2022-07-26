@@ -89,6 +89,10 @@
                 </div>
             </div>
 
+            @php
+                $tax_centers = App\Models\TaxCenter::get();
+                $services    = App\Models\Service::get();
+            @endphp
 
             <!-- Start Header Area  -->
             <header class="rn-header header-default header-transparent header-sticky nav-white">
@@ -113,7 +117,7 @@
                                         <li><a href="{{ route("home") }}">Home</a></li>
                                         <li><a href="{{ route("about") }}">About</a></li>
                                         <li class="has-droupdown has-menu-child-item"><a href="#">Services</a>
-                                            <ul class="submenu">
+                                            {{-- <ul class="submenu">
                                                 <li>
                                                     <a href="{{ route("tax_center", "taxcenter-slug") }}">Track Your Refund</a>
                                                     <ul class="sub-menu text-left">
@@ -185,17 +189,13 @@
                                                 <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Record Retention Guide</a>
                                                 </li>
                                                 <li><a href="{{ route("tax_center", "taxcenter-slug") }}">State Tax Forms</a></li>
-                                            </ul>
+                                            </ul> --}}
                                         </li>
                                         <li class="has-droupdown has-menu-child-item"><a href="#">Tax Center</a>
                                             <ul class="submenu">
-                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Tax Due Dates</a></li>
-                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Tax Rates</a></li>
-                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Tax Forms &amp;
-                                                        Publications</a></li>
-                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Record Retention Guide</a>
-                                                </li>
-                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">State Tax Forms</a></li>
+                                                @foreach ( $tax_centers as $tax_center )
+                                                    <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Tax Due Dates</a></li>
+                                                @endforeach
                                             </ul>
                                         </li>
                                         <li><a href="{{ route("blog") }}">Blog</a></li>

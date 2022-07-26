@@ -61,7 +61,6 @@ class TaxCenterController extends Controller
         // save all request in one variable
         $requestData = $request->all();
 
-
         //  Upload image & Create name img
         $file_extention = $request->img -> getClientOriginalExtension();
         $file_name = time() . "." . $file_extention;   // name => 3628.png
@@ -69,6 +68,11 @@ class TaxCenterController extends Controller
         $request -> img -> move( $path , $file_name );
         // edit var img at $requestData Array
         $requestData['img'] = $file_name;
+
+
+        // add slug in $requestData Array
+        $requestData += [ 'slug' => Str::slug( $request->title , '-') ];
+
 
         // return $requestData;
 
@@ -138,6 +142,9 @@ class TaxCenterController extends Controller
 
         // Add img name to $requestData
         $requestData['img'] = $file_name;
+
+        // add slug in $requestData Array
+        $requestData += [ 'slug' => Str::slug( $request->title , '-') ];
 
         // return $requestData;
 
