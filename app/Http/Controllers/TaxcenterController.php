@@ -18,11 +18,11 @@ class TaxcenterController extends Controller
     public function index($slug)
     {
         $tax_center = TaxCenter::where('slug',$slug)->first();
-        // if product Not Found
+        // if tax_center Not Found
         if( !$tax_center ){
             return redirect('/');
         }
-        return view('tax_center',compact("product"));
+        return view('tax_center',compact("tax_center"));
     }
 
 
