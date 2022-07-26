@@ -187,131 +187,6 @@
                             <span class="sidebar-text">Settings</span>
                         </a>
                     </li>
-                    {{-- <li class="nav-item ">
-                        <a href="#"
-                            class="nav-link {{ Request::is('*/users*') ? 'active' : '' }}">
-                            <span class="sidebar-icon">
-                                <i class="fa-solid fa-users"></i>
-                            </span>
-                            <span class="sidebar-text">Users</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <span class="nav-link d-flex justify-content-between align-items-center collapsed"
-                            data-bs-toggle="collapse" data-bs-target="#submenu-app" aria-expanded="false">
-                            <span>
-                                <span class="sidebar-icon"> <i class="fa-solid fa-list"></i> </span>
-                                <span class="sidebar-text">Categories</span>
-                            </span>
-                            <span class="link-arrow">
-                                <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </span>
-                        </span>
-                        <div class="multi-level collapse  {{ Request::is('*/categories*') || Request::is('*/subcategories*') ? 'show' : '' }}"
-                            role="list" id="submenu-app" aria-expanded="false" style="">
-                            <ul class="flex-column nav">
-                                <li class="nav-item">
-                                    <a class="nav-link {{ Request::is('*/categories*') ? 'active' : '' }}"
-                                        href="#">
-                                        <span class="sidebar-text-contracted">
-                                            <i class="fa-solid fa-list-check"></i>
-                                        </span>
-                                        <span class="sidebar-text">
-                                            <i class="fa-solid fa-list-check"></i>
-                                            Main Categories
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link {{ Request::is('*/subcategories*') ? 'active' : '' }}"
-                                        href="#">
-                                        <span class="sidebar-text-contracted">
-                                            <i class="fa-solid fa-folder-tree"></i>
-                                        </span>
-                                        <span class="sidebar-text">
-                                            <i class="fa-solid fa-folder-tree"></i>
-                                            Sub Categories
-                                        </span>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item ">
-                        <a href="#"
-                            class="nav-link {{ Request::is('*/products*') ? 'active' : '' }}">
-                            <span class="sidebar-icon">
-                                <i class="fa-solid fa-box-open"></i>
-                            </span>
-                            <span class="sidebar-text">Products</span>
-                        </a>
-                    </li>
-
-
-
-                    <li class="nav-item">
-                        <span class="nav-link d-flex justify-content-between align-items-center collapsed"
-                            data-bs-toggle="collapse" data-bs-target="#orders" aria-expanded="false">
-                            <span>
-                                <span class="sidebar-icon"> <i class="fa-solid fa-dolly"></i> </span>
-                                <span class="sidebar-text"> Orders </span>
-                            </span>
-                            <span class="link-arrow">
-                                <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </span>
-                        </span>
-                        <div class="multi-level collapse {{ Request::is('*/orders*') || Request::is('*/prescription_orders*') ? 'show' : '' }}"
-                            role="list" id="orders" aria-expanded="false" style="">
-                            <ul class="flex-column nav">
-                                <li class="nav-item">
-                                    <a class="nav-link {{ Request::is('*/orders*') ? 'active' : '' }}"
-                                        href="#">
-                                        <span class="sidebar-text-contracted">
-                                            <i class="fa-solid fa-cart-shopping"></i>
-                                        </span>
-                                        <span class="sidebar-text">
-                                            <i class="fa-solid fa-cart-shopping me-0"></i>
-                                            Subscriped Orders
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link {{ Request::is('*/prescription_orders*') ? 'active' : '' }}"
-                                        href="#">
-                                        <span class="sidebar-text-contracted">
-                                            <i class="fa-solid fa-file-prescription"></i>
-                                        </span>
-                                        <span class="sidebar-text">
-                                            <i class="fa-solid fa-file-prescription me-2"></i>
-                                            Prescription Orders
-                                        </span>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item ">
-                        <a href="#"
-                            class="nav-link {{ Request::is('*/messeges*') ? 'active' : '' }}">
-                            <span class="sidebar-icon">
-                                <i class="fa-solid fa-envelope"></i>
-                            </span>
-                            <span class="sidebar-text">Messeges</span>
-                        </a>
-                    </li> --}}
 
                 </ul>
             </div>
@@ -333,7 +208,7 @@
                                 </svg></button></div>
                         <!-- Navbar links -->
                         <ul class="navbar-nav align-items-center" style="padding-right: 40px;">
-                            <li class="nav-item dropdown">
+                            {{-- <li class="nav-item dropdown">
                                 <a class="nav-link text-dark notification-bell unread dropdown-toggle"
                                     data-unread-notifications="true" href="#" role="button" data-bs-toggle="dropdown"
                                     data-bs-display="static" aria-expanded="false">
@@ -344,7 +219,7 @@
                                         </path>
                                     </svg>
                                 </a>
-                                {{-- <!------ Notification ------>
+                                <!------ Notification ------>
                                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-center mt-2 py-0">
                                     <div class="list-group list-group-flush">
                                         <a href="#"
@@ -461,8 +336,8 @@
                                             View all
                                         </a>
                                     </div>
-                                </div> --}}
-                            </li>
+                                </div>
+                            </li> --}}
                             <li class="nav-item dropdown ms-lg-3">
                                 <a class="nav-link dropdown-toggle pt-2 px-0" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -485,15 +360,17 @@
                                         </svg>
                                         My Profile
                                     </a>
-                                    {{-- <a class="dropdown-item d-flex align-items-center" href="#">
-                                        <svg class="dropdown-icon text-gray-400 me-2" fill="currentColor"
-                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd"
-                                                d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                        Settings
-                                    </a> --}}
+                                    {{--
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <svg class="dropdown-icon text-gray-400 me-2" fill="currentColor"
+                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Settings
+                                        </a>
+                                    --}}
                                     <a class="dropdown-item d-flex align-items-center"
                                         href="#">
                                         <svg class="dropdown-icon text-gray-400 me-2" fill="currentColor"

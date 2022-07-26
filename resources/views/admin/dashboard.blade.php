@@ -19,21 +19,21 @@
                     <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                 </ol>
             </nav>
-            {{-- <div class="row">
+            <div class="row">
 
                 <div class="col-sm-4">
                     <div class="stat-card">
                         <div class="stat-card__content">
-                            <p class="text-uppercase mb-1 text-muted">Users</p>
-                            <h2>{{ $users }}</h2>
+                            <p class="text-uppercase mb-1 text-muted">Articles</p>
+                            <h2>{{ $articles }}</h2>
                             <div>
-                                <span class="text-muted"> <a href="{{ route('admin.users.index') }}"
+                                <span class="text-muted"> <a href="{{ route('admin.article.index') }}"
                                         class="text-underline view-more"> View More </a></span>
                             </div>
                         </div>
                         <div class="stat-card__icon stat-card__icon--primary">
                             <div class="stat-card__icon-circle">
-                                <i class="fa fa-users"></i>
+                                <i class="fa-solid fa-file-lines"></i>
                             </div>
                         </div>
                     </div>
@@ -43,16 +43,16 @@
                 <div class="col-sm-4">
                     <div class="stat-card">
                         <div class="stat-card__content">
-                            <p class="text-uppercase mb-1 text-muted">Categories</p>
-                            <h2>{{ $categories }}</h2>
+                            <p class="text-uppercase mb-1 text-muted">Members</p>
+                            <h2>{{ $members }}</h2>
                             <div>
-                                <span class="text-muted"> <a href="{{ route('admin.categories.index') }}"
+                                <span class="text-muted"> <a href="{{ route('admin.member.index') }}"
                                         class="text-underline view-more"> View More </a></span>
                             </div>
                         </div>
                         <div class="stat-card__icon stat-card__icon--success">
                             <div class="stat-card__icon-circle">
-                                <i class="fa-solid fa-list-check"></i>
+                                <i class="fa-solid fa-users"></i>
                             </div>
                         </div>
                     </div>
@@ -61,16 +61,16 @@
                 <div class="col-sm-4">
                     <div class="stat-card">
                         <div class="stat-card__content">
-                            <p class="text-uppercase mb-1 text-muted">Sub Categories</p>
-                            <h2>{{ $subcategories }}</h2>
+                            <p class="text-uppercase mb-1 text-muted">Services</p>
+                            <h2>{{ $services }}</h2>
                             <div>
-                                <span class="text-muted"> <a href="{{ route('admin.subcategories.index') }}"
+                                <span class="text-muted"> <a href="{{ route('admin.service.index') }}"
                                         class="text-underline view-more"> View More </a></span>
                             </div>
                         </div>
                         <div class="stat-card__icon stat-card__icon--warning">
                             <div class="stat-card__icon-circle">
-                                <i class="fa-solid fa-folder-tree"></i>
+                                <i class="fa-solid fa-handshake-simple"></i>
                             </div>
                         </div>
                     </div>
@@ -79,16 +79,16 @@
                 <div class="col-sm-4">
                     <div class="stat-card">
                         <div class="stat-card__content">
-                            <p class="text-uppercase mb-1 text-muted">Products</p>
-                            <h2>{{ $products }}</h2>
+                            <p class="text-uppercase mb-1 text-muted">Resources</p>
+                            <h2>{{ $resources }}</h2>
                             <div>
-                                <span class="text-muted"> <a href="{{ route('admin.products.index') }}"
+                                <span class="text-muted"> <a href="{{ route('admin.resource.index') }}"
                                         class="text-underline view-more"> View More </a></span>
                             </div>
                         </div>
                         <div class="stat-card__icon stat-card__icon--danger">
                             <div class="stat-card__icon-circle">
-                                <i class="fa-solid fa-box-open"></i>
+                                <i class="fa-solid fa-book"></i>
                             </div>
                         </div>
                     </div>
@@ -97,16 +97,16 @@
                 <div class="col-sm-4">
                     <div class="stat-card">
                         <div class="stat-card__content">
-                            <p class="text-uppercase mb-1 text-muted">Uploaded Prescriptions</p>
-                            <h2>{{ $prescriptions }}</h2>
+                            <p class="text-uppercase mb-1 text-muted">Tax Center</p>
+                            <h2>{{ $tax_centers }}</h2>
                             <div>
-                                <span class="text-muted"> <a href="{{ route('admin.prescriptions.index') }}"
+                                <span class="text-muted"> <a href="{{ route('admin.tax_center.index') }}"
                                         class="text-underline view-more"> View More </a></span>
                             </div>
                         </div>
                         <div class="stat-card__icon stat-card__icon--info">
                             <div class="stat-card__icon-circle">
-                                <i class="fa-solid fa-file-prescription"></i>
+                                <i class="fa-solid fa-money-bill-wave"></i>
                             </div>
                         </div>
                     </div>
@@ -115,21 +115,21 @@
                 <div class="col-sm-4">
                     <div class="stat-card">
                         <div class="stat-card__content">
-                            <p class="text-uppercase mb-1 text-muted">Orders</p>
-                            <h2>{{ $orders }}</h2>
+                            <p class="text-uppercase mb-1 text-muted">Testimonials</p>
+                            <h2>{{ $testimonials }}</h2>
                             <div>
-                                <span class="text-muted"> <a href="{{ route('admin.orders.index') }}"
+                                <span class="text-muted"> <a href="{{ route('admin.testimonial.index') }}"
                                         class="text-underline view-more"> View More </a></span>
                             </div>
                         </div>
                         <div class="stat-card__icon stat-card__icon--gray">
                             <div class="stat-card__icon-circle">
-                                <i class="fa-solid fa-dolly"></i>
+                                <i class="fa-solid fa-comment"></i>
                             </div>
                         </div>
                     </div>
                 </div>
-
+{{--
                 <div class="col-sm-4">
                     <div class="stat-card">
                         <div class="stat-card__content">
@@ -164,9 +164,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
-            </div> --}}
+            </div>
         </div>
     </div>
 @endsection
