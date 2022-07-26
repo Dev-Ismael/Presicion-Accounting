@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Resource;
+
 
 class ResourceController extends Controller
 {
@@ -16,7 +18,8 @@ class ResourceController extends Controller
 
     public function index()
     {
-        return view('resources');
+        $resources = Resource::get();
+        return view('resources',compact('resources'));
     }
 
 
