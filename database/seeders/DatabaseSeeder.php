@@ -72,5 +72,21 @@ class DatabaseSeeder extends Seeder
             'img' => 'img',
         ]);
 
+
+        \App\Models\Setting::factory()->create([
+            'seo_description' => 'seo_description',
+            'seo_keywords'    => 'seo_keywords',
+            'address'         => 'address',
+            'location'        => 'location',
+            'email'           => 'email',
+            'phone'           => 'phone',
+            'sms'             => 'sms',
+            'whatsapp'        => 'whatsapp',
+            'linkedin'        => 'linkedin',
+            'facebook'        => 'facebook',
+            'twitter'         => 'twitter',
+            'youtube'         => 'youtube',
+        ]);
+
     }
 }

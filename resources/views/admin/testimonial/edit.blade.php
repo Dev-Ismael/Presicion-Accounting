@@ -46,7 +46,7 @@
                                             <label for="name" class="capitalize"> <i class="fa-solid fa-file-signature"></i> Username </label>
                                             <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" value="{{ $testimonial->name }}" aria-describedby="emailHelp" placeholder="Type Usermame..." autocomplete="nope" />
                                             @error('name')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 
@@ -56,7 +56,7 @@
                                             <label for="job_title" class="capitalize"> <i class="fa-solid fa-user-tie"></i> Job Title </label>
                                             <input type="text" name="job_title" id="job_title" class="form-control @error('job_title') is-invalid @enderror" value="{{ $testimonial->job_title }}" aria-describedby="emailHelp" placeholder="Type Job Title..." autocomplete="nope" />
                                             @error('job_title')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 
@@ -69,7 +69,7 @@
                                                 <option value="0" {{ $testimonial->visibility === '0' ? "selected" : "" }} > Invisible </option>
                                             </select>
                                             @error('visibility')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 
@@ -79,7 +79,7 @@
                                             <label for="content" class="capitalize"> <i class="fa-solid fa-align-left"></i> Content </label>
                                             <textarea type="text" name="content"  rows="5" class="form-control @error('content') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Testimonial Content..." autocomplete="nope" >{{ $testimonial->content }}</textarea>
                                             @error('content')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 

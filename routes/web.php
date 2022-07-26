@@ -92,5 +92,8 @@ Route::group([ "prefix" => "admin" , 'middleware' => "admin" , "as" => "admin." 
     Route::get('testimonial/destroy/{id}' , [App\Http\Controllers\Admin\TestimonialController::class, 'destroy'] )->name("testimonial.destroy");
 
 
+    // setting
+    Route::get('setting/edit' , [App\Http\Controllers\Admin\SettingController::class, 'edit'])->name("setting.edit");
+    Route::put('setting/update' , [App\Http\Controllers\Admin\SettingController::class, 'update'])->name("setting.update");
 
 });

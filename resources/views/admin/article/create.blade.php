@@ -45,7 +45,7 @@
                                             <label for="title" class="capitalize"> <i class="fa-solid fa-file-signature"></i> Title </label>
                                             <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}" aria-describedby="emailHelp" placeholder="Type Article Title..." autocomplete="nope" />
                                             @error('title')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 
@@ -55,7 +55,7 @@
                                             <label for="content" class="capitalize"> <i class="fa-solid fa-align-left"></i> Article Content </label>
                                             <textarea type="text" name="content" id="CKEditor_Content" rows="5" class="form-control @error('content') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Article Content..." autocomplete="nope" >{{ old('content') }}</textarea>
                                             @error('content')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 
@@ -65,7 +65,7 @@
                                             <label for="seo_description" class="capitalize"> <i class="fa-solid fa-chart-line"></i> SEO Description </label>
                                             <input type="text" name="seo_description" id="seo_description" class="form-control @error('seo_description') is-invalid @enderror" value="{{ old('seo_description') }}" aria-describedby="emailHelp" placeholder="Type SEO Description..." autocomplete="nope" />
                                             @error('seo_description')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 
@@ -75,7 +75,7 @@
                                             <label for="seo_keywords" class="capitalize"> <i class="fa-solid fa-chart-line"></i> SEO Keywords </label>
                                             <input type="text" name="seo_keywords" id="seo_keywords" class="form-control @error('seo_keywords') is-invalid @enderror" value="{{ old('seo_keywords') }}" aria-describedby="emailHelp" placeholder="Type SEO Keywords..." autocomplete="nope" />
                                             @error('seo_keywords')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 
@@ -85,7 +85,7 @@
                                             <label for="author" class="capitalize"> <i class="fa-solid fa-user-pen"></i> Author </label>
                                             <input type="text" name="author" id="author" class="form-control @error('author') is-invalid @enderror" value="{{ old('author') }}" aria-describedby="emailHelp" placeholder="Type SEO Keywords..." autocomplete="nope" />
                                             @error('author')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 
@@ -95,7 +95,7 @@
                                             <label for="category" class="capitalize"> <i class="fa-solid fa-code-branch"></i> Category </label>
                                             <input type="text" name="category" id="category" class="form-control @error('category') is-invalid @enderror" value="{{ old('category') }}" aria-describedby="emailHelp" placeholder="Type SEO Keywords..." autocomplete="nope" />
                                             @error('category')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 

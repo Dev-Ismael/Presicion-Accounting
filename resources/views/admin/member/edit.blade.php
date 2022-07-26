@@ -46,7 +46,7 @@
                                             <label for="name" class="capitalize"> <i class="fa-solid fa-file-signature"></i> Title </label>
                                             <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" value="{{ $member->name }}" aria-describedby="emailHelp" placeholder="Type Member Name..." autocomplete="nope" />
                                             @error('name')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 
@@ -55,7 +55,7 @@
                                             <label for="job_title" class="capitalize"> <i class="fa-solid fa-user-tie"></i> Job Title </label>
                                             <input type="text" name="job_title" id="job_title" class="form-control @error('job_title') is-invalid @enderror" value="{{ $member->job_title }}" aria-describedby="emailHelp" placeholder="Type Member Job Title..." autocomplete="nope" />
                                             @error('job_title')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 
@@ -64,7 +64,7 @@
                                             <label for="address" class="capitalize"> <i class="fa-solid fa-address-card"></i> Address </label>
                                             <input type="text" name="address" id="address" class="form-control @error('address') is-invalid @enderror" value="{{ $member->address }}" aria-describedby="emailHelp" placeholder="Type Member Address..." autocomplete="nope" />
                                             @error('address')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 

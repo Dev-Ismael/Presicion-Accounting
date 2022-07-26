@@ -44,7 +44,7 @@
                         <input type="text" name="search" class="form-control @error('search') is-invalid @enderror"
                         placeholder="Search testimonials by username"  value='{{ Request::input('search') }}' autocomplete="off" maxlength="55" required/>
                         @error('search')
-                            <div class="invalid-feedback" style="margin-left: 40px">{{$message }}.</div>
+                            <div class="invalid-feedback" style="margin-left: 40px">{{ $message }}.</div>
                         @enderror
                     </form>
                 </div>
@@ -112,7 +112,7 @@
         @if ($testimonials->isEmpty())
             <!----------- No Data ------------->
             <div class="card card-body shadow border-0 d-flex justify-content-center align-items-center">
-                <img src="{{ asset("images/no_data.png") }}" alt="no_data" class="img-fluid" style="max-width: 500px">
+                <img src="{{ asset("volt_template_assets/images/no_data.png") }}" alt="no_data" class="img-fluid" style="max-width: 500px">
                 <h5>Sorry... No Data Available !!</h5>
             </div>
         @else
@@ -133,7 +133,7 @@
                         <button type="submit" id="multi-alert-btn" class="btn btn-sm px-3 btn-primary ms-3 multi-alert" disabled> <i class="fa-solid fa-list-check"></i> Apply</button>
 
                         @error('action')
-                            <div class="invalid-feedback" style="margin-left: 10px;display: block;" >{{$message }}.</div>
+                            <div class="invalid-feedback" style="margin-left: 10px;display: block;" >{{ $message }}.</div>
                         @enderror
 
                     </div>

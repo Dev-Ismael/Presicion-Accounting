@@ -120,7 +120,7 @@
         @if ($members->isEmpty())
             <!----------- No Data ------------->
             <div class="card card-body shadow border-0 d-flex justify-content-center align-items-center">
-                <img src="{{ asset('images/no_data.png') }}" alt="no_data" class="img-fluid" style="max-width: 500px">
+                <img src="{{ asset('volt_template_assets/images/no_data.png') }}" alt="no_data" class="img-fluid" style="max-width: 500px">
                 <h5>Sorry... No Data Available !!</h5>
             </div>
         @else
@@ -172,7 +172,7 @@
                                     </td>
                                     <td><a href="{{ route('admin.member.show', $member->id) }}" class="d-flex align-items-center"><img
                                                 src="{{ asset('images/members/' . $member->img) }}"
-                                                class="avatar rounded-circle me-3" alt="testimonail-image">
+                                                class="avatar rounded-circle me-3" alt="member-image">
                                             <div class="d-block"><span class="fw-bold">{{ $member->name }}</span>
                                                 <div class="small text-gray">{{ $member->job_title }}</div>
                                             </div>

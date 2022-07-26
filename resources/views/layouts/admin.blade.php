@@ -17,7 +17,7 @@
     <meta name="theme-color" content="#2a8e82">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('doob_template_assets/images/favicon-white.png') }}">
+    <link rel="shortcut icon" href="{{ asset('volt_template_assets/images/favicon-white.png') }}">
 
     <!------- FontAwesome  ------->
     <script src="https://kit.fontawesome.com/bc98e6aa51.js" crossorigin="anonymous"></script>
@@ -59,7 +59,7 @@
 
         <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
             <a class="navbar-brand me-lg-5" href="{{ route('home') }}">
-                <img src="{{ asset('images/logo-white.png') }}" style="max-width: 150px" alt="Bloomfield Logo">
+                <img src="{{ asset('volt_template_assets/images/logo.png') }}" style="max-width: 150px" alt="Precision Logo">
             </a>
             <div class="d-flex align-items-center">
                 <button class="navbar-toggler d-lg-none collapsed" type="button" data-bs-toggle="collapse"
@@ -82,7 +82,7 @@
                         <div class="d-block">
                             <h2 class="h5 mb-3">Hi, {{ Str::ucfirst(Auth::user()->name) }} </h2>
                             <a href="../../pages/examples/sign-in.html"
-                                class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center">
+                                class="btn btn-outline-white btn-sm d-inline-flex align-items-center">
                                 <svg class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -108,8 +108,8 @@
                 <ul class="nav flex-column pt-3 pt-md-0">
                     <li class="nav-item">
                         <a href="{{ route('home') }}" class="nav-link text-center">
-                            <span class="sidebar-icon brand-img"><img src="{{ asset('doob_template_assets/images/favicon-white.png') }}"
-                                    alt="Bloomfield Logo">
+                            <span class="sidebar-icon brand-img"><img src="{{ asset('volt_template_assets/images/favicon-white.png') }}"
+                                    alt="Precision Logo">
                             </span>
                             <span class="mt-1 sidebar-text">PRESICION  <small
                                     style="font-size: 0.7rem">INTL</small></span>
@@ -176,6 +176,15 @@
                                 <i class="fa-solid fa-comment"></i>
                             </span>
                             <span class="sidebar-text">Testimonials</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="{{ route('admin.setting.edit') }}"
+                            class="nav-link {{ Request::is('*/setting*') ? 'active' : '' }}">
+                            <span class="sidebar-icon">
+                                <i class="fa-solid fa-gear"></i>
+                            </span>
+                            <span class="sidebar-text">Settings</span>
                         </a>
                     </li>
                     {{-- <li class="nav-item ">

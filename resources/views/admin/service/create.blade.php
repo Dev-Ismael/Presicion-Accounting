@@ -45,7 +45,7 @@
                                             <label for="title" class="capitalize"> <i class="fa-solid fa-file-signature"></i> Title </label>
                                             <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}" aria-describedby="emailHelp" placeholder="Type Service Title..." autocomplete="nope" />
                                             @error('title')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 
@@ -60,7 +60,7 @@
                                                 @endforeach
                                             </select>
                                             @error('parent_id')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 
@@ -70,7 +70,7 @@
                                             <label for="content" class="capitalize"> <i class="fa-solid fa-align-left"></i> Content </label>
                                             <textarea type="text" name="content" id="CKEditor_Content" rows="5" class="form-control @error('content') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Service Content..." autocomplete="nope" >{{ old('content') }}</textarea>
                                             @error('content')
-                                                <small class="form-text text-danger">{{$message }}</small>
+                                                <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
 
