@@ -63,6 +63,9 @@ class DatabaseSeeder extends Seeder
         \App\Models\Service::factory()->create([
             'title' => 'title',
             'slug' => 'slug',
+            'seo_title' => 'seo_title',
+            'seo_description' => 'seo_description',
+            'seo_keywords' => 'seo_keywords',
             'summary' => 'summary',
             'parent_id' => 1,
             'content' => 'content',
