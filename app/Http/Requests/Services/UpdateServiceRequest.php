@@ -26,8 +26,10 @@ class UpdateServiceRequest extends FormRequest
     {
         return [
             'title'           => ['required' , 'string' , 'max:100' , Rule::unique('services', 'title')->ignore($this->service)],
+            'summary'         => ['required' , 'string' , 'max:255'],
             'parent_id'       => ['nullable' , 'numeric' , 'digits_between:1,11' ],
             'content'         => ['required' , 'string' , 'max:5000'],
+            'icon'            => ['nullable' , 'mimes:jpeg,png,jpg' , 'max:2048'],
             'img'             => ['nullable' , 'mimes:jpeg,png,jpg' , 'max:2048'],
         ];
     }

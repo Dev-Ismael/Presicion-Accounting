@@ -50,6 +50,15 @@
                                         </div>
 
 
+                                        <!----------------- summary -------------------->
+                                        <div class="mb-4 input-content">
+                                            <label for="summary" class="capitalize"> <i class="fa-solid fa-align-left"></i> Summary </label>
+                                            <textarea type="text" name="summary" rows="5" class="form-control @error('summary') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Service Summary..." autocomplete="nope" >{{ old('summary') }}</textarea>
+                                            @error('summary')
+                                                <small class="form-text text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+
                                         <!----------------- Parent Service -------------------->
                                         <div class="mb-4 input-content">
                                             <label for="parent_id" class="capitalize"> <i class="fa-solid fa-code-branch"></i> Parent Service (Optional) </label>
@@ -74,6 +83,15 @@
                                             @enderror
                                         </div>
 
+
+                                        <!----------------- icon -------------------->
+                                        <div class="mb-3 input-content">
+                                            <label for="icon" class="form-label"> <i class="fa-solid fa-image"></i> Icon </label>
+                                            <input name="icon" type="file" class="form-control @error('icon') is-invalid @enderror" id="icon"  />
+                                            @error('icon')
+                                                <small class="form-text text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
 
                                         <!----------------- Img -------------------->
                                         <div class="mb-3 input-content">

@@ -17,8 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('title', 100 )->index();
             $table->string('slug');
+            $table->string('summary', 255 );
             $table->integer('parent_id')->nullable();
             $table->text('content', 5000);
+            $table->string('icon');
             $table->string('img');
             $table->timestamps();
         });

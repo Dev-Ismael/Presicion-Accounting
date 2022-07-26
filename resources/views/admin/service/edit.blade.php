@@ -52,6 +52,16 @@
 
 
 
+                                        <!----------------- summary -------------------->
+                                        <div class="mb-4 input-content">
+                                            <label for="summary" class="capitalize"> <i class="fa-solid fa-align-left"></i> Summary </label>
+                                            <textarea type="text" name="summary" rows="5" class="form-control @error('summary') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Service Summary..." autocomplete="nope" >{{ $service->summary }}</textarea>
+                                            @error('summary')
+                                                <small class="form-text text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+
+
                                         <!----------------- Parent Service -------------------->
                                         <div class="mb-4 input-content">
                                             <label for="parent_id" class="capitalize"> <i class="fa-solid fa-code-branch"></i> Parent Service (Optional) </label>
@@ -72,6 +82,23 @@
                                             <label for="content" class="capitalize"> <i class="fa-solid fa-align-left"></i> Service Content </label>
                                             <textarea type="text" name="content" id="CKEditor_Content" rows="5" class="form-control @error('content') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Service Content..." autocomplete="nope" >{{ $service->content }}</textarea>
                                             @error('content')
+                                                <small class="form-text text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+
+
+                                        <!----------------- Icon -------------------->
+                                        <div class="mb-3 input-content">
+                                            <label for="icon" class="form-label d-flex align-items-center">
+                                                <i class="fa-solid fa-image"></i> &nbsp;  Image
+                                                <div class="show-img-container">
+                                                    <a href="{{ asset("images/services/".$service->icon) }}"  target="_blank">
+                                                        <img src="{{ asset("images/services/".$service->icon) }}" alt="service-icon">
+                                                    </a>
+                                                </div>
+                                            </label>
+                                            <input name="icon" type="file" class="form-control @error('icon') is-invalid @enderror" id="icon"  />
+                                            @error('icon')
                                                 <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>

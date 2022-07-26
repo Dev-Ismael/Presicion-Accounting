@@ -59,8 +59,10 @@ class DatabaseSeeder extends Seeder
         \App\Models\Service::factory()->create([
             'title' => 'title',
             'slug' => 'slug',
+            'summary' => 'summary',
             'parent_id' => 1,
             'content' => 'content',
+            'icon' => 'icon',
             'img' => 'img',
         ]);
 
