@@ -43,7 +43,7 @@ class SettingController extends Controller
             return redirect() -> route("admin.setting.edit") -> with( [ "failed" => "Error at update opration"] ) ;
         }
 
-        
+
     }
 
 }

@@ -24,11 +24,12 @@ class UpdateSettingRequest extends FormRequest
     public function rules()
     {
         return [
-            'seo_description'   => ['required' , 'string' , 'max:255' ],
+            'head_title'        => ['required' , 'string' , 'max:255' ],
+            'seo_title'         => ['required' , 'string' , 'max:255' ],
             'seo_keywords'      => ['required' , 'string' , 'max:255' ],
             'address'           => ['required' , 'string' , 'max:255' ],
             'location'          => ['required' , 'string' , 'max:255' ],
-            'email'             => ['required' , 'email' , 'max:255' ],
+            'email'             => ['required' , 'email'  , 'max:255' ],
             'phone'             => ['required' , 'string' , 'max:255' ],
             'sms'               => ['required' , 'string' , 'max:255' ],
             'whatsapp'          => ['required' , 'string' , 'max:255' ],
