@@ -45,7 +45,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        $services = Article::where('type','service')->select('id','title')->get();
+        $services = Article::where([ ['type','service'],['parent_id', Null] ])->select('id','title')->get();
         return view("admin.service.create",compact("services"));
     }
 
@@ -128,7 +128,7 @@ class ServiceController extends Controller
         // find id in Db With Error 404
         $service = Article::findOrFail($id);
 
-        $services = Article::where('type','service')->select('id','title')->get();
+        $services = Article::where([ ['type','service'],['parent_id', Null] ])->select('id','title')->get();
         return view("admin.service.edit" , compact("service","services") ) ;
 
     }

@@ -90,9 +90,9 @@
             </div>
 
             @php
-                $tax_centers  = App\Models\Article::where('type','tax_center')->get();
-                // $services     = App\Models\Service::where('parent_id', Null)->get();
-                // $sub_services = App\Models\Service::where('parent_id', '!=', Null)->get();
+                $tax_centers   = App\Models\Article::where('type','tax_center')->get();
+                $main_services = App\Models\Article::where([ ['type','service'],['parent_id', Null] ])->get();
+                $all_services  = App\Models\Article::where('type','service')->get();
             @endphp
             <!-- Start Header Area  -->
             <header class="rn-header header-default header-transparent header-sticky nav-white">
@@ -118,35 +118,22 @@
                                         <li><a href="{{ route("about") }}">About</a></li>
                                         <li class="has-droupdown has-menu-child-item"><a href="#">Services</a>
                                             <ul class="submenu">
-                                                {{-- @foreach ( $services as $service )
+                                                @foreach ( $main_services as $main_service )
                                                     <li>
-                                                        <a href="{{ route("service", $service->slug ) }}"> {{ $service->title }} <i class="fa-solid fa-arrow-right"></i> </a>
-
-                                                        <ul class="sub-menu text-left">
-                                                            @foreach ( $sub_services as $sub_service )
-                                                                <li><a href="{{ route("service", "service-slug") }}">Bookkeeping Services</a></li>
-                                                            @endforeach
-                                                        </ul>
+                                                        <a href="{{ route("article", $main_service->slug ) }}"> {{ $main_service->title }}  </a>
+                                                        @php
+                                                            $sub_services = App\Models\Article::where([ ['type','service'],['parent_id', $main_service->id] ])->get();
+                                                        @endphp
+                                                        @if ( !$sub_services->isEmpty())
+                                                            <i class="fa-solid fa-arrow-right"></i>
+                                                            <ul class="sub-menu text-left">
+                                                                @foreach ( $sub_services as $sub_service )
+                                                                    <li><a href="{{ route("article", $sub_service->slug ) }}"> {{ $sub_service->title }} </a></li>
+                                                                @endforeach
+                                                            </ul>
+                                                        @endif
                                                     </li>
-                                                @endforeach --}}
-
-                                                {{-- <li>
-                                                    <a href="{{ route("service", "service-slug") }}">Track Your Refund <i class="fa-solid fa-arrow-right"></i> </a>
-                                                    <ul class="sub-menu text-left">
-                                                        <li class="dropdown-submenu"><a href="individuals-services.php">Individuals Services</a></li>
-                                                        <li><a href="bookkeeping-services.php">Bookkeeping Services</a></li>
-                                                        <li><a href="{{ route("service", "service-slug") }}">Bookkeeping Services</a></li>
-                                                        <li><a href="{{ route("service", "service-slug") }}">Payroll Services</a></li>
-                                                        <li><a href="{{ route("service", "service-slug") }}">Part-Time CFO Services</a></li>
-                                                        <li><a href="{{ route("service", "service-slug") }}">Non-Profit Organization Services</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="{{ route("service", "service-slug") }}">Tax Due Dates</a></li>
-                                                <li><a href="{{ route("service", "service-slug") }}">Tax Rates</a></li>
-                                                <li><a href="{{ route("service", "service-slug") }}">Tax Forms &amp;Publications</a></li>
-                                                <li><a href="{{ route("service", "service-slug") }}">Record Retention Guide</a></li>
-                                                <li><a href="{{ route("service", "service-slug") }}">State Tax Forms</a></li> --}}
-
+                                                @endforeach
                                             </ul>
                                         </li>
                                         <li class="has-droupdown has-menu-child-item"><a href="#">Tax Center</a>
@@ -224,40 +211,64 @@
 
                         <li><a href="{{ route("home") }}">Home</a></li>
                         <li><a href="{{ route("about") }}">About</a></li>
-                        <li class="with-megamenu has-menu-child-item"><a href="#">Services</a>
+                        {{-- <li class="with-megamenu has-menu-child-item"><a href="#">Services</a>
                             <div class="rn-megamenu">
                                 <div class="wrapper">
                                     <div class="row row--0">
                                         <div class="col-lg-4 single-mega-item">
                                             <ul class="mega-menu-item">
-                                                <li><a href="{{ route("service", "service-slug") }}">Individuals Services</a></li>
-                                                <li><a href="{{ route("service", "service-slug") }}">Tax Preparation Services</a></li>
-                                                <li><a href="{{ route("service", "service-slug") }}">Tax Debt, and Tax Issues</a></li>
-                                                <li><a href="{{ route("service", "service-slug") }}">Estate Planning</a></li>
-                                                <li><a href="{{ route("service", "service-slug") }}">Retirement Planning</a></li>
+                                                <li><a href="{{ route("article", "service-slug") }}">Individuals Services</a></li>
+                                                <li><a href="{{ route("article", "service-slug") }}">Tax Preparation Services</a></li>
+                                                <li><a href="{{ route("article", "service-slug") }}">Tax Debt, and Tax Issues</a></li>
+                                                <li><a href="{{ route("article", "service-slug") }}">Estate Planning</a></li>
+                                                <li><a href="{{ route("article", "service-slug") }}">Retirement Planning</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-lg-4 single-mega-item">
                                             <ul class="mega-menu-item">
-                                                <li><a href="{{ route("service", "service-slug") }}">Tax Services</a></li>
-                                                <li><a href="{{ route("service", "service-slug") }}">Tax Preparation for Businesses</a></li>
-                                                <li><a href="{{ route("service", "service-slug") }}">Tax Planning</a></li>
-                                                <li><a href="{{ route("service", "service-slug") }}">Estate and Trust Tax Services</a></li>
-                                                <li><a href="{{ route("service", "service-slug") }}">Tax Relief</a></li>
+                                                <li><a href="{{ route("article", "service-slug") }}">Tax Services</a></li>
+                                                <li><a href="{{ route("article", "service-slug") }}">Tax Preparation for Businesses</a></li>
+                                                <li><a href="{{ route("article", "service-slug") }}">Tax Planning</a></li>
+                                                <li><a href="{{ route("article", "service-slug") }}">Estate and Trust Tax Services</a></li>
+                                                <li><a href="{{ route("article", "service-slug") }}">Tax Relief</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-lg-4 single-mega-item">
                                             <ul class="mega-menu-item">
-                                                <li><a href="{{ route("service", "service-slug") }}">Bookkeeping Services</a></li>
-                                                <li><a href="{{ route("service", "service-slug") }}">Payroll Services</a></li>
-                                                <li><a href="{{ route("service", "service-slug") }}">Part-Time CFO Services</a></li>
-                                                <li><a href="{{ route("service", "service-slug") }}">Non-Profit Organization Services</a>
+                                                <li><a href="{{ route("article", "service-slug") }}">Bookkeeping Services</a></li>
+                                                <li><a href="{{ route("article", "service-slug") }}">Payroll Services</a></li>
+                                                <li><a href="{{ route("article", "service-slug") }}">Part-Time CFO Services</a></li>
+                                                <li><a href="{{ route("article", "service-slug") }}">Non-Profit Organization Services</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </li> --}}
+                        <li class="has-droupdown has-menu-child-item"><a href="#">Services</a>
+                            <ul class="submenu">
+                                @foreach ( $main_services as $main_service )
+                                    <li>
+                                        @php
+                                            $sub_services = App\Models\Article::where([ ['type','service'],['parent_id', $main_service->id] ])->get();
+                                        @endphp
+
+                                        @if ( $sub_services->isEmpty())
+                                            <a href="{{ route("article", $main_service->slug ) }}"> {{ $main_service->title }}  </a>
+                                        @else
+                                            <li class="has-droupdown has-menu-child-item">
+                                                <a href="{{ route("article", $main_service->slug ) }}"> {{ $main_service->title }}  </a>
+                                                <ul class="submenu">
+                                                    @foreach ( $sub_services as $sub_service )
+                                                        <li><a href="{{ route("article", $sub_service->slug ) }}"> {{ $sub_service->title }} </a></li>
+                                                    @endforeach
+                                                </ul>
+                                            </li>
+                                        @endif
+                                    </li>
+                                @endforeach
+                            </ul>
                         </li>
                         <li class="has-droupdown has-menu-child-item"><a href="#">Tax Center</a>
                             <ul class="submenu">

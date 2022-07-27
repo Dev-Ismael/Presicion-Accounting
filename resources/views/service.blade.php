@@ -20,7 +20,7 @@
                         <div class="row g-0 radius-10">
                             <div class="col-lg-12 col-xl-6 col-12">
                                 <div class="thumbnail">
-                                    <img src="{{ asset('images/tax_center/' . $article->img) }}" alt="tax-center-image">
+                                    <img src="{{ asset('images/services/' . $article->img) }}" alt="tax-center-image">
                                 </div>
                             </div>
                             <div class="col-lg-12 col-xl-6 col-12">
