@@ -22,7 +22,7 @@ class ArticleController extends Controller
     public function perPage( $num=10 )
     {
         // Dynamic pagination
-        $articles = Article::orderBy('id','desc')->paginate( $num );
+        $articles = Article::where('type','blog')->orderBy('id','desc')->paginate( $num );
         return view("admin.article.index",compact("articles"));
     }
 
@@ -34,7 +34,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::orderBy('id','desc')->paginate( 10 );
+        $articles = Article::where('type','blog')->orderBy('id','desc')->paginate( 10 );
         return view("admin.article.index",compact("articles"));
     }
 
@@ -59,7 +59,6 @@ class ArticleController extends Controller
 
         // save all request in one variable
         $requestData = $request->all();
-
 
         //  Upload image & Create name img
         $file_extention = $request->img -> getClientOriginalExtension();

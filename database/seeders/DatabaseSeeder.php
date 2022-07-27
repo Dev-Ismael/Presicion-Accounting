@@ -28,10 +28,9 @@ class DatabaseSeeder extends Seeder
             'title' => 'title',
             'slug' => 'slug',
             'content' => 'content',
+            'seo_title' => 'seo_title',
             'seo_description' => 'seo_description',
             'seo_keywords' => 'seo_keywords',
-            'author' => 'author',
-            'category' => 'category',
             'img' => 'img',
         ]);
 
@@ -45,31 +44,6 @@ class DatabaseSeeder extends Seeder
             'name' => 'ismael',
             'job_title' => 'job_title',
             'address' => 'address',
-            'img' => 'img',
-        ]);
-
-
-        \App\Models\TaxCenter::factory()->create([
-            'title' => 'title',
-            'slug' => 'slug',
-            'seo_title' => 'seo_title',
-            'seo_description' => 'seo_description',
-            'seo_keywords' => 'seo_keywords',
-            'content' => 'content',
-            'img' => 'img',
-        ]);
-
-
-        \App\Models\Service::factory()->create([
-            'title' => 'title',
-            'slug' => 'slug',
-            'seo_title' => 'seo_title',
-            'seo_description' => 'seo_description',
-            'seo_keywords' => 'seo_keywords',
-            'summary' => 'summary',
-            'parent_id' => 1,
-            'content' => 'content',
-            'icon' => 'icon',
             'img' => 'img',
         ]);
 

@@ -90,10 +90,13 @@
             </div>
 
             @php
-                $tax_centers = App\Models\TaxCenter::get();
-                $services    = App\Models\Service::get();
+                $tax_centers  = App\Models\TaxCenter::get();
+                $services     = App\Models\Service::where('parent_id', Null)->get();
+                $sub_services = App\Models\Service::where('parent_id', '!=', Null)->get();
+                foreach (array_combine( $services, $sub_services ) as $service => $sub_service) {
+                    echo '<option value="' . $service . '">' . $sub_service . '</option>';
+                }
             @endphp
-
             <!-- Start Header Area  -->
             <header class="rn-header header-default header-transparent header-sticky nav-white">
                 <div class="container position-relative">
@@ -118,77 +121,35 @@
                                         <li><a href="{{ route("about") }}">About</a></li>
                                         <li class="has-droupdown has-menu-child-item"><a href="#">Services</a>
                                             <ul class="submenu">
-                                                <li>
-                                                    <a href="{{ route("tax_center", "taxcenter-slug") }}">Track Your Refund</a>
+                                                {{-- @foreach ( $services as $service )
+                                                    <li>
+                                                        <a href="{{ route("service", $service->slug ) }}"> {{ $service->title }} <i class="fa-solid fa-arrow-right"></i> </a>
+
+                                                        <ul class="sub-menu text-left">
+                                                            @foreach ( $sub_services as $sub_service )
+                                                                <li><a href="{{ route("service", "service-slug") }}">Bookkeeping Services</a></li>
+                                                            @endforeach
+                                                        </ul>
+                                                    </li>
+                                                @endforeach --}}
+
+                                                {{-- <li>
+                                                    <a href="{{ route("service", "service-slug") }}">Track Your Refund <i class="fa-solid fa-arrow-right"></i> </a>
                                                     <ul class="sub-menu text-left">
-                                                        <li class="dropdown-submenu"><a href="individuals-services.php">Individuals Services</a>
-                                                            <ul class="dropdown-menu">
-                                                                <li><a href="{{ route("service", "service-slug") }}">Individuals Services</a></li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Preparation Services</a></li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Debt, and Tax Issues</a></li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Estate Planning</a></li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Retirement Planning</a></li>
-                                                            </ul>
-                                                        </li>
+                                                        <li class="dropdown-submenu"><a href="individuals-services.php">Individuals Services</a></li>
                                                         <li><a href="bookkeeping-services.php">Bookkeeping Services</a></li>
-                                                        <li class="dropdown-submenu"><a href="tax-services.php">Tax Services</a>
-                                                            <ul class="dropdown-menu">
-                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Services</a></li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Preparation for Businesses</a>
-                                                                </li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Planning</a></li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Estate and Trust Tax Services</a>
-                                                                </li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Relief</a></li>
-                                                            </ul>
-                                                        </li>
                                                         <li><a href="{{ route("service", "service-slug") }}">Bookkeeping Services</a></li>
                                                         <li><a href="{{ route("service", "service-slug") }}">Payroll Services</a></li>
                                                         <li><a href="{{ route("service", "service-slug") }}">Part-Time CFO Services</a></li>
-                                                        <li><a href="{{ route("service", "service-slug") }}">Non-Profit Organization
-                                                                Services</a>
-                                                        </li>
+                                                        <li><a href="{{ route("service", "service-slug") }}">Non-Profit Organization Services</a></li>
                                                     </ul>
                                                 </li>
-                                                <li>
-                                                    <a href="{{ route("tax_center", "taxcenter-slug") }}">Track Your Refund <i class="fa-solid fa-arrow-right"></i> </a>
-                                                    <ul class="sub-menu text-left">
-                                                        <li class="dropdown-submenu"><a href="individuals-services.php">Individuals Services</a>
-                                                            <ul class="dropdown-menu">
-                                                                <li><a href="{{ route("service", "service-slug") }}">Individuals Services</a></li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Preparation Services</a></li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Debt, and Tax Issues</a></li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Estate Planning</a></li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Retirement Planning</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a href="bookkeeping-services.php">Bookkeeping Services</a></li>
-                                                        <li class="dropdown-submenu"><a href="tax-services.php">Tax Services</a>
-                                                            <ul class="dropdown-menu">
-                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Services</a></li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Preparation for Businesses</a>
-                                                                </li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Planning</a></li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Estate and Trust Tax Services</a>
-                                                                </li>
-                                                                <li><a href="{{ route("service", "service-slug") }}">Tax Relief</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a href="{{ route("service", "service-slug") }}">Bookkeeping Services</a></li>
-                                                        <li><a href="{{ route("service", "service-slug") }}">Payroll Services</a></li>
-                                                        <li><a href="{{ route("service", "service-slug") }}">Part-Time CFO Services</a></li>
-                                                        <li><a href="{{ route("service", "service-slug") }}">Non-Profit Organization
-                                                                Services</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Tax Due Dates</a></li>
-                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Tax Rates</a></li>
-                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Tax Forms &amp;
-                                                        Publications</a></li>
-                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">Record Retention Guide</a>
-                                                </li>
-                                                <li><a href="{{ route("tax_center", "taxcenter-slug") }}">State Tax Forms</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Tax Due Dates</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Tax Rates</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Tax Forms &amp;Publications</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">Record Retention Guide</a></li>
+                                                <li><a href="{{ route("service", "service-slug") }}">State Tax Forms</a></li> --}}
+
                                             </ul>
                                         </li>
                                         <li class="has-droupdown has-menu-child-item"><a href="#">Tax Center</a>

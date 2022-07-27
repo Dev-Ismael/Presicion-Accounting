@@ -60,7 +60,15 @@
                                             <td> {{ $article->title != "" ? $article->title : '-'  }} </td>
                                         </tr>
                                         <tr>
-                                            <td class="text-capitalize content"> <i class="fa-solid fa-cart-flatbed"></i> Content </td>
+                                            <td class="text-capitalize"> <i class="fa-solid fa-code-branch"></i> Category </td>
+                                            <td> {{ $article->category != "" ? $article->category : '-'  }} </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-capitalize"> <i class="fa-solid fa-user-pen"></i> Author </td>
+                                            <td> {{ $article->author != "" ? $article->author : '-'  }} </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-capitalize content"> <i class="fa-solid fa-align-left"></i> Content </td>
                                             <td> {!! $article->content !!} </td>
                                         </tr>
                                     </tbody>

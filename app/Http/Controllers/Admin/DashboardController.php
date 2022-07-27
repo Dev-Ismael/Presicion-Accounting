@@ -17,11 +17,11 @@ class DashboardController extends Controller
     public function index()
     {
 
-        $articles = Article::count();
-        $members = Member::count();
-        $services = Service::count();
-        $resources = Resource::count();
-        $tax_centers = TaxCenter::count();
+        $articles     = Article::where('type','blog')->count();
+        $services     = Article::where('type','service')->count();
+        $tax_centers  = Article::where('type','tax_center')->count();
+        $members      = Member::count();
+        $resources    = Resource::count();
         $testimonials = Testimonial::count();
 
         return view('admin.dashboard',

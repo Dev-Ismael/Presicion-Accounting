@@ -53,8 +53,18 @@
                                         <!----------------- Content -------------------->
                                         <div class="mb-4 input-content">
                                             <label for="content" class="capitalize"> <i class="fa-solid fa-align-left"></i> Article Content </label>
-                                            <textarea type="text" name="content" id="CKEditor_Content" rows="5" class="form-control @error('    ') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Article Content..." autocomplete="nope" >{{ old('content') }}</textarea>
+                                            <textarea type="text" name="content" id="CKEditor_Content" rows="5" class="form-control @error('content') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Article Content..." autocomplete="nope" >{{ old('content') }}</textarea>
                                             @error('content')
+                                                <small class="form-text text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+
+
+                                        <!----------------- Seo Title -------------------->
+                                        <div class="mb-4 input-content">
+                                            <label for="seo_title" class="capitalize"> <i class="fa-solid fa-chart-line"></i> SEO Title </label>
+                                            <input type="text" name="seo_title" id="seo_title" class="form-control @error('seo_title') is-invalid @enderror" value="{{ old('seo_title') }}" aria-describedby="emailHelp" placeholder="Type SEO Title..." autocomplete="nope" />
+                                            @error('seo_title')
                                                 <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
@@ -83,7 +93,7 @@
                                         <!----------------- Author -------------------->
                                         <div class="mb-4 input-content">
                                             <label for="author" class="capitalize"> <i class="fa-solid fa-user-pen"></i> Author </label>
-                                            <input type="text" name="author" id="author" class="form-control @error('author') is-invalid @enderror" value="{{ old('author') }}" aria-describedby="emailHelp" placeholder="Type SEO Keywords..." autocomplete="nope" />
+                                            <input type="text" name="author" id="author" class="form-control @error('author') is-invalid @enderror" value="{{ old('author') }}" aria-describedby="emailHelp" placeholder="Type Author Name..." autocomplete="nope" />
                                             @error('author')
                                                 <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
@@ -93,7 +103,7 @@
                                         <!----------------- Category -------------------->
                                         <div class="mb-4 input-content">
                                             <label for="category" class="capitalize"> <i class="fa-solid fa-code-branch"></i> Category </label>
-                                            <input type="text" name="category" id="category" class="form-control @error('category') is-invalid @enderror" value="{{ old('category') }}" aria-describedby="emailHelp" placeholder="Type SEO Keywords..." autocomplete="nope" />
+                                            <input type="text" name="category" id="category" class="form-control @error('category') is-invalid @enderror" value="{{ old('category') }}" aria-describedby="emailHelp" placeholder="Type Category..." autocomplete="nope" />
                                             @error('category')
                                                 <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror

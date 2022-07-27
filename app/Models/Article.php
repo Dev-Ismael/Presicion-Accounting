@@ -16,9 +16,19 @@ class Article extends Model
      * @return array
      */
 
-     protected $fillable = [
-        'title', 'slug', 'content', 'seo_description', 'seo_keywords', 'author', 'category' , 'img'
+    protected $fillable = [
+        'title',
+        'slug',
+        'summary',
+        'content',
+        'author',
+        'category',
+        'parent_id',
+        'type',
+        'icon',
+        'img',
+        'seo_title',
+        'seo_description',
+        'seo_keywords',
     ];
-
-
 }
