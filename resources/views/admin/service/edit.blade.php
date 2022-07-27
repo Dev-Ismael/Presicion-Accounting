@@ -63,6 +63,17 @@
 
 
 
+                                        <!----------------- Content -------------------->
+                                        <div class="mb-4 input-content">
+                                            <label for="content" class="capitalize"> <i class="fa-solid fa-align-left"></i> Service Content </label>
+                                            <textarea type="text" name="content" id="CKEditor_Content" rows="5" class="form-control @error('content') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Service Content..." autocomplete="nope" >{{ $service->content }}</textarea>
+                                            @error('content')
+                                                <small class="form-text text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+
+
+
                                         <!----------------- Seo Title -------------------->
                                         <div class="mb-4 input-content">
                                             <label for="seo_title" class="capitalize"> <i class="fa-solid fa-chart-line"></i> SEO Title </label>
@@ -106,17 +117,6 @@
                                                 <small class="form-text text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
-
-
-                                        <!----------------- Content -------------------->
-                                        <div class="mb-4 input-content">
-                                            <label for="content" class="capitalize"> <i class="fa-solid fa-align-left"></i> Service Content </label>
-                                            <textarea type="text" name="content" id="CKEditor_Content" rows="5" class="form-control @error('content') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Type Service Content..." autocomplete="nope" >{{ $service->content }}</textarea>
-                                            @error('content')
-                                                <small class="form-text text-danger">{{ $message }}</small>
-                                            @enderror
-                                        </div>
-
 
                                         <!----------------- Icon -------------------->
                                         <div class="mb-3 input-content">

@@ -154,11 +154,11 @@ class TaxCenterController extends Controller
         // Update Record in DB
         try {
             $update = $tax_center-> update( $requestData );
-                return redirect() -> route("admin.tax_center.index") -> with( [ "success" => " Tax Center updated successfully"] ) ;
+                return Redirect::back()-> with( [ "success" => " Tax Center updated successfully"] ) ;
             if(!$update)
-                return redirect() -> route("admin.tax_center.index") -> with( [ "failed" => "Error at update opration"] ) ;
+                return Redirect::back()-> with( [ "failed" => "Error at update opration"] ) ;
         } catch (\Exception $e) {
-            return redirect() -> route("admin.tax_center.index") -> with( [ "failed" => "Error at update opration"] ) ;
+            return Redirect::back()-> with( [ "failed" => "Error at update opration"] ) ;
         }
 
     }
@@ -177,11 +177,11 @@ class TaxCenterController extends Controller
         // Delete Record from DB
         try {
             $delete = $tax_center->delete();
-                return redirect() -> route("admin.tax_center.index") -> with( [ "success" => " Tax Center deleted successfully"] ) ;
+                return Redirect::back()-> with( [ "success" => " Tax Center deleted successfully"] ) ;
             if(!$delete)
-                return redirect() -> route("admin.tax_center.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+                return Redirect::back()-> with( [ "failed" => "Error at delete opration"] ) ;
         } catch (\Exception $e) {
-            return redirect() -> route("admin.tax_center.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+            return Redirect::back()-> with( [ "failed" => "Error at delete opration"] ) ;
         }
     }
 
@@ -229,11 +229,11 @@ class TaxCenterController extends Controller
         if( $request->action == "delete" ){
             try {
                 $delete = Article::destroy( $request->id );
-                    return redirect() -> route("admin.tax_center.index") -> with( [ "success" => " Tax Center deleted successfully"] ) ;
+                    return Redirect::back()-> with( [ "success" => " Tax Center deleted successfully"] ) ;
                 if(!$delete)
-                    return redirect() -> route("admin.tax_center.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+                    return Redirect::back()-> with( [ "failed" => "Error at delete opration"] ) ;
             } catch (\Exception $e) {
-                return redirect() -> route("admin.tax_center.index") -> with( [ "failed" => "Error at delete opration"] ) ;
+                return Redirect::back()-> with( [ "failed" => "Error at delete opration"] ) ;
             }
         }
 
