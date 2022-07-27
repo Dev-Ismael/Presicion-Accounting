@@ -195,7 +195,7 @@ class ArticleController extends Controller
             'search'     =>  ['required', 'string', 'max:55'],
         ]);
 
-        $articles = Article::where('title', 'like', "%{$request->search}%")->paginate( 10 );
+        $articles = Article::where([ ['title', 'like', "%{$request->search}%"] , ['type','blog'] ])->paginate( 10 );
         return view("admin.article.index",compact("articles"));
 
     }

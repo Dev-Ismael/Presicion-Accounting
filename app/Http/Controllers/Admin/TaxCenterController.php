@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\TaxCenter;
+use App\Models\Article;
 use App\Http\Requests\TaxCenters\StoreTaxCenterRequest;
 use App\Http\Requests\TaxCenters\UpdateTaxCenterRequest;
 use Illuminate\Support\Facades\Hash;
@@ -23,7 +23,7 @@ class TaxCenterController extends Controller
     public function perPage( $num=10 )
     {
         // Dynamic pagination
-        $tax_centers = TaxCenter::orderBy('id','desc')->paginate( $num );
+        $tax_centers = Article::where('type','tax_center')->orderBy('id','desc')->paginate( $num );
         return view("admin.tax_center.index",compact("tax_centers"));
     }
 
@@ -35,7 +35,7 @@ class TaxCenterController extends Controller
      */
     public function index()
     {
-        $tax_centers = TaxCenter::orderBy('id','desc')->paginate( 10 );
+        $tax_centers = Article::where('type','tax_center')->orderBy('id','desc')->paginate( 10 );
         return view("admin.tax_center.index",compact("tax_centers"));
     }
 
@@ -74,11 +74,14 @@ class TaxCenterController extends Controller
         $requestData += [ 'slug' => Str::slug( $request->title , '-') ];
 
 
+        // add artilce type in $requestData Array
+        $requestData += [ 'type' => 'tax_center' ];
+
         // return $requestData;
 
         // Store in DB
         try {
-            $tax_center = TaxCenter::create( $requestData );
+            $tax_center = Article::create( $requestData );
                 return Redirect::back()-> with( [ "success" => " Tax Center store successfully"] ) ;
             if(!$tax_center)
                 return Redirect::back()-> with( [ "failed" => "Error at store opration"] ) ;
@@ -97,7 +100,7 @@ class TaxCenterController extends Controller
     public function show($id)
     {
         // find id in Db With Error 404
-        $tax_center = TaxCenter::findOrFail($id);
+        $tax_center = Article::findOrFail($id);
         return view("admin.tax_center.show" , compact("tax_center") ) ;
     }
 
@@ -110,7 +113,7 @@ class TaxCenterController extends Controller
     public function edit($id)
     {
         // find id in Db With Error 404
-        $tax_center = TaxCenter::findOrFail($id);
+        $tax_center = Article::findOrFail($id);
         return view("admin.tax_center.edit" , compact("tax_center") ) ;
     }
 
@@ -124,7 +127,7 @@ class TaxCenterController extends Controller
     public function update(UpdateTaxCenterRequest $request, $id)
     {
         // find id in Db With Error 404
-        $tax_center = TaxCenter::findOrFail($id);
+        $tax_center = Article::findOrFail($id);
 
         // save all request in one variable
         $requestData = $request->all();
@@ -169,7 +172,7 @@ class TaxCenterController extends Controller
     public function destroy($id)
     {
         // find id in Db With Error 404
-        $tax_center = TaxCenter::findOrFail($id);
+        $tax_center = Article::findOrFail($id);
 
         // Delete Record from DB
         try {
@@ -197,7 +200,7 @@ class TaxCenterController extends Controller
             'search'     =>  ['required', 'string', 'max:55'],
         ]);
 
-        $tax_centers = TaxCenter::where('title', 'like', "%{$request->search}%")->paginate( 10 );
+        $tax_centers = Article::where([ ['title', 'like', "%{$request->search}%"] , ['type','tax_center'] ])->paginate( 10 );
         return view("admin.tax_center.index",compact("tax_centers"));
 
     }
@@ -225,7 +228,7 @@ class TaxCenterController extends Controller
         // If Action is Delete
         if( $request->action == "delete" ){
             try {
-                $delete = TaxCenter::destroy( $request->id );
+                $delete = Article::destroy( $request->id );
                     return redirect() -> route("admin.tax_center.index") -> with( [ "success" => " Tax Center deleted successfully"] ) ;
                 if(!$delete)
                     return redirect() -> route("admin.tax_center.index") -> with( [ "failed" => "Error at delete opration"] ) ;
