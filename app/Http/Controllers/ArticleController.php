@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\TaxCenter;
+use App\Models\Article;
 
-class TaxcenterController extends Controller
+class ArticleController extends Controller
 {
 
     /**
@@ -17,12 +17,14 @@ class TaxcenterController extends Controller
 
     public function index($slug)
     {
-        $tax_center = TaxCenter::where('slug',$slug)->first();
-        // if tax_center Not Found
-        if( !$tax_center ){
+        $article = Article::where('slug',$slug)->first();
+
+        // if article Not Found
+        if( !$article ){
             return redirect('/');
         }
-        return view('tax_center',compact("tax_center"));
+
+        return view( $article->type ,compact("article"));
     }
 
 

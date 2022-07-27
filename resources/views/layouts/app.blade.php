@@ -90,12 +90,9 @@
             </div>
 
             @php
-                $tax_centers  = App\Models\TaxCenter::get();
-                $services     = App\Models\Service::where('parent_id', Null)->get();
-                $sub_services = App\Models\Service::where('parent_id', '!=', Null)->get();
-                foreach (array_combine( $services, $sub_services ) as $service => $sub_service) {
-                    echo '<option value="' . $service . '">' . $sub_service . '</option>';
-                }
+                $tax_centers  = App\Models\Article::where('type','tax_center')->get();
+                // $services     = App\Models\Service::where('parent_id', Null)->get();
+                // $sub_services = App\Models\Service::where('parent_id', '!=', Null)->get();
             @endphp
             <!-- Start Header Area  -->
             <header class="rn-header header-default header-transparent header-sticky nav-white">
@@ -155,7 +152,7 @@
                                         <li class="has-droupdown has-menu-child-item"><a href="#">Tax Center</a>
                                             <ul class="submenu">
                                                 @foreach ( $tax_centers as $tax_center )
-                                                    <li><a href="{{ route("tax_center", $tax_center->slug ) }}"> {{ $tax_center->title }} </a></li>
+                                                    <li><a href="{{ route("article", $tax_center->slug ) }}"> {{ $tax_center->title }} </a></li>
                                                 @endforeach
                                             </ul>
                                         </li>
@@ -265,13 +262,13 @@
                         <li class="has-droupdown has-menu-child-item"><a href="#">Tax Center</a>
                             <ul class="submenu">
                                 @foreach ( $tax_centers as $tax_center )
-                                    <li><a href="{{ route("tax_center", $tax_center->slug ) }}"> {{ $tax_center->title }} </a></li>
+                                    <li><a href="{{ route("article", $tax_center->slug ) }}"> {{ $tax_center->title }} </a></li>
                                 @endforeach
                             </ul>
                         </li>
                         <li><a href="{{ route("blog") }}">Blog</a></li>
                         <li><a href="{{ route("contact") }}">Contact</a></li>
-                        <li><a  href="{{ route("resources") }}">Resources</a></li>
+                        <li><a href="{{ route("resources") }}">Resources</a></li>
                     </ul>
 
                 </div>
